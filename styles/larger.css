@@ -4,6 +4,7 @@
   --color-secondary: #50e3c2;
   --color-tertiary: #0c0c0c;
   --color-background: #f4f4f4;
+  --color-accent: lightbrown;
   --color-text: #333;
 
   /* Font Sizes */
@@ -31,6 +32,11 @@ body {
   margin: 0;
 }
 
+main {
+  margin: 1rem 2rem;
+  height: 100vh;
+}
+
 /*------------------- HEADER -------------------*/
 
 header {
@@ -49,8 +55,6 @@ header {
   width: 100%;
   padding-top: 20px;
   position: relative;
-
-  
 }
 /* Profile */
 .profile {
@@ -85,7 +89,6 @@ header {
   position: relative;
   width: 100%;
 }
-
 
 .nav-list {
   display: flex;
@@ -145,7 +148,6 @@ li a.active {
   color: var(--color-secondary);
 }
 
-
 /* Hamburger icon */
 .icon {
   display: none;
@@ -158,6 +160,54 @@ li a.active {
   color: var(--secondary-color);
 }
 
+/* Sections */
+
+section {
+  background-color: var(--color-background);
+  box-shadow: var(--shadow-large);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+section h2 {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 500;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Certificate Section */
+.section-certificate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cert-filter-item {
+  background-color: var(--color-tertiary);
+  color: white;
+  padding: 5px 10px;
+  width: 100px;
+  font-weight: 500;
+  border-radius: 4px;
+  box-shadow: var(--shadow-small);
+}
+
+.cert-filter-item:hover {
+  background-color: var(--color-primary);
+  color: white;
+  cursor: pointer;
+}
+
+.cert-filter-item.active {
+  background-color: var(--color-primary);
+  color: white;
+}
 
 /* Footer */
 footer {
@@ -168,7 +218,7 @@ footer {
   padding: 10px;
 }
 
-.footer-text{
+.footer-text {
   font-weight: 600;
 }
 
