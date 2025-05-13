@@ -7,17 +7,12 @@
     <meta name="author" content="Michael Kazembe">
     <title>Course Home Page</title>
     <!-- CSS Files -->
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="small.css">
-    <link rel="stylesheet" href="larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
     <!-- Fonts -->
-     <link rel="stylesheet" href="styles/styles.css" >
     <link rel="preconnect" href="https://fonts.googleapis.com" >
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
-    <link
-      href="https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
-      rel="stylesheet"
-    >
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
       rel="stylesheet"
@@ -34,20 +29,36 @@
 </head>
 <body>
     <header>
-        <div>
-            <img src="images/profile.jpg" alt="proifle picture" class="profile-pic">
-            <span>Michael Kazembe</span>
-        </div>
-        <div>
-            <nav>
-                <ul class="nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="chamber.html">Chamber</a></li>
-                    <li><a href="final.html">Final</a></li>
-                    <li><a href="https://github.com/MichaelKazembe">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/in/michael-kazembe/">LinkedIn</a></li>
-                </ul>
-            </nav>
+        <div class="navigation">
+            <div class="profile">
+                <img src="images/Michael-Kazembe.webp" alt="profile picture" class="profile-pic" width="auto" height="100">
+                <span>Michael Kazembe</span>
+            </div>
+
+            <!-- Hamburger + Close icons -->
+            <div>
+            <a
+                href="javascript:void(0);"
+                class="icon"
+                onclick="toggleMenu()"
+                id="menuToggleIcon"
+            >
+                <i class="fa fa-bars"></i>
+            </a>
+            </div>
+
+            <!-- NavBar -->
+            <div class="navBar" id="myNavBar">
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="chamber.html">Chamber</a></li>
+                        <li><a href="final.html">Final</a></li>
+                        <li><a href="https://github.com/MichaelKazembe">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/michael-kazembe/">LinkedIn</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main>
