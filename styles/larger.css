@@ -1,7 +1,7 @@
 :root {
   /* Colors */
   --color-primary: #185ba7;
-  --color-secondary: #50e3c2;
+  --color-secondary: #3bb4ec;
   --color-tertiary: #0c0c0c;
   --color-background: #f4f4f4;
   --color-accent: lightbrown;
@@ -33,7 +33,7 @@ body {
 }
 
 main {
-  margin: 1rem 2rem;
+  margin: 1rem;
 }
 
 /*------------------- HEADER -------------------*/
@@ -184,7 +184,18 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.certificate-filter {
+  background-color: rgb(224, 219, 219);
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .cert-filter-item {
