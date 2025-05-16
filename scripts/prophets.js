@@ -24,13 +24,18 @@ const displayProphets = (prophets) => {
         let birthdate = document.createElement('p');
         let place = document.createElement('p');
 
-        // Populate elements
+        // Create attributes for the elements
         fullName.textContent = `${prophet.name} ${prophet.lastname}`;
         potrait.setAttribute('src', prophet.imageurl);
         potrait.setAttribute('alt', `${prophet.name} ${prophet.lastname} - ${prophet.order}th prophet`);
         potrait.setAttribute('loading', 'lazy');
         potrait.setAttribute('width', '340');
         potrait.setAttribute('height', '440');
+
+        // Add classes to the card
+        card.classList.add('card');
+        fullName.classList.add('card-title');
+        potrait.classList.add('card-image');
 
         // Populate birthdate and birthplace
         birthdate.textContent = `Date of Birth: ${prophet.birthdate}`;
@@ -45,10 +50,6 @@ const displayProphets = (prophets) => {
         // Append the card to the cards div
         cards.appendChild(card);
 
-        // Add classes to the card
-        card.classList.add('card');
-        fullName.classList.add('card-title');
-        potrait.classList.add('card-image');
     });
 }
 
