@@ -21,3 +21,4 @@ function toggleMenu() {
     if (closeIcon) closeIcon.style.display = "none";
   }
 }
+

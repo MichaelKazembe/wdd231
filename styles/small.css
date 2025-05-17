@@ -61,12 +61,21 @@ nav ul {
 
 nav ul li {
   list-style: none;
+  font-weight: 600;
 }
 
 nav ul li a {
   text-decoration: none;
   color: white;
 }
+
+nav ul li a:hover {
+  color: var(--color-secondary);
+}
+nav ul li a.active {
+  color: var(--color-secondary);
+}
+
 
 /* Menu and Close Icons */
 #menu-icon,
@@ -154,7 +163,7 @@ section h2 {
   text-align: center;
 }
 
-/* Malawi section */
+/* Malawi Section */
 
 .zebra-img {
   width: 70%;
