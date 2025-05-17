@@ -29,6 +29,7 @@
     overflow: visible;
   }
 
+
   /* --- Add grid layout for main content --- */
   main {
       display: grid;
