@@ -19,7 +19,6 @@
     padding: 0;
   }
 
-
   #menu-icon,
   #close-icon {
     display: none;
@@ -28,5 +27,41 @@
   #menu-list {
     max-height: none;
     overflow: visible;
+  }
+
+  /* --- Add grid layout for main content --- */
+  main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "mainTitle mainTitle"
+        "courseWork malawi"
+        "certificate certificate";
+      gap: 30px;
+      align-items: start;
+  }
+  
+  main > h1 {
+    grid-area: mainTitle;
+    margin-bottom: 0;
+  }
+
+  .section-courseWork {
+    grid-area: courseWork;
+    min-height: 300px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .section-malawi {
+    grid-area: malawi;
+    min-height: 300px;
+  }
+
+  .section-certificate {
+    grid-area: certificate;
+    min-width: 0;
+    margin-top: 0;
   }
 }
