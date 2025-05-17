@@ -2,9 +2,9 @@
   /* Colors */
   --color-primary: #185ba7;
   --color-secondary: #3bb4ec;
-  --color-tertiary: #030303;
+  --color-tertiary: #191919;
   --color-background: #f4f4f4;
-  --color-accent: lightbrown;
+  --color-accent:  rgb(108, 29, 29);
   --color-text: #333;
 
   /* Font Sizes */
@@ -259,15 +259,54 @@ figcaption {
 }
 
 .course-item {
-  color: var(--color-tertiary);
-  background-color: #e4e4e4;
-  padding: 10px 10px;
-  margin: 10px;
-  width: 200px;
-  font-weight: 500;
-  border-radius: 4px;
-  box-shadow: var(--shadow-small);
+    color: var(--color-tertiary);
+    background-color: #e4e4e4;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    font-weight: 500;
+    border-radius: 4px;
+    box-shadow: var(--shadow-small);
+    position: relative;
 }
+
+.course-item.completed {
+    background-color: var(--color-accent);
+    color: whitesmoke;
+}
+
+.course-item.completed::after {
+    content: "✓";
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    color: whitesmoke;
+  
+}
+
+
+.course-filter button {
+    background-color: var(--color-tertiary);
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.course-filter button.active {
+    background-color: var(--color-primary);
+}
+
+.total-credits {
+    margin: 20px 0;
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--color-accent);
+}
+
 
 /* Footer */
 footer {

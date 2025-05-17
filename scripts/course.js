@@ -9,7 +9,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -22,7 +22,7 @@ const courses = [
             'HTML',
             'CSS'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -79,16 +79,46 @@ const courses = [
 ]
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const courseList = document.getElementById('course-list');
+    const totalCredits = document.getElementById('total-credits');
+    const filterButtons = document.querySelectorAll('.course-filter-item');
 
-// Dynamically add courses to the Course Work section
-document.addEventListener('DOMContentLoaded', () => {
-    const courseList = document.querySelector('.section-courseWork ul');
-    if (courseList) {
-        courseList.innerHTML = ''; // Clear any existing <li>
+    function displayCourses(courses) {
+        courseList.innerHTML = '';
+        let credits = 0;
+
         courses.forEach(course => {
-            const li = document.createElement('li');
-            li.textContent = `${course.subject} ${course.number}: ${course.title} (${course.credits} credits)`;
-            courseList.appendChild(li);
+            const courseItem = document.createElement('div');
+            courseItem.className = `course-item ${course.completed ? 'completed' : ''}`;
+            courseItem.innerHTML = `
+                <h3>${course.subject} ${course.number}</h3>
+                <p>${course.title}</p>
+            `;
+            courseList.appendChild(courseItem);
+            credits += course.credits;
         });
+
+        totalCredits.textContent = credits;
     }
+
+    function filterCourses(subject) {
+        if (subject === 'all') {
+            displayCourses(courses);
+        } else {
+            const filteredCourses = courses.filter(course => course.subject === subject);
+            displayCourses(filteredCourses);
+        }
+    }
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const subject = this.id.split('-')[1];
+            filterCourses(subject === 'all' ? 'all' : subject.toUpperCase());
+        });
+    });
+
+    displayCourses(courses);
 });

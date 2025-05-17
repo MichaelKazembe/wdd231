@@ -70,23 +70,18 @@
         <section class="section-certificate">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="course-filter">
-                <ul>
-                    <li class="course-filter-item">All</li>
-                    <li class="course-filter-item">CSE</li>
-                    <li class="course-filter-item">WDD</li>
-                </ul>
+                <button class="course-filter-item active" id="filter-all">All</button>
+                <button class="course-filter-item" id="filter-cse">CSE</button>
+                <button class="course-filter-item" id="filter-wdd">WDD</button>
             </div>
-            <div class="course-list">
-                <ul>
-                    <li class="course-item">CSE 110</li>
-                    <li class="course-item">WDD 130</li>
-                    <li class="course-item">CSE 111</li>
-                    <li class="course-item">CSE 210</li>
-                    <li class="course-item">WDD 131</li>
-                    <li class="course-item">WDD 231</li>
-                </ul>
+            <div class="course-list" id="course-list">
+                <!-- Courses will be dynamically inserted here -->
+            </div>
+            <div class="total-credits">
+                Total Credits: <span id="total-credits">0</span>
             </div>
         </section>
+
     </main>
     <!-- FOOTER -->
     <footer class="site-footer">
