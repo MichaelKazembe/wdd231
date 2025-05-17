@@ -14,49 +14,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" >
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" >
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    >
+
     <!-- Javascript Files -->
     <script src="/scripts/navigation.js" defer></script>
     <script src="/scripts/course.js" defer></script>
     <script src="/scripts/date.js" defer></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/4ea4219760.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
     <header>
-        <div class="navigation">
-            <div class="profile">
-                <img src="images/michael-kazembe.webp" alt="profile picture" class="profile-pic" height="100">
-                <span>Michael Kazembe</span>
-            </div>
-
-            <!-- Hamburger + Close icons -->
-            <div>
-            <a
-                href="javascript:void(0);"
-                class="icon"
-                onclick="toggleMenu()"
-                id="menuToggleIcon"
-            >
-                <i class="fa fa-bars"></i>
-            </a>
-            </div>
-
-            <!-- NavBar -->
-            <div class="navBar" id="myNavBar">
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="chamber.html">Chamber</a></li>
-                        <li><a href="final.html">Final</a></li>
-                        <li><a href="https://github.com/MichaelKazembe">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/michael-kazembe/">LinkedIn</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="profile">
+            <img src="images/michael-kazembe.webp" alt="profile picture" class="profile-img">
+            <span>Michael Kazembe</span>
         </div>
+        <nav class="navBar">
+            <ul id="menu-list">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="final.html">Final</a></li>
+                <li><a href="https://github.com/MichaelKazembe">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/michael-kazembe/">LinkedIn</a></li>
+            </ul>
+            <div>
+                <i id="menu-icon" class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+                <i id="close-icon" class="fa-solid fa-xmark" onclick="toggleMenu()"></i>
+            </div>
+        </nav>
+
     </header>
     <main>
         <h1>
