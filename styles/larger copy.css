@@ -197,8 +197,8 @@ figcaption {
 }
 
 
-/* Certificate Section */
-.section-certificate {
+/* courseificate Section */
+.section-courseificate {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +216,7 @@ figcaption {
   flex-wrap: wrap;
 }
 
-.cert-filter-item {
+.course-filter-item {
   background-color: var(--color-tertiary);
   color: white;
   padding: 5px 10px;
@@ -226,13 +226,13 @@ figcaption {
   box-shadow: var(--shadow-small);
 }
 
-.cert-filter-item:hover {
+.course-filter-item:hover {
   background-color: var(--color-primary);
   color: white;
   cursor: pointer;
 }
 
-.cert-filter-item.active {
+.course-filter-item.active {
   background-color: var(--color-primary);
   color: white;
 }
