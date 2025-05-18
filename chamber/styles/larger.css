@@ -120,3 +120,114 @@ nav ul li a.active:after {
 }
 
 
+/* ---- FOOTER ---- */
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-social h5,
+.footer-subscribe h4 {
+  margin-bottom: 10px;
+  font-size: var(--font-size-medium);
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.social-links li a {
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-links li a:hover {
+  color: var(--color-secondary);
+}
+/* Subscribe form */
+
+.footer-subscribe .subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.subscribe-form input {
+  padding: 5px;
+  /* font-size: var(--paragraph-size); */
+  border: none;
+  border-radius: 5px;
+  flex: 1;
+  max-width: 300px;
+}
+
+/* Input field */
+.subscribe-form input[type="email"] {
+  padding: 10px;
+  font-size: var(--font-size-small);
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/* button */
+.subscribe-form button {
+  padding: 10px 20px;
+  background-color: var(--color-secondary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--font-size-small);
+  transition: background-color 0.3s ease;
+}
+.subscribe-form button:hover {
+  background-color: var(--color-accent);
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 0.75rem;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-subscribe .subscribe-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe-form input {
+    max-width: 100%;
+  }
+}
