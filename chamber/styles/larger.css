@@ -148,7 +148,8 @@ nav ul li a.active:after {
 .footer-social h5,
 .footer-subscribe h4 {
   margin-bottom: 10px;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-normal);
 }
 
 .social-links {
