@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of Chamber of Commerce">
+    <meta name="author" content="Michael Kazembe">
+    <title>Directory | Malawi Chamber of Commerce</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo-favicon.png" sizes="16x16">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Directory | Malawi Chamber of Commerce">
+    <meta property="og:description" content="Discover businesses and organizations in the Malawi Chamber of Commerce directory.">
+    <meta property="og:image" content="https://michaelkazembe.github.io/chamber/images/logo-1-primary.png">
+    <meta property="og:url" content="https://michaelkazembe.github.io/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Javascript Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/4ea4219760.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header>
+        <nav class="navBar">
+             <div class="logo">
+                <img src="images/logo-dark-transparent.png" alt="logo" class="logo-img" width="200"> 
+            </div>
+            <ul id="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover Lilongwe</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+            <div>
+                <i id="menu-icon" class="fa-solid fa-bars" onclick="toggleMenu()"></i>
+                <i id="close-icon" class="fa-solid fa-xmark" onclick="toggleMenu()"></i>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <h1>
+            Directory
+        </h1>
+
+    </main>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p class="footer-text">
+        &copy; <span id="currentdate"></span> Michael Kazembe 🇲🇼 Malawi, Africa
+      </p>
+      <p id="last-modified" class="footer-modified">
+        Last Modified: <span id="last-modified-date"></span>
+      </p>
+    </footer>
+</body>
+</html>

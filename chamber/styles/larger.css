@@ -1,0 +1,122 @@
+:root {
+  /* Colors: Define a color palette for the site. */
+  --color-primary: #2c3e50;
+  --color-secondary: #3498db;
+  --color-background: #ecf0f1;
+  --color-text: #2c3e50;
+  --color-accent: #e74c3c;
+
+  /* Font Sizes */
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --font-size-large: 18px;
+  --font-size-xlarge: 24px;
+
+  /* Shadows */
+  --shadow-small: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-large: 0px 10px 20px rgba(0, 0, 0, 0.2);
+
+  /* Breakpoints */
+  --breakpoint-small: 600px;
+  --breakpoint-medium: 900px;
+  --breakpoint-large: 1200px;
+  --breakpoint-xlarge: 1500px;
+
+  /* Font Family: Define the font family for the site. */
+  --font-family: "Montserrat", sans-serif;
+  --font-family-alt: "Arial", sans-serif;
+
+  /* Font Weights: Define font weights for different text styles. */
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-bolder: 900;
+
+  /* Line Heights: Define line heights for different text styles. */
+  --line-height-normal: 1.5;
+  --line-height-tight: 1.25;
+  --line-height-loose: 1.75;
+
+  /* Border Radius: Define border radius for elements. */
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: var(--paragraph-size);
+  line-height: 1.5;
+  background-color: var(--color-background);
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  margin: 2rem;
+  padding: 0 4rem;
+}
+
+/*------------------- HEADER -------------------*/
+/* NavBar */
+nav {
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: white;
+  position: relative;
+  height: 120px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+}
+nav ul li {
+  list-style: none;
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-small);
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  color: var(--color-secondary);
+}
+nav ul li a.active {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+nav ul li a.active:hover {
+  color: var(--color-secondary);
+}
+nav ul li a.active:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-secondary);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+/* Logo */
+.logo {
+  padding: 20px;
+}
+
+
