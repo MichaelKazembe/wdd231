@@ -118,12 +118,60 @@ nav ul li a.active:after {
   padding: 20px;
 }
 
+/*------------------- MENU -------------------*/
 
-/* ---- FOOTER ---- */
+.directory-view-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  
+}
+
+.view-btn {
+  background: var(--color-background);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-primary);
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.view-btn i {
+  font-size: 1.2em;
+  margin-right: 4px;
+}
+
+.view-btn:hover,
+.view-btn.active {
+  background: var(--color-secondary);
+  color: #fff;
+  border-color: var(--color-secondary);
+}
+
+.view-btn:hover i,
+.view-btn.active i {
+  color: #fff;
+}
+
+.view-btn span {
+  font-size: var(--font-size-small);
+  font-weight: 500;
+  color: inherit;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+/*------------------- FOOTER -------------------*/
 
 /* Footer Styles */
 .footer {
-  background-color: #333;
+  background-color: var(--color-primary);
   color: #fff;
   padding: 40px 20px;
   text-align: center;
