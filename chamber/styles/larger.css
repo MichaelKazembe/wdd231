@@ -6,6 +6,7 @@
   --color-accent: #e74c3c;
   --color-accent-light: #f1c40f;
 
+  --font-size-xsmall: 10px;
   --font-size-small: 12px;
   --font-size-medium: 14px;
   --font-size-large: 18px;
@@ -186,7 +187,7 @@ nav ul li {
 .member-card {
   background: #fff;
   border-radius: var(--border-radius-medium, 8px);
-  box-shadow: var(--shadow-medium, 0px 4px 6px rgba(0,0,0,0.13));
+  box-shadow: var(--shadow-medium, 0px 4px 6px rgba(0, 0, 0, 0.13));
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -197,7 +198,7 @@ nav ul li {
 }
 
 .member-card:hover {
-  box-shadow: var(--shadow-large, 0px 10px 20px rgba(44,62,80,0.13));
+  box-shadow: var(--shadow-large, 0px 10px 20px rgba(44, 62, 80, 0.13));
   transform: translateY(-4px) scale(1.02);
 }
 
@@ -208,7 +209,8 @@ nav ul li {
   margin: 0;
   border-radius: 0;
   box-shadow: none;
-  transition: transform 0.4s cubic-bezier(.4,1.5,.5,1), box-shadow 0.3s, border-radius 0.3s;
+  transition: transform 0.4s cubic-bezier(0.4, 1.5, 0.5, 1), box-shadow 0.3s,
+    border-radius 0.3s;
   will-change: transform;
   display: block;
 }
@@ -225,15 +227,13 @@ nav ul li {
   gap: 0.5rem;
   padding: 1.2rem 1.2rem 1.5rem 1.2rem;
   background: #fff;
-
 }
 
 .member-card h3 {
   margin: 0 0 0.2rem 0;
-
 }
 
-.member-card .description {  
+.member-card .description {
   margin-bottom: 0.5rem;
   line-height: var(--line-height-normal);
   text-align: left;
@@ -273,7 +273,7 @@ nav ul li {
   gap: 0;
   background: #fff;
   border-radius: var(--border-radius-medium, 8px);
-  box-shadow: var(--shadow-medium, 0px 4px 6px rgba(0,0,0,0.13));
+  box-shadow: var(--shadow-medium, 0px 4px 6px rgba(0, 0, 0, 0.13));
   border: 1px solid #e5e7eb;
   overflow: hidden;
   margin-bottom: 1rem;
@@ -329,8 +329,8 @@ nav ul li {
 .directory-list.list .member-card .info-row .address,
 .directory-list.list .member-card .info-row .phone,
 .directory-list.list .member-card .info-row .website {
-  color: #4b5563;
-  font-size: 0.92rem;
+  color: grey;
+  font-size: var(--font-size-small);
   margin: 0;
   padding: 0;
   display: flex;
@@ -373,6 +373,13 @@ nav ul li {
   .directory-list.list .member-card .info-row {
     padding: 0.7rem 0.4rem;
   }
+
+  /* make fonts smaller for infoRow */
+  .directory-list.list .member-card .info-row .address,
+  .directory-list.list .member-card .info-row .phone,
+  .directory-list.list .member-card .info-row .website {
+    font-size: var(--font-size-xsmall);
+  }
 }
 
 @media (max-width: 480px) {
@@ -380,98 +387,25 @@ nav ul li {
     grid-template-columns: minmax(36px, 60px) 1fr 1fr;
   }
   .directory-list.list .member-card img {
-    min-width: 36px;
-    max-width: 60px;
+    min-width: 20px;
+    max-width: 30px;
+    height: 30px;
   }
   .directory-list.list .member-card .main-info,
   .directory-list.list .member-card .info-row {
     padding: 0.3rem 0.2rem;
   }
-}
+  /* Make fonts smaller for */
+  .directory-list.list .member-card h3 {
+    font-size: smaller;
+  }
 
-/* --- DIRECTORY GRID VIEW --- */
-.directory-list.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-}
-
-.member-card {
-  background: #fff;
-  border-radius: var(--border-radius-medium, 8px);
-  box-shadow: var(--shadow-medium, 0px 4px 6px rgba(0,0,0,0.13));
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  transition: box-shadow 0.2s, transform 0.2s;
-  border: 1px solid #e5e7eb;
-  overflow: hidden;
-  min-width: 0;
-}
-
-.member-card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
-  transition: transform 0.4s cubic-bezier(.4,1.5,.5,1), box-shadow 0.3s, border-radius 0.3s;
-  will-change: transform;
-  display: block;
-}
-
-.member-card:hover {
-  box-shadow: var(--shadow-large, 0px 10px 20px rgba(44,62,80,0.13));
-  transform: translateY(-4px) scale(1.02);
-}
-
-.member-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
-  background: #fff;
-}
-
-.member-card h3 {
-  font-size: 1.08rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-  margin: 0 0 0.2rem 0;
-  letter-spacing: 0.01em;
-}
-
-.member-card .description {
-  font-size: 0.97rem;
-  color: var(--color-text);
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-}
-
-.member-card .address,
-.member-card .phone,
-.member-card .website {
-  font-size: 0.93rem;
-  color: #4b5563;
-  display: flex;
-  align-items: center;
-  gap: 0.3em;
-  margin: 0.1rem 0;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  word-break: break-all;
-}
-
-.member-card .address .fa-location-dot,
-.member-card .phone .fa-phone,
-.member-card .website .fa-globe {
-  color: var(--color-secondary, #3498db);
-  margin-right: 0.4em;
-  font-size: 1em;
-  vertical-align: middle;
-  opacity: 0.85;
+  /* make fonts smaller for infoRow */
+  .directory-list.list .member-card .info-row .address,
+  .directory-list.list .member-card .info-row .phone,
+  .directory-list.list .member-card .info-row .website {
+    font-size: var(--font-size-xsmall);
+  }
 }
 
 /* --- ACCESSIBILITY: HIGH CONTRAST FOR TEXT --- */
@@ -495,8 +429,6 @@ nav ul li {
   word-break: break-word;
   box-sizing: border-box;
 }
-
-
 
 /*------------------- FOOTER -------------------*/
 .footer {
