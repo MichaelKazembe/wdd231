@@ -5,92 +5,117 @@ const directorySection = document.querySelector("#directory-list"); // Section t
 
 let companies = []; // Will hold the fetched data
 
+// Set default view
+let currentView = "grid";
+
 // Fetch member data from JSON file
 async function fetchCompanies() {
-    try {
-        const response = await fetch("data/members.json");
-        if (!response.ok) throw new Error("Network response was not ok");
-        companies = await response.json();
-        displayCompanies("grid");
-        gridButton.classList.add("active");
-    } catch (error) {
-        directorySection.innerHTML = "<p>Failed to load members.</p>";
-        console.error("Fetch error:", error);
-    }
+  try {
+    const response = await fetch("data/members.json");
+    if (!response.ok) throw new Error("Network response was not ok");
+    companies = await response.json();
+    displayCompanies(currentView);
+    setActiveButton(currentView);
+  } catch (error) {
+    directorySection.innerHTML = "<p>Failed to load members.</p>";
+    console.error("Fetch error:", error);
+  }
 }
 
-// Function to create and display companies in grid or list view
+// Display companies in grid or list view
 function displayCompanies(view = "grid") {
-    // Clear previous content
-    directorySection.innerHTML = "";
+  directorySection.innerHTML = "";
+  directorySection.className = "directory-list " + view;
 
-    // Add the appropriate class for styling
-    directorySection.className = "directory-list " + view;
+  companies.forEach((member) => {
+    const memberCard = document.createElement("div");
+    memberCard.className = "member-card";
 
-    // Loop through each member and create its card/item
-    companies.forEach(member => {
-        // Create the container for each member
-        const memberCard = document.createElement("div");
-        memberCard.className = "member-card";
+    const img = document.createElement("img");
+    img.src = member.imageURL;
+    img.alt = `${member.name} logo`;
+    img.loading = "lazy";
 
-        // member image
-        const img = document.createElement("img");
-        img.src = member.imageURL;
-        img.alt = `${member.name} logo`;
-        img.loading = "lazy";
+    const name = document.createElement("h3");
+    name.textContent = member.name;
 
-        // member name
-        const name = document.createElement("h3");
-        name.textContent = member.name;
+    const desc = document.createElement("p");
+    desc.className = "description";
+    desc.textContent = member.description;
 
-        // member description
-        const desc = document.createElement("p");
-        desc.textContent = member.description;
-        desc.className = "description";
+    const address = document.createElement("p");
+    address.className = "address";
+    address.innerHTML = `<i class="fa-solid fa-location-dot"></i>${member.address}`;
 
-        // member address with FontAwesome icon
-        const address = document.createElement("p");
-        address.className = "address";
-        address.innerHTML = `<i class="fa-solid fa-location-dot"></i>${member.address}`;
+    const phone = document.createElement("p");
+    phone.className = "phone";
+    phone.innerHTML = `<i class="fa-solid fa-phone"></i>${member.phone}`;
 
-        // member phone with FontAwesome icon
-        const phone = document.createElement("p");
-        phone.className = "phone";
-        phone.innerHTML = `<i class="fa-solid fa-phone"></i>${member.phone}`;
+    const website = document.createElement("p");
+    website.className = "website";
+    if (member.website && member.website.trim() !== "") {
+      website.innerHTML = `<i class="fa-solid fa-globe"></i> ${member.website}`;
+    } else {
+      website.innerHTML = `<i class="fa-solid fa-globe"></i> No website`;
+    }
 
-        // member website (as a link)
-        const website = document.createElement("a");
-        website.href = member.website;
-        website.textContent = "Visit Website";
-        website.target = "_blank";
-        website.rel = "noopener";
+    if (view === "list") {
+      // 3-column layout: img | main-info | info-row
+      const mainInfo = document.createElement("div");
+      mainInfo.className = "main-info";
+      mainInfo.appendChild(name);
+      mainInfo.appendChild(desc);
 
-        // Append all elements to the card
-        memberCard.appendChild(img);
-        memberCard.appendChild(name);
-        memberCard.appendChild(desc);
-        memberCard.appendChild(address);
-        memberCard.appendChild(phone);
-        memberCard.appendChild(website);
+      const infoRow = document.createElement("div");
+      infoRow.className = "info-row";
+      infoRow.appendChild(address);
+      infoRow.appendChild(phone);
+      infoRow.appendChild(website);
 
-        // Add the card to the directory section
-        directorySection.appendChild(memberCard);
-    });
+      memberCard.appendChild(img);
+      memberCard.appendChild(mainInfo);
+      memberCard.appendChild(infoRow);
+    } else {
+      // Grid view: stack everything in member-info
+      const infoDiv = document.createElement("div");
+      infoDiv.className = "member-info";
+      infoDiv.appendChild(name);
+      infoDiv.appendChild(desc);
+      infoDiv.appendChild(address);
+      infoDiv.appendChild(phone);
+      infoDiv.appendChild(website);
+
+      memberCard.appendChild(img);
+      memberCard.appendChild(infoDiv);
+    }
+
+    directorySection.appendChild(memberCard);
+  });
 }
 
-// Event listener for grid view button
-gridButton.addEventListener("click", () => {
-    displayCompanies("grid");
+// Set active button styling
+function setActiveButton(view) {
+  if (view === "grid") {
     gridButton.classList.add("active");
     listButton.classList.remove("active");
-});
-
-// Event listener for list view button
-listButton.addEventListener("click", () => {
-    displayCompanies("list");
+  } else {
     listButton.classList.add("active");
     gridButton.classList.remove("active");
+  }
+}
+
+// Event listeners for view toggle buttons
+gridButton.addEventListener("click", () => {
+  currentView = "grid";
+  displayCompanies(currentView);
+  setActiveButton(currentView);
 });
 
-// Initial fetch and display
+listButton.addEventListener("click", () => {
+  currentView = "list";
+  displayCompanies(currentView);
+  setActiveButton(currentView);
+});
+
+// Initialize on page load
 fetchCompanies();

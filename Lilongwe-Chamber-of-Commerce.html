@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lilongwe Chamber of Commerce</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#2C3E50',secondary:'#3498DB'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Open Sans', sans-serif;
+color: #2C3E50;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+width: 0;
+height: 2px;
+bottom: -4px;
+left: 0;
+background-color: #3498DB;
+transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after {
+width: 100%;
+}
+.event-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.service-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.business-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.business-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.blog-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.blog-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+input[type="checkbox"] {
+appearance: none;
+-webkit-appearance: none;
+width: 18px;
+height: 18px;
+border: 2px solid #3498DB;
+border-radius: 4px;
+outline: none;
+cursor: pointer;
+position: relative;
+}
+input[type="checkbox"]:checked {
+background-color: #3498DB;
+}
+input[type="checkbox"]:checked::after {
+content: '';
+position: absolute;
+width: 5px;
+height: 10px;
+border: solid white;
+border-width: 0 2px 2px 0;
+top: 1px;
+left: 5px;
+transform: rotate(45deg);
+}
+.custom-select {
+position: relative;
+}
+.custom-select select {
+appearance: none;
+-webkit-appearance: none;
+padding-right: 2rem;
+}
+.custom-select::after {
+content: '';
+position: absolute;
+right: 12px;
+top: 50%;
+transform: translateY(-50%);
+width: 0;
+height: 0;
+border-left: 5px solid transparent;
+border-right: 5px solid transparent;
+border-top: 5px solid #3498DB;
+pointer-events: none;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+</style>
+</head>
+<body class="bg-[#ECF0F1]">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-white shadow-md">
+<div class="container mx-auto px-4 py-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary mr-10">logo</a>
+<nav class="hidden lg:flex space-x-6">
+<a href="#" class="nav-link active text-primary font-medium hover:text-secondary transition-colors">Home</a>
+<a href="#" class="nav-link text-primary font-medium hover:text-secondary transition-colors">Discover Lilongwe</a>
+<a href="https://readdy.ai/home/33be6dc3-2a33-40f0-a147-52fd829bf64e/668236b8-ef6a-4670-8944-a01081653936" data-readdy="true" class="nav-link text-primary font-medium hover:text-secondary transition-colors">Business Directory</a>
+<a href="#" class="nav-link text-primary font-medium hover:text-secondary transition-colors">Join Us</a>
+<a href="#" class="nav-link text-primary font-medium hover:text-secondary transition-colors">Events</a>
+<a href="#" class="nav-link text-primary font-medium hover:text-secondary transition-colors">About Us</a>
+<a href="#" class="nav-link text-primary font-medium hover:text-secondary transition-colors">Insights</a>
+<a href="#" class="nav-link text-primary font-medium hover:text-secondary transition-colors">Contact</a>
+</nav>
+</div>
+<div class="flex items-center space-x-4">
+<div class="hidden md:flex items-center relative">
+<input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 rounded border border-gray-300 focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary text-sm">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+<button class="hidden md:block bg-secondary text-white px-4 py-2 rounded-button whitespace-nowrap hover:bg-opacity-90 transition-colors">Member Login</button>
+<button class="lg:hidden w-10 h-10 flex items-center justify-center text-primary">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/60"></div>
+<div class="relative w-full h-[600px]" style="background-image: url('https://readdy.ai/api/search-image?query=Beautiful%20panoramic%20view%20of%20Lilongwe%20city%20skyline%20with%20modern%20buildings%2C%20lush%20green%20parks%2C%20and%20clear%20blue%20sky.%20The%20image%20shows%20a%20vibrant%20African%20capital%20city%20with%20a%20mix%20of%20traditional%20and%20contemporary%20architecture%2C%20bustling%20streets%20with%20people%2C%20and%20the%20natural%20beauty%20surrounding%20the%20urban%20landscape.%20The%20composition%20has%20a%20gradient%20from%20darker%20left%20side%20to%20lighter%20right%20side%20to%20allow%20text%20overlay&width=1920&height=600&seq=1&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="absolute inset-0 flex items-center">
+<div class="container mx-auto px-4">
+<div class="max-w-2xl">
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">Empowering Lilongwe's Business Community</h1>
+<p class="text-lg md:text-xl text-white mb-8">Connecting businesses, fostering growth, and building a stronger economy for Malawi's capital city.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-[#E74C3C] text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Join the Chamber</button>
+<button class="bg-white text-primary px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Explore Benefits</button>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-white py-4 shadow-md transform translate-y-1/2">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<a href="#" class="flex items-center justify-center gap-3 py-3 px-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-full text-secondary">
+<i class="ri-user-add-line"></i>
+</div>
+<span class="font-medium">Become a Member</span>
+</a>
+<a href="#" class="flex items-center justify-center gap-3 py-3 px-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-full text-secondary">
+<i class="ri-building-line"></i>
+</div>
+<span class="font-medium">Business Directory</span>
+</a>
+<a href="#" class="flex items-center justify-center gap-3 py-3 px-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-full text-secondary">
+<i class="ri-calendar-event-line"></i>
+</div>
+<span class="font-medium">Upcoming Events</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Services Grid -->
+<section class="pt-32 pb-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">How We Support Your Business</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">The Lilongwe Chamber of Commerce provides essential services to help your business thrive in our growing economy.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="service-card bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full text-secondary mb-6">
+<i class="ri-team-line text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Networking Opportunities</h3>
+<p class="text-gray-600 mb-5">Connect with other business leaders through our regular networking events, mixers, and industry-specific gatherings.</p>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full text-secondary mb-6">
+<i class="ri-graduation-cap-line text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Business Education</h3>
+<p class="text-gray-600 mb-5">Enhance your skills with workshops, seminars, and training sessions on relevant business topics and trends.</p>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full text-secondary mb-6">
+<i class="ri-megaphone-line text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Advocacy & Representation</h3>
+<p class="text-gray-600 mb-5">We advocate for business-friendly policies and represent your interests to local and national government.</p>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full text-secondary mb-6">
+<i class="ri-global-line text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Market Exposure</h3>
+<p class="text-gray-600 mb-5">Gain visibility through our business directory, promotional opportunities, and marketing channels.</p>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full text-secondary mb-6">
+<i class="ri-funds-line text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Economic Development</h3>
+<p class="text-gray-600 mb-5">Access resources for growth, including funding opportunities, grants, and economic development programs.</p>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+<div class="service-card bg-white p-8 rounded-lg shadow-sm">
+<div class="w-16 h-16 flex items-center justify-center bg-secondary/10 rounded-full text-secondary mb-6">
+<i class="ri-customer-service-line text-3xl"></i>
+</div>
+<h3 class="text-xl font-bold mb-3">Business Support</h3>
+<p class="text-gray-600 mb-5">Get personalized assistance with business challenges, regulatory issues, and growth strategies.</p>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+Learn More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Latest Events Section -->
+<section class="py-20 bg-[#ECF0F1]">
+<div class="container mx-auto px-4">
+<div class="flex flex-wrap items-center justify-between mb-12">
+<div>
+<h2 class="text-3xl font-bold mb-2">Upcoming Events</h2>
+<p class="text-lg text-gray-600">Connect, learn, and grow with our business community</p>
+</div>
+<div class="flex mt-4 md:mt-0">
+<button class="flex items-center justify-center w-10 h-10 bg-white rounded-l-lg border border-gray-300 text-primary hover:bg-gray-50">
+<i class="ri-list-check-2"></i>
+</button>
+<button class="flex items-center justify-center w-10 h-10 bg-secondary text-white rounded-r-lg border border-secondary hover:bg-opacity-90">
+<i class="ri-calendar-line"></i>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="event-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20business%20networking%20event%20with%20diverse%20group%20of%20business%20people%20in%20formal%20attire%20exchanging%20business%20cards%20and%20engaging%20in%20conversation.%20The%20setting%20is%20a%20modern%20conference%20room%20with%20elegant%20decorations%2C%20refreshment%20tables%2C%20and%20a%20professional%20atmosphere.%20The%20image%20shows%20people%20actively%20networking%2C%20smiling%2C%20and%20making%20connections%20in%20a%20well-lit%20environment&width=600&height=400&seq=2&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<div class="w-14 h-14 flex flex-col items-center justify-center bg-[#E74C3C] text-white rounded-lg mr-4">
+<span class="text-sm font-medium">MAY</span>
+<span class="text-xl font-bold">28</span>
+</div>
+<div>
+<span class="text-sm text-gray-500">Thursday, 2:00 PM - 5:00 PM</span>
+<h3 class="text-xl font-bold">Business Networking Mixer</h3>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Connect with fellow chamber members and expand your professional network at our monthly mixer event.</p>
+<div class="flex items-center text-gray-500 mb-5">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Lilongwe Sunbird Hotel, Capital City</span>
+</div>
+<button class="w-full bg-secondary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Register Now</button>
+</div>
+</div>
+<div class="event-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20workshop%20setting%20with%20a%20female%20presenter%20standing%20at%20a%20podium%20presenting%20to%20a%20diverse%20audience%20of%20business%20professionals.%20The%20room%20has%20modern%20conference%20facilities%20with%20presentation%20screens%20showing%20business%20growth%20charts.%20Attendees%20are%20taking%20notes%20and%20engaging%20with%20the%20content.%20The%20setting%20is%20professional%20with%20good%20lighting%20and%20business-appropriate%20decor&width=600&height=400&seq=3&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<div class="w-14 h-14 flex flex-col items-center justify-center bg-[#E74C3C] text-white rounded-lg mr-4">
+<span class="text-sm font-medium">JUN</span>
+<span class="text-xl font-bold">05</span>
+</div>
+<div>
+<span class="text-sm text-gray-500">Wednesday, 9:00 AM - 12:00 PM</span>
+<h3 class="text-xl font-bold">Digital Marketing Workshop</h3>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Learn effective strategies to boost your online presence and reach more customers through digital channels.</p>
+<div class="flex items-center text-gray-500 mb-5">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Lilongwe Business Center, Area 3</span>
+</div>
+<button class="w-full bg-secondary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Register Now</button>
+</div>
+</div>
+<div class="event-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Economic%20forum%20with%20government%20officials%20and%20business%20leaders%20seated%20at%20a%20panel%20discussion.%20The%20setting%20is%20a%20formal%20conference%20hall%20with%20national%20flags%2C%20professional%20lighting%2C%20and%20audience%20seating.%20Panelists%20include%20diverse%20representatives%20in%20professional%20attire%20discussing%20economic%20policies.%20The%20stage%20has%20a%20professional%20backdrop%20with%20economic%20development%20themed%20graphics%20and%20the%20event%20appears%20to%20be%20well-attended&width=600&height=400&seq=4&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<div class="w-14 h-14 flex flex-col items-center justify-center bg-[#E74C3C] text-white rounded-lg mr-4">
+<span class="text-sm font-medium">JUN</span>
+<span class="text-xl font-bold">15</span>
+</div>
+<div>
+<span class="text-sm text-gray-500">Saturday, 10:00 AM - 4:00 PM</span>
+<h3 class="text-xl font-bold">Economic Development Forum</h3>
+</div>
+</div>
+<p class="text-gray-600 mb-4">Join government officials and business leaders to discuss economic policies and growth opportunities in Lilongwe.</p>
+<div class="flex items-center text-gray-500 mb-5">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Bingu International Convention Center</span>
+</div>
+<button class="w-full bg-secondary text-white py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Register Now</button>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+View All Events
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Business Directory Preview -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Business Directory</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover and connect with Lilongwe's diverse business community</p>
+</div>
+<div class="bg-[#ECF0F1] p-6 rounded-lg mb-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="col-span-1 md:col-span-2">
+<div class="relative">
+<input type="text" placeholder="Search businesses..." class="w-full pl-10 pr-4 py-3 rounded border-none focus:outline-none focus:ring-1 focus:ring-secondary text-sm">
+<div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-400">
+<i class="ri-search-line"></i>
+</div>
+</div>
+</div>
+<div class="custom-select">
+<select class="w-full py-3 px-4 rounded border-none focus:outline-none focus:ring-1 focus:ring-secondary text-sm pr-8">
+<option value="">All Industries</option>
+<option value="finance">Finance & Banking</option>
+<option value="retail">Retail & Commerce</option>
+<option value="technology">Technology</option>
+<option value="healthcare">Healthcare</option>
+<option value="hospitality">Hospitality & Tourism</option>
+<option value="agriculture">Agriculture</option>
+</select>
+</div>
+<div class="custom-select">
+<select class="w-full py-3 px-4 rounded border-none focus:outline-none focus:ring-1 focus:ring-secondary text-sm pr-8">
+<option value="">All Locations</option>
+<option value="area1">Area 1</option>
+<option value="area2">Area 2</option>
+<option value="area3">Area 3</option>
+<option value="area4">Area 4</option>
+<option value="area10">Area 10</option>
+<option value="area12">Area 12</option>
+<option value="area18">Area 18</option>
+<option value="area25">Area 25</option>
+<option value="area43">Area 43</option>
+<option value="area47">Area 47</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Featured Business Spotlight -->
+<div class="bg-gradient-to-r from-primary/5 to-secondary/5 p-8 rounded-lg mb-12">
+<div class="flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/3 mb-6 md:mb-0 md:pr-8">
+<div class="rounded-lg overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Modern%20office%20building%20exterior%20with%20glass%20facade%20in%20an%20African%20city%20setting.%20The%20building%20has%20professional%20signage%20and%20landscaping.%20The%20architecture%20is%20contemporary%20with%20clean%20lines%20and%20a%20welcoming%20entrance.%20The%20setting%20shows%20a%20well-maintained%20business%20district%20with%20some%20greenery%20and%20clear%20blue%20skies&width=600&height=400&seq=5&orientation=landscape" alt="Malawi Innovation Hub" class="w-full h-64 object-cover object-top">
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<div class="flex items-center mb-4">
+<span class="bg-[#E74C3C] text-white text-xs font-medium px-3 py-1 rounded-full mr-3">Featured Member</span>
+<span class="bg-secondary/10 text-secondary text-xs font-medium px-3 py-1 rounded-full">Technology</span>
+</div>
+<h3 class="text-2xl font-bold mb-3">Malawi Innovation Hub</h3>
+<p class="text-gray-600 mb-4">A leading technology incubator fostering innovation and entrepreneurship in Lilongwe. We provide workspace, mentorship, and funding opportunities for tech startups across Malawi.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+<div class="flex items-center text-gray-500">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Area 3, Lilongwe</span>
+</div>
+<div class="flex items-center text-gray-500">
+<i class="ri-phone-line mr-2"></i>
+<span>+265 999 876 543</span>
+</div>
+<div class="flex items-center text-gray-500">
+<i class="ri-global-line mr-2"></i>
+<span>www.malawiinnovation.org</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-3">
+<a href="#" class="inline-flex items-center bg-secondary text-white px-4 py-2 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+<i class="ri-user-line mr-2"></i>
+View Profile
+</a>
+<a href="#" class="inline-flex items-center bg-white text-primary border border-gray-300 px-4 py-2 rounded-button font-medium hover:bg-gray-50 transition-colors whitespace-nowrap">
+<i class="ri-mail-line mr-2"></i>
+Contact
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Business Listings Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="business-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20bank%20branch%20exterior%20in%20an%20African%20city%20with%20professional%20signage%20and%20ATM%20machines.%20The%20building%20has%20a%20clean%2C%20corporate%20design%20with%20the%20banks%20branding%20visible.%20Customers%20are%20entering%20and%20exiting%20the%20facility.%20The%20architecture%20is%20contemporary%20with%20glass%20elements%20and%20security%20features%20typical%20of%20financial%20institutions&width=600&height=400&seq=6&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<span class="bg-secondary/10 text-secondary text-xs font-medium px-3 py-1 rounded-full">Finance & Banking</span>
+</div>
+<h3 class="text-xl font-bold mb-2">National Bank of Malawi</h3>
+<p class="text-gray-600 mb-4">Leading financial institution providing comprehensive banking services to individuals and businesses across Lilongwe.</p>
+<div class="flex items-center text-gray-500 mb-2">
+<i class="ri-map-pin-line mr-2"></i>
+<span>City Center, Area 1</span>
+</div>
+<div class="flex items-center text-gray-500 mb-5">
+<i class="ri-phone-line mr-2"></i>
+<span>+265 1 771 144</span>
+</div>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<div class="business-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20hotel%20exterior%20in%20an%20African%20city%20with%20elegant%20entrance%2C%20valet%20parking%2C%20and%20well-maintained%20landscaping.%20The%20building%20has%20a%20contemporary%20design%20with%20African%20architectural%20influences.%20The%20hotel%20entrance%20shows%20staff%20welcoming%20guests%2C%20with%20a%20luxurious%20lobby%20visible%20through%20glass%20doors.%20The%20setting%20appears%20upscale%20with%20palm%20trees%20and%20professional%20lighting&width=600&height=400&seq=7&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<span class="bg-secondary/10 text-secondary text-xs font-medium px-3 py-1 rounded-full">Hospitality & Tourism</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Sunbird Capital Hotel</h3>
+<p class="text-gray-600 mb-4">Premier hotel offering luxury accommodations, conference facilities, and fine dining in the heart of Lilongwe.</p>
+<div class="flex items-center text-gray-500 mb-2">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Presidential Way, Area 2</span>
+</div>
+<div class="flex items-center text-gray-500 mb-5">
+<i class="ri-phone-line mr-2"></i>
+<span>+265 1 773 388</span>
+</div>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<div class="business-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20shopping%20mall%20in%20an%20African%20city%20with%20multiple%20retail%20storefronts%20and%20shoppers.%20The%20mall%20has%20a%20contemporary%20design%20with%20large%20glass%20entrances%2C%20professional%20signage%2C%20and%20a%20clean%2C%20well-maintained%20appearance.%20People%20are%20shopping%2C%20carrying%20bags%2C%20and%20browsing%20store%20windows.%20The%20setting%20shows%20a%20vibrant%20commercial%20center%20with%20both%20international%20and%20local%20brands&width=600&height=400&seq=8&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<span class="bg-secondary/10 text-secondary text-xs font-medium px-3 py-1 rounded-full">Retail & Commerce</span>
+</div>
+<h3 class="text-xl font-bold mb-2">Gateway Mall</h3>
+<p class="text-gray-600 mb-4">Lilongwe's premier shopping destination featuring international and local retail brands, restaurants, and entertainment.</p>
+<div class="flex items-center text-gray-500 mb-2">
+<i class="ri-map-pin-line mr-2"></i>
+<span>Mchinji Road, Area 47</span>
+</div>
+<div class="flex items-center text-gray-500 mb-5">
+<i class="ri-phone-line mr-2"></i>
+<span>+265 1 750 777</span>
+</div>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+View Details
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">
+Browse Full Directory
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Membership Benefits -->
+<section class="py-20 bg-[#ECF0F1]">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold mb-6">Membership Benefits</h2>
+<p class="text-lg text-gray-600 mb-8">Join the Lilongwe Chamber of Commerce and unlock a wide range of exclusive benefits designed to help your business succeed.</p>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-secondary rounded-full text-white mt-1 mr-3">
+<i class="ri-check-line"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Enhanced Visibility</h4>
+<p class="text-gray-600">Get listed in our business directory and gain exposure through our marketing channels.</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-secondary rounded-full text-white mt-1 mr-3">
+<i class="ri-check-line"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Exclusive Networking</h4>
+<p class="text-gray-600">Connect with potential clients, partners, and mentors at member-only events.</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-secondary rounded-full text-white mt-1 mr-3">
+<i class="ri-check-line"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Business Resources</h4>
+<p class="text-gray-600">Access market research, business templates, and professional development resources.</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-secondary rounded-full text-white mt-1 mr-3">
+<i class="ri-check-line"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Advocacy Support</h4>
+<p class="text-gray-600">We advocate for policies that support business growth and economic development.</p>
+</div>
+</li>
+<li class="flex items-start">
+<div class="w-6 h-6 flex items-center justify-center bg-secondary rounded-full text-white mt-1 mr-3">
+<i class="ri-check-line"></i>
+</div>
+<div>
+<h4 class="font-bold mb-1">Cost Savings</h4>
+<p class="text-gray-600">Enjoy member discounts on events, advertising, and business services.</p>
+</div>
+</li>
+</ul>
+<button class="bg-[#E74C3C] text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Join the Chamber Today</button>
+</div>
+<div class="relative">
+<div class="rounded-lg overflow-hidden shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=Professional%20business%20meeting%20in%20a%20modern%20conference%20room%20with%20diverse%20group%20of%20African%20business%20people%20discussing%20and%20collaborating.%20The%20setting%20shows%20a%20well-appointed%20meeting%20space%20with%20presentation%20screens%2C%20notebooks%2C%20and%20coffee.%20The%20participants%20are%20engaged%20in%20productive%20discussion%2C%20dressed%20in%20business%20attire%2C%20and%20appear%20to%20be%20making%20important%20decisions.%20The%20atmosphere%20is%20professional%20and%20collaborative&width=800&height=600&seq=9&orientation=landscape" alt="Chamber Meeting" class="w-full h-full object-cover object-top">
+</div>
+<div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-lg shadow-lg max-w-sm">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20an%20African%20businesswoman%20in%20her%2040s%20with%20a%20confident%20smile%2C%20wearing%20business%20attire.%20The%20photo%20is%20well-lit%20with%20a%20neutral%20background%2C%20showing%20her%20from%20shoulders%20up.%20She%20has%20a%20professional%20hairstyle%20and%20minimal%20jewelry%2C%20presenting%20an%20approachable%20yet%20authoritative%20appearance&width=200&height=200&seq=10&orientation=squarish" alt="Testimonial" class="w-full h-full object-cover object-top">
+</div>
+<div>
+<h4 class="font-bold">Grace Mwanza</h4>
+<p class="text-gray-500 text-sm">CEO, Lilongwe Tech Solutions</p>
+</div>
+</div>
+<p class="text-gray-600 italic">"Joining the Chamber was one of the best business decisions I've made. The connections and resources have been invaluable for our company's growth in Lilongwe's competitive market."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News & Insights -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Lilongwe Insights</h2>
+<p class="text-lg text-gray-600 max-w-3xl mx-auto">Stay informed with the latest business news, trends, and insights from Lilongwe's business community</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20urban%20development%20in%20an%20African%20city%20with%20new%20construction%2C%20infrastructure%20projects%2C%20and%20development%20activity.%20The%20image%20shows%20cranes%2C%20partially%20completed%20buildings%2C%20and%20construction%20workers.%20The%20setting%20demonstrates%20economic%20growth%20and%20urban%20expansion%20with%20a%20mix%20of%20traditional%20and%20contemporary%20architectural%20elements%20under%20development&width=600&height=400&seq=11&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<span class="bg-secondary/10 text-secondary text-xs font-medium px-3 py-1 rounded-full mr-2">Economic Development</span>
+<span class="text-gray-500 text-sm">May 20, 2025</span>
+</div>
+<h3 class="text-xl font-bold mb-3">New Infrastructure Projects Set to Transform Lilongwe's Business District</h3>
+<p class="text-gray-600 mb-4">The government has announced a $50 million investment in infrastructure upgrades for Lilongwe's central business district, including road improvements, fiber optic networks, and public transportation enhancements.</p>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+Read More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20podcast%20recording%20session%20with%20two%20hosts%20interviewing%20a%20guest%20in%20a%20studio%20setting.%20The%20image%20shows%20professional%20microphones%2C%20headphones%2C%20and%20recording%20equipment.%20The%20participants%20are%20engaged%20in%20conversation%2C%20professionally%20dressed%2C%20and%20the%20studio%20has%20sound%20treatment%20panels%20and%20professional%20lighting.%20The%20setting%20appears%20modern%20and%20well-equipped&width=600&height=400&seq=12&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<span class="bg-secondary/10 text-secondary text-xs font-medium px-3 py-1 rounded-full mr-2">Podcast</span>
+<span class="text-gray-500 text-sm">May 15, 2025</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Business Leaders Podcast: Navigating Malawi's Changing Economic Landscape</h3>
+<p class="text-gray-600 mb-4">In this episode, we interview Thomas Banda, CEO of Malawi Agricultural Exports, about adapting to climate change challenges and finding new markets for Malawian products.</p>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+Listen Now
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="h-48 bg-gray-200" style="background-image: url('https://readdy.ai/api/search-image?query=Professional%20business%20training%20workshop%20with%20a%20diverse%20group%20of%20African%20professionals%20engaged%20in%20a%20hands-on%20learning%20activity.%20The%20setting%20shows%20a%20modern%20training%20room%20with%20presentation%20screens%2C%20workbooks%2C%20and%20collaborative%20exercises.%20Participants%20are%20working%20in%20small%20groups%2C%20taking%20notes%2C%20and%20actively%20participating.%20The%20trainer%20is%20facilitating%20discussion%20with%20professional%20presentation%20materials%20visible&width=600&height=400&seq=13&orientation=landscape'); background-size: cover; background-position: center;"></div>
+<div class="p-6">
+<div class="flex items-center mb-4">
+<span class="bg-secondary/10 text-secondary text-xs font-medium px-3 py-1 rounded-full mr-2">Business Education</span>
+<span class="text-gray-500 text-sm">May 10, 2025</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Chamber Launches New Business Skills Training Program for Entrepreneurs</h3>
+<p class="text-gray-600 mb-4">Our new six-week training program will cover essential business skills including financial management, marketing, and business planning for new and aspiring entrepreneurs.</p>
+<a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+Read More
+<i class="ri-arrow-right-line ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="bg-primary/5 rounded-lg p-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<h3 class="text-2xl font-bold mb-3">Subscribe to Our Newsletter</h3>
+<p class="text-gray-600 mb-0">Stay updated with the latest business news, events, and opportunities in Lilongwe.</p>
+</div>
+<div>
+<form class="flex flex-col sm:flex-row gap-3">
+<input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-button border-none focus:outline-none focus:ring-1 focus:ring-secondary text-sm">
+<button type="submit" class="bg-secondary text-white px-6 py-3 rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-primary text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-white mb-6 inline-block">logo</a>
+<p class="text-gray-300 mb-6">Empowering Lilongwe's business community through advocacy, networking, and resources since 1985.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+<i class="ri-facebook-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+<i class="ri-twitter-x-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+<i class="ri-linkedin-fill text-white"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors">
+<i class="ri-instagram-fill text-white"></i>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Discover Lilongwe</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Business Directory</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Join the Chamber</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Events Calendar</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">Contact Information</h4>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="ri-map-pin-line mr-3 mt-1"></i>
+<span>Chamber House, City Center<br>Area 3, Lilongwe, Malawi</span>
+</li>
+<li class="flex items-center">
+<i class="ri-phone-line mr-3"></i>
+<span>+265 1 771 000</span>
+</li>
+<li class="flex items-center">
+<i class="ri-mail-line mr-3"></i>
+<span>info@lilongwechamber.org</span>
+</li>
+<li class="flex items-center">
+<i class="ri-time-line mr-3"></i>
+<span>Mon-Fri: 8:00 AM - 5:00 PM</span>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6">We Accept</h4>
+<div class="flex flex-wrap gap-3 mb-6">
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded">
+<i class="ri-visa-fill text-blue-700 text-xl"></i>
+</div>
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded">
+<i class="ri-mastercard-fill text-red-500 text-xl"></i>
+</div>
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded">
+<i class="ri-paypal-fill text-blue-500 text-xl"></i>
+</div>
+<div class="w-12 h-8 flex items-center justify-center bg-white rounded">
+<i class="ri-bank-card-fill text-gray-700 text-xl"></i>
+</div>
+</div>
+<h4 class="text-lg font-bold mb-4">Download Our App</h4>
+<div class="flex flex-wrap gap-3">
+<a href="#" class="flex items-center bg-white/10 hover:bg-white/20 transition-colors rounded px-3 py-2">
+<i class="ri-google-play-fill text-2xl mr-2"></i>
+<span>Google Play</span>
+</a>
+<a href="#" class="flex items-center bg-white/10 hover:bg-white/20 transition-colors rounded px-3 py-2">
+<i class="ri-apple-fill text-2xl mr-2"></i>
+<span>App Store</span>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-300 text-sm mb-4 md:mb-0">© 2025 Lilongwe Chamber of Commerce. All rights reserved.</p>
+<div class="flex flex-wrap gap-4 text-sm text-gray-300">
+<a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+<a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+<a href="#" class="hover:text-white transition-colors">Cookie Policy</a>
+<a href="#" class="hover:text-white transition-colors">Sitemap</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Mobile menu toggle
+const mobileMenuButton = document.querySelector('.lg\\:hidden');
+if (mobileMenuButton) {
+mobileMenuButton.addEventListener('click', function() {
+// Mobile menu functionality would go here
+alert('Mobile menu clicked');
+});
+}
+});
+</script>
+</body>
+</html>
