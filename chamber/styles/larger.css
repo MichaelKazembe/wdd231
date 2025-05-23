@@ -567,6 +567,7 @@ nav ul li a:hover:after {
 .footer-logo img {
   max-width: 100%;
   height: auto;
+  width: 100px;
 }
 
 .footer-details {
@@ -587,11 +588,12 @@ nav ul li a:hover:after {
   color: white;
 }
 
-.footer-social h5,
-.footer-subscribe h4 {
+.footer-social p,
+.footer-subscribe p {
   margin-bottom: 10px;
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-normal);
+  color: white;
 }
 
 .social-links {

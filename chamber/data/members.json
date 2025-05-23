@@ -7,7 +7,7 @@
     "phone": "+265 1 771 144",
     "website": "www.natbank.mw",
     "image": "nationalbank.png",
-    "imageURL": "https://images.unsplash.com/photo-1515168833906-d2a3b82b3029?auto=format&fit=crop&w=400&q=80",
+    "imageURL": "https://unsplash.com/photos/three-round-gold-colored-coins-on-100-us-dollar-banknotes-eBWzFKahEaU",
     "starRating": 5
   },
   {
@@ -60,7 +60,7 @@
     "description": "Software development and digital transformation company specializing in custom solutions for African businesses.",
     "address": "Area 4, Lilongwe",
     "phone": "+265 999 123 456",
-    "website": "",
+    "website": "https:/malawidigital.com",
     "image": "malawidigital.png",
     "imageURL": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
     "starRating": 5
@@ -71,7 +71,7 @@
     "description": "Full-service construction and real estate development company specializing in commercial and residential projects.",
     "address": "Area 12, Lilongwe",
     "phone": "+265 1 782 345",
-    "website": "",
+    "website": "www.lilongweconstruction.com",
     "image": "lilongweconstruction.png",
     "imageURL": "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80",
     "starRating": 4
