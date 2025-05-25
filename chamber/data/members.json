@@ -1,16 +1,5 @@
 [
   {
-    "name": "National Bank of Malawi",
-    "category": "Finance & Banking",
-    "description": "Leading financial institution providing comprehensive banking services to individuals and businesses.",
-    "address": "City Center, Area 1",
-    "phone": "+265 1 771 144",
-    "website": "www.natbank.mw",
-    "image": "nationalbank.png",
-    "imageURL": "https://unsplash.com/photos/three-round-gold-colored-coins-on-100-us-dollar-banknotes-eBWzFKahEaU",
-    "starRating": 5
-  },
-  {
     "name": "Sunbird Capital Hotel",
     "category": "Hospitality & Tourism",
     "description": "Premier hotel offering luxury accommodations, conference facilities, and fine dining in the heart of Lilongwe.",
@@ -60,21 +49,10 @@
     "description": "Software development and digital transformation company specializing in custom solutions for African businesses.",
     "address": "Area 4, Lilongwe",
     "phone": "+265 999 123 456",
-    "website": "https:/malawidigital.com",
+    "website": "https://dummy-malawidigital.com",
     "image": "malawidigital.png",
     "imageURL": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
     "starRating": 5
-  },
-  {
-    "name": "Lilongwe Construction Group",
-    "category": "Construction & Real Estate",
-    "description": "Full-service construction and real estate development company specializing in commercial and residential projects.",
-    "address": "Area 12, Lilongwe",
-    "phone": "+265 1 782 345",
-    "website": "www.lilongweconstruction.com",
-    "image": "lilongweconstruction.png",
-    "imageURL": "https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80",
-    "starRating": 4
   },
   {
     "name": "Malawi Industrial Products",
@@ -96,6 +74,50 @@
     "website": "www.capitallegal.mw",
     "image": "capitallegal.png",
     "imageURL": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+    "starRating": 5
+  },
+  {
+    "name": "Green Fields Agro",
+    "category": "Agriculture",
+    "description": "Supplier of high-quality seeds, fertilizers, and modern farming equipment for Malawi's agricultural sector.",
+    "address": "Area 49, Lilongwe",
+    "phone": "+265 1 800 234",
+    "website": "www.greenfieldsagro.mw",
+    "image": "greenfieldsagro.png",
+    "imageURL": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80",
+    "starRating": 4
+  },
+  {
+    "name": "Malawi Green Energy",
+    "category": "Energy & Utilities",
+    "description": "Renewable energy company specializing in solar power solutions for residential and commercial clients.",
+    "address": "Area 11, Lilongwe",
+    "phone": "+265 1 789 123",
+    "website": "www.malawigreenenergy.mw",
+    "image": "malawigreenenergy.png",
+    "imageURL": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=400&q=80",
+    "starRating": 5
+  },
+  {
+    "name": "Green Fields Farm",
+    "category": "Agriculture",
+    "description": "Agricultural enterprise specializing in the production of organic fruits and vegetables for local and international markets.",
+    "address": "Area 18, Lilongwe",
+    "phone": "+265 1 791 234",
+    "website": "www.greenfieldsfarm.mw",
+    "image": "greenfieldsfarm.png",
+    "imageURL": "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?auto=format&fit=crop&w=400&q=80",
+    "starRating": 4
+  },
+  {
+    "name": "HealthPlus Clinic",
+    "category": "Healthcare",
+    "description": "Modern healthcare facility offering a wide range of medical services, including general practice, pediatrics, and specialist consultations.",
+    "address": "Area 9, Lilongwe",
+    "phone": "+265 1 792 345",
+    "website": "www.healthplusclinic.mw",
+    "image": "healthplusclinic.png",
+    "imageURL": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80",
     "starRating": 5
   }
 ]
