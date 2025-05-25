@@ -606,6 +606,7 @@ nav ul li a:hover:after {
 .social-links li a {
   color: #fff;
   font-size: 1rem;
+  padding: 8px 12px;
   transition: color 0.3s ease;
 }
 
