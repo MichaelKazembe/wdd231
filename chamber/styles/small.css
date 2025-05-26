@@ -1,17 +1,143 @@
+/* ========== NAVIGATION BAR ========== */
 
+/* --- Mobile --- */
+@media (max-width: 768px) {
+  nav {
+    height: auto;
+    padding: 10px 10px;
+  }
+  .logo {
+    padding: 10px;
+  }
+  #menu-icon,
+  #close-icon {
+    display: block;
+    color: var(--color-secondary);
+  }
+  #close-icon {
+    display: none;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    color: white;
+    width: 100vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 1.5, 0.5, 1);
+    box-shadow: 0 8px 24px rgba(44, 62, 80, 0.13);
+    z-index: 1000;
+  }
+  nav ul li a {
+    font-weight: var(--font-weight-normal);
+    width: 100vw;
+    text-align: center;
+    padding: 18px 0;
+  }
+  nav ul li a.active {
+    position: relative;
+    text-decoration: none;
+  }
+  nav ul li a.active::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-secondary);
+    border-radius: 2px;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: left;
+  }
+  nav ul li a:hover::after {
+    transform: scaleX(1);
+  }
+  nav ul li a.active::after {
+    transform: scaleX(1);
+  }
+  #menu-list {
+    transition: all 0.7s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+}
 
-/* Footer */
+/* ========== MOBILE MENU OPEN ========== */
+@media (max-width: 768px) {
+  nav ul.open {
+    max-height: 500px;
+    transition: max-height 0.4s cubic-bezier(0.4, 1.5, 0.5, 1);
+  }
+}
+
+/* ========== DIRECTORY LIST VIEW ========== */
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .directory-list.list .member-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .directory-list.list .main-info,
+  .directory-list.list .info-row {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .directory-list.list .member-card {
+    padding: 0.8rem;
+  }
+  .directory-list.list .main-info h2 {
+    font-size: var(--font-size-medium);
+  }
+  .directory-list.list .main-info .description,
+  .directory-list.list .info-row .address,
+  .directory-list.list .info-row .phone,
+  .directory-list.list .info-row .website {
+    font-size: var(--font-size-small);
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    margin: 0.5rem;
+    padding: 0 0.5rem;
+  }
+  .directory-list.list .member-card {
+    gap: 0.5rem;
+    padding: 0.6rem;
+  }
+  .directory-list.list .main-info h2 {
+    font-size: var(--font-size-small);
+  }
+  .directory-list.list .info-row .address,
+  .directory-list.list .info-row .phone,
+  .directory-list.list .info-row .website {
+    font-size: var(--font-size-xsmall);
+  }
+}
+
+/* ========== FOOTER ========== */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     text-align: center;
   }
-
   .footer-subscribe .subscribe-form {
     flex-direction: column;
     align-items: center;
   }
-
   .subscribe-form input {
     max-width: 100%;
   }

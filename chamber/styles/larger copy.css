@@ -36,10 +36,11 @@ html,
 body {
   font-family: var(--font-family);
   color: var(--color-text);
-  line-height: var(--line-height-normal);
+  line-height: 1.5;
   background-color: var(--color-background);
   height: 100%;
   width: 100%;
+  
 }
 
 main {
@@ -278,151 +279,148 @@ nav ul li a:hover:after {
   opacity: 0.85;
 }
 
-/* ========== DIRECTORY GRID VIEW ========== */
-.directory-list.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-}
-
-.member-card {
-  background: #fff;
-  border-radius: var(--border-radius-medium);
-  box-shadow: var(--shadow-medium);
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.2s, transform 0.2s;
-  border: 1px solid #e5e7eb;
-  overflow: hidden;
-}
-
-.member-card:hover {
-  box-shadow: var(--shadow-large);
-  transform: translateY(-4px) scale(1.02);
-}
-
-.member-card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.4, 1.5, 0.5, 1), box-shadow 0.3s, border-radius 0.3s;
-  display: block;
-}
-
-.member-card:hover img {
-  transform: scale(1.04);
-  box-shadow: 0 8px 24px rgba(44, 62, 80, 0.13);
-  border-radius: var(--border-radius-medium);
-}
-
-.member-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.2rem;
-  background: #fff;
-}
-
-.member-card h2 {
-  margin: 0 0 0.2rem 0;
-  font-size: var(--font-size-large);
-}
-
-.member-card .description {
-  margin-bottom: 0.5rem;
-  line-height: var(--line-height-normal);
-  text-align: left;
-}
-
-.member-card .address,
-.member-card .phone,
-.member-card .website {
-  font-size: var(--font-size-small);
-  color: grey;
-  display: flex;
-  align-items: center;
-  gap: 0.3em;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  word-break: break-word;
-}
-
-.member-card .address .fa-location-dot,
-.member-card .phone .fa-phone,
-.member-card .website .fa-globe {
-  color: var(--color-secondary);
-  margin-right: 0.4em;
-  font-size: var(--font-size-small);
-  opacity: 0.85;
-}
-
 /* ========== DIRECTORY LIST VIEW ========== */
 .directory-list.list .member-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem;
+  display: grid;
+  grid-template-columns: minmax(70px, 140px) 1.5fr 1.2fr;
+  align-items: stretch;
+  min-height: 140px;
+  padding: 0;
+  gap: 0;
   background: #fff;
   border-radius: var(--border-radius-medium);
   box-shadow: var(--shadow-medium);
   border: 1px solid #e5e7eb;
+  overflow: hidden;
   margin-bottom: 1rem;
-  gap: 1rem;
-  flex-wrap: wrap;
 }
 
-/* Remove image in list view */
 .directory-list.list .member-card img {
-  display: none;
+  width: 100%;
+  height: 100%;
+  min-width: 70px;
+  max-width: 140px;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 0;
+  align-self: stretch;
+  display: block;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
-.directory-list.list .main-info,
-.directory-list.list .info-row {
-  flex: 1;
+.directory-list.list .member-card .main-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
-  min-width: 150px;
+  gap: 0.3rem;
+  padding: 1.1rem 1.2rem;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
 }
 
-.directory-list.list .main-info h2 {
-  margin: 0;
+.directory-list.list .member-card .main-info h2 {
+  margin: 0 0 0.2rem 0;
   color: var(--color-primary);
   font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-large);
 }
 
-.directory-list.list .main-info .description {
-  margin: 0;
+.directory-list.list .member-card .main-info .description {
+  margin-bottom: 0.2rem;
   color: var(--color-text);
   font-size: 0.95rem;
 }
 
-.directory-list.list .info-row .address,
-.directory-list.list .info-row .phone,
-.directory-list.list .info-row .website {
-  color: grey;
-  font-size: var(--font-size-small);
+.directory-list.list .member-card .info-row {
   display: flex;
-  align-items: center;
-  gap: 0.3em;
-  font-weight: 500;
-  word-break: break-word;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 1.1rem 1.2rem;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
 }
 
-.directory-list.list .info-row .fa-location-dot,
-.directory-list.list .info-row .fa-phone,
-.directory-list.list .info-row .fa-globe {
+.directory-list.list .member-card .info-row .address,
+.directory-list.list .member-card .info-row .phone,
+.directory-list.list .member-card .info-row .website {
+  color: grey;
+  font-size: var(--font-size-small);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.directory-list.list .member-card .info-row .address .fa-location-dot,
+.directory-list.list .member-card .info-row .phone .fa-phone,
+.directory-list.list .member-card .info-row .website .fa-globe {
   color: var(--color-secondary);
   margin-right: 0.4em;
   font-size: 1em;
+  vertical-align: middle;
   opacity: 0.85;
 }
 
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .directory-list.list .member-card {
+    grid-template-columns: minmax(60px, 100px) 1fr 1fr;
+  }
+  .directory-list.list .member-card img {
+    min-width: 60px;
+    max-width: 100px;
+  }
+}
 
+@media (max-width: 600px) {
+  .directory-list.list .member-card {
+    grid-template-columns: minmax(48px, 80px) 1fr 1fr;
+  }
+  .directory-list.list .member-card img {
+    min-width: 48px;
+    max-width: 80px;
+  }
+  .directory-list.list .member-card .main-info,
+  .directory-list.list .member-card .info-row {
+    padding: 0.7rem 0.4rem;
+  }
+  .directory-list.list .member-card .info-row .address,
+  .directory-list.list .member-card .info-row .phone,
+  .directory-list.list .member-card .info-row .website {
+    font-size: var(--font-size-xsmall);
+  }
+}
 
+@media (max-width: 480px) {
+  main {
+    margin: 0.5rem;
+    padding: 0 1rem;
+  }
+  .directory-list.list .member-card {
+    grid-template-columns: minmax(36px, 60px) 1fr 1fr;
+  }
+  .directory-list.list .member-card img {
+    min-width: 20px;
+    max-width: 30px;
+    height: 30px;
+  }
+  .directory-list.list .member-card .main-info,
+  .directory-list.list .member-card .info-row {
+    padding: 0.3rem 0.2rem;
+  }
+  .directory-list.list .member-card h2 {
+    font-size: var(--font-size-small);
+  }
+  .directory-list.list .member-card .info-row .address,
+  .directory-list.list .member-card .info-row .phone,
+  .directory-list.list .member-card .info-row .website {
+    font-size: var(--font-size-xsmall);
+  }
+}
 
 /* ========== FOOTER ========== */
 .footer {
