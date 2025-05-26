@@ -4,6 +4,7 @@
   --color-secondary: #3498db;
   --color-background: #ecf0f1;
   --color-text: #2c3e50;
+  --color-text-secondary: #7f8c8d;
 
   --font-size-xsmall: 10px;
   --font-size-small: 12px;
@@ -259,7 +260,7 @@ nav ul li a:hover:after {
 .member-card .phone,
 .member-card .website {
   font-size: var(--font-size-small);
-  color: grey;
+  color: var(--color-text-secondary);
   display: flex;
   align-items: center;
   gap: 0.3em;
@@ -340,7 +341,7 @@ nav ul li a:hover:after {
 .member-card .phone,
 .member-card .website {
   font-size: var(--font-size-small);
-  color: grey;
+  color: var(--color-text-secondary);
   display: flex;
   align-items: center;
   gap: 0.3em;
@@ -404,7 +405,7 @@ nav ul li a:hover:after {
 .directory-list.list .info-row .address,
 .directory-list.list .info-row .phone,
 .directory-list.list .info-row .website {
-  color: grey;
+  color: var(--color-text-secondary);
   font-size: var(--font-size-small);
   display: flex;
   align-items: center;
