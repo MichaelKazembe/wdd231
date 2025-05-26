@@ -33,7 +33,7 @@
     <script src="scripts/date.js" defer></script>
 
     <!-- Icons -->
-    <script src="https://kit.fontawesome.com/4ea4219760.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4ea4219760.js" crossorigin="anonymous" defer></script>
     
 </head>
 <body>
@@ -53,8 +53,8 @@
           <li><a href="join.html">Join Us</a></li>
         </ul>
         <div>
-          <i id="menu-icon" class="fa-solid fa-bars" tabindex="0" aria-label="Open menu" onclick="toggleMenu()"></i>
-          <i id="close-icon" class="fa-solid fa-xmark" tabindex="0" aria-label="Close menu" onclick="toggleMenu()"></i>
+          <i id="menu-icon" class="fa-solid fa-bars" tabindex="0" onclick="toggleMenu()"></i>
+          <i id="close-icon" class="fa-solid fa-xmark" tabindex="0" onclick="toggleMenu()"></i>
         </div>
       </nav>
     </header>
@@ -100,16 +100,24 @@
           <p>Follow Us</p>
           <ul class="social-links">
             <li>
-              <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
             </li>
             <li>
-              <a href="www.x.con"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.x.com" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
             </li>
             <li>
-              <a href="www.instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
             </li>
             <li>
-              <a href="www.youtube.com"><i class="fab fa-youtube"></i></a>
+              <a href="https://www.youtube.com" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
             </li>
           </ul>
         </div>

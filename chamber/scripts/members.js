@@ -36,7 +36,7 @@ function displayCompanies(view = "grid") {
     img.alt = `${member.name} logo`;
     img.loading = "lazy";
 
-    const name = document.createElement("h3");
+    const name = document.createElement("h2");
     name.textContent = member.name;
 
     const desc = document.createElement("p");
