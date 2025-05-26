@@ -416,7 +416,7 @@ nav ul li a:hover:after {
   color: var(--color-text-secondary);
   font-size: var(--font-size-small);
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 0.3em;
   font-weight: var(--font-weight-medium);
   word-break: break-word;

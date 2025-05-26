@@ -119,6 +119,7 @@
   .directory-list.list .info-row .phone,
   .directory-list.list .info-row .website {
     font-size: var(--font-size-xsmall);
+    text-align: left;
   }
 }
 
