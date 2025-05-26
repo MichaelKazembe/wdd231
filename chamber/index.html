@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Directory of Chamber of Commerce">
+    <meta name="author" content="Michael Kazembe">
+    <title>Directory | Malawi Chamber of Commerce</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo-favicon.png" sizes="16x16">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Directory | Malawi Chamber of Commerce">
+    <meta property="og:description" content="Discover businesses and organizations in the Malawi Chamber of Commerce directory.">
+    <meta property="og:image" content="https://github.com/MichaelKazembe/wdd231/blob/main/chamber/images/logo-1-primary.png">
+    <meta property="og:url" content="https://michaelkazembe.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- Javascript Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/events.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/4ea4219760.js" crossorigin="anonymous" defer></script>
+    
+</head>
+<body>
+    <header>
+      <nav class="navBar">
+        <div class="logo">
+          <img src="images/dark-transparent.png" alt="logo" class="logo-img" width="150" height="45" loading="lazy">
+        </div>
+        <ul id="menu-list">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="discover.html">Discover Lilongwe</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="join.html">Join Us</a></li>
+        </ul>
+        <div>
+          <i id="menu-icon" class="fa-solid fa-bars" tabindex="0" onclick="toggleMenu()"></i>
+          <i id="close-icon" class="fa-solid fa-xmark" tabindex="0" onclick="toggleMenu()"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" aria-label="Welcome to Malawi Chamber of Commerce">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>Empowering Businesses in Malawi</h1>
+          <p>Join the Malawi Chamber of Commerce and connect with a thriving network of professionals, resources, and opportunities to grow your business.</p>
+          <a href="join.html" class="primary-button hero-cta">Join Us Today</a>
+        </div>
+      </section>
+
+      <!-- ========== CURRENT EVENTS SECTION ========== -->
+      <section class="current-events" aria-label="Current Events">
+        <div class="events-container">
+          <h2>Current Events</h2>
+          <!-- Insert Current events -->
+        </div>
+      </section>      
+      <!-- ========== WEATHER SECTION ========== --> 
+      <section class="weather-section" aria-label="Weather in Lilongwe">
+        <!-- Insert Current Weather data for Lilongwe -->
+  
+  
+      </section>
+
+
+      
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+          <img
+            src="images/icon-dark-transparent.png"
+            alt="Logo"
+            width="75"
+            height="75"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+          <p>Follow Us</p>
+          <ul class="social-links">
+            <li>
+              <a href="https://www.facebook.com" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.x.com" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Subscribe Form -->
+        <div class="footer-subscribe">
+          <p>Subscribe to Our Newsletter</p>
+          <form action="thank-you.html" method="post" class="subscribe-form">
+            <input type="email" placeholder="Enter your email" required >
+            <button type="submit" class="primary-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <!-- My Details -->
+       <div class="footer-details">
+            <p class="footer-text">
+            &copy; <span id="currentdate"></span> Michael Kazembe 🇲🇼 Malawi, Africa
+            </p>
+            <p id="last-modified" class="footer-modified">
+        Last Modified: <span id="last-modified-date"></span>
+            </p>
+       </div>
+    </footer>
+</body>
+</html>

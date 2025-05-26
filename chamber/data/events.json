@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Business Networking Breakfast",
+    "date": "2025-06-15",
+    "time": "08:00",
+    "location": "Sunbird Capital Hotel, Lilongwe",
+    "description": "Connect with local business leaders and entrepreneurs. Enjoy a morning of networking, knowledge sharing, and partnership opportunities.",
+    "link": "events.html"
+  },
+  {
+    "title": "Digital Transformation Workshop",
+    "date": "2025-07-02",
+    "time": "10:00",
+    "location": "Gateway Mall Conference Center",
+    "description": "Discover the latest trends in digital business and how to leverage technology for growth. Open to all members and guests.",
+    "link": "events.html"
+  }
+]
