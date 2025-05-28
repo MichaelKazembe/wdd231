@@ -46,7 +46,7 @@ body {
 
 main {
   margin: 2rem;
-  padding: 0 4rem;
+  padding: 0 2rem;
 }
 
 @media (max-width: 600px) {
@@ -183,6 +183,7 @@ nav ul li a:hover:after {
 }
 
 .hero-content h1 {
+  font-size: var(--font-size-xlarge);
   margin-bottom: 1rem;
   line-height: var(--line-height-normal);
 }
@@ -245,6 +246,7 @@ nav ul li a:hover:after {
 }
 
 .current-events h2 {
+  font-size: var(--font-size-large);
   text-align: center;
   color: var(--color-text);
   margin-bottom: 1rem;
@@ -269,6 +271,7 @@ nav ul li a:hover:after {
 }
 
 .event-card h3 {
+  font-size: var(--font-size-medium);
   margin-top: 0;
   color: var(--color-secondary, #2b8a3e);
 }
@@ -306,7 +309,7 @@ nav ul li a:hover:after {
 .secondary-button:focus {
   background: var(--color-secondary, #2b8a3e);
   transform: translateY(-2px) scale(1.03);
-  color: var (var(--color-text), #ecf0f1);
+  color: var(--color-text);
   outline: none;
 }
 
@@ -342,10 +345,12 @@ nav ul li a:hover:after {
 .current-weather h2 {
   color: var(--color-text);
   margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: var(--font-size-large);
 }
 
-.current-weather h3 {
-  font-size: 1.5rem;
+.current-weather h2 {
+  font-size: var(--font-size-medium);
   font-weight: 700;
   color: var(--color-primary, #1a4d2e);
   margin-bottom: 1rem;
@@ -721,7 +726,8 @@ nav ul li a:hover:after {
   color: var(--color-text-secondary);
   font-size: var(--font-size-small);
   display: flex;
-  align-items: left;
+  align-items: center;
+  text-align: left;
   gap: 0.3em;
   font-weight: var(--font-weight-medium);
   word-break: break-word;

@@ -47,7 +47,7 @@ function renderWeather(current, forecast) {
 
   weatherSection.innerHTML = `
     <div class="current-weather">
-      <h3>Current Weather in Lilongwe</h3>
+      <h2>Current Weather in Lilongwe</h2>
       <div class="weather-main">
         <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}" />
         <span class="temp">${temp}&deg;C</span>
