@@ -119,3 +119,4 @@ listButton.addEventListener("click", () => {
 
 // Initialize on page load
 fetchCompanies();
+

@@ -467,6 +467,125 @@ nav ul li a:hover:after {
   }
 }
 
+/* ====== SPOTLIGHT SECTION ====== */
+
+.spotlight {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+  background: var(--color-background);
+}
+
+.spotlight h2 {
+  text-align: center;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  font-size: var(--font-size-h2, 1.6rem);
+  font-weight: var(--font-weight-bold);
+}
+
+.spotlight-card {
+  background: #fff;
+  border-radius: var(--border-radius-medium);
+  box-shadow: var(--shadow-medium);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  max-width: 270px;
+  min-width: 200px;
+  text-align: center;
+  flex: 1 1 220px;
+  border: 2px solid #e5e7eb;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  margin-bottom: 1rem;
+}
+
+.spotlight-card.gold {
+  border-color: #ffd700;
+  box-shadow: 0 4px 24px rgba(255, 215, 0, 0.10);
+}
+
+.spotlight-card.silver {
+  border-color: #b0b0b0;
+  box-shadow: 0 4px 24px rgba(176, 176, 176, 0.10);
+}
+
+.spotlight-card:hover {
+  box-shadow: var(--shadow-large);
+  transform: translateY(-4px) scale(1.03);
+  border-color: var(--color-secondary);
+}
+
+.spotlight-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 0.7rem;
+  border-radius: var(--border-radius-small);
+  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+  background: #f8fafc;
+}
+
+.spotlight-name {
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-bold);
+  margin: 0.5rem 0 0.2rem 0;
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
+}
+
+.spotlight-level {
+  font-size: 1rem;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.spotlight-phone,
+.spotlight-address {
+  font-size: 0.97rem;
+  color: var(--color-text-secondary);
+  margin: 0.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+}
+
+.spotlight-phone i,
+.spotlight-address i {
+  color: var(--color-secondary);
+  opacity: 0.85;
+}
+
+.spotlight-website {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--color-secondary);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.spotlight-website:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+@media (max-width: 900px) {
+  .spotlight {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  .spotlight-card {
+    max-width: 95vw;
+    min-width: 0;
+  }
+}
 /* ======================================== DIRECTORY PAGE ============================== */
 
 /* ========== DIRECTORY VIEW TOGGLE ========== */
