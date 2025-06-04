@@ -122,3 +122,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     displayCourses(courses);
 });
+
+// function to show course details in a modal
+
+function displayCourseDetails(course) {
+    displayCourseDetails.innerHTML = "";
+    displayCourseDetails.innerHTML = `
+        <button id="closeModal">&#10006</button>
+        <h2>${course.subject} ${course.number}</h2>
+        <h3>${course.title}</h3>
+        <p><strong>Credits: </strong> ${course.credits}</p>
+        <p><strong>Certificate: </strong> ${course.certificate}</p>
+        <p>${course.description}</p>
+        <p><strong>Technologies:</strong> ${course.technology.join(', ')}</p>
+    `;
+    displayCourseDetails.showModal();
+
+    closeModal.addEventListener('click', function() {
+        CourseDetails.close();
+    });
+
+    courseDiv.addEventListener('click', () => {
+        displayCourseDetails(course);
+    }
+    );
+
+}

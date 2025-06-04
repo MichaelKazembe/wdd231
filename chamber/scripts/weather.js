@@ -49,9 +49,9 @@ function renderWeather(current, forecast) {
     <div class="current-weather">
       <h2>Current Weather in Lilongwe</h2>
       <div class="weather-main">
-        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}" />
-        <span class="temp">${temp}&deg;C</span>
+        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="${desc}" width="75" length="75"/>
       </div>
+      <span class="temp">${temp}&deg;C</span>
       <div class="description">${desc.charAt(0).toUpperCase() + desc.slice(1)}</div>
     </div>
     <div class="forecast">
@@ -60,7 +60,7 @@ function renderWeather(current, forecast) {
         ${days.map(day => `
           <div class="forecast-day">
             <div class="forecast-label">${day.day}</div>
-            <img src="https://openweathermap.org/img/wn/${day.icon}@2x.png" alt="${day.desc}" />
+            <img src="https://openweathermap.org/img/wn/${day.icon}@2x.png" alt="${day.desc}" width="50" lenghth="50" />
             <div class="forecast-temp">${day.temp}&deg;C</div>
             <div class="forecast-desc">${day.desc.charAt(0).toUpperCase() + day.desc.slice(1)}</div>
           </div>
