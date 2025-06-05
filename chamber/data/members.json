@@ -5,7 +5,7 @@
     "description": "Premier hotel offering luxury accommodations, conference facilities, and fine dining in the heart of Lilongwe.",
     "address": "Presidential Way, Area 2",
     "phone": "+265 1 773 388",
-    "website": "https://www.sunbirdhotels.com",
+    "website": "www.sunbirdhotels.com",
     "logo": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
     "membership": "Gold"
   },
@@ -15,7 +15,7 @@
     "description": "Lilongwe's premier shopping destination featuring international and local retail brands, restaurants, and entertainment.",
     "address": "Mchinji Road, Area 47",
     "phone": "+265 1 750 777",
-    "website": "https://www.gatewaymall.mw",
+    "website": "www.gatewaymall.mw",
     "logo": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
     "membership": "Silver"
   },
@@ -25,7 +25,7 @@
     "description": "Leading institution offering undergraduate and graduate programs in business, technology, and professional studies.",
     "address": "Area 25, Lilongwe",
     "phone": "+265 1 765 432",
-    "website": "https://www.lub.edu.mw",
+    "website": "www.lub.edu.mw",
     "logo": "https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=400&q=80",
     "membership": "Bronze"
   },
@@ -35,7 +35,7 @@
     "description": "Comprehensive logistics and transportation solutions connecting Malawi to regional and international markets.",
     "address": "Industrial Area, Kanengo",
     "phone": "+265 1 710 890",
-    "website": "https://www.centralafricalogistics.com",
+    "website": "www.centralafricalogistics.com",
     "logo": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80",
     "membership": "Silver"
   },
@@ -45,7 +45,7 @@
     "description": "Software development and digital transformation company specializing in custom solutions for African businesses.",
     "address": "Area 4, Lilongwe",
     "phone": "+265 999 123 456",
-    "website": "https://www.malawidigital.com",
+    "website": "www.malawidigital.com",
     "logo": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80",
     "membership": "Gold"
   },
@@ -55,7 +55,7 @@
     "description": "Manufacturing company producing high-quality consumer goods and industrial products for domestic and export markets.",
     "address": "Industrial Area, Kanengo",
     "phone": "+265 1 713 567",
-    "website": "https://www.malawiindustrial.com",
+    "website": "www.malawiindustrial.com",
     "logo": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
     "membership": "Bronze"
   },
@@ -65,7 +65,7 @@
     "description": "Full-service law firm providing expert legal counsel to businesses and individuals across Malawi and the region.",
     "address": "Area 3, Lilongwe",
     "phone": "+265 1 774 123",
-    "website": "https://www.capitallegal.mw",
+    "website": "www.capitallegal.mw",
     "logo": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
     "membership": "Gold"
   },
@@ -75,7 +75,7 @@
     "description": "Supplier of high-quality seeds, fertilizers, and modern farming equipment for Malawi's agricultural sector.",
     "address": "Area 49, Lilongwe",
     "phone": "+265 1 800 234",
-    "website": "https://www.greenfieldsagro.mw",
+    "website": "www.greenfieldsagro.mw",
     "logo": "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=400&q=80",
     "membership": "Silver"
   },
@@ -85,7 +85,7 @@
     "description": "Renewable energy company specializing in solar power solutions for residential and commercial clients.",
     "address": "Area 11, Lilongwe",
     "phone": "+265 1 789 123",
-    "website": "https://www.malawigreenenergy.mw",
+    "website": "www.malawigreenenergy.mw",
     "logo": "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?auto=format&fit=crop&w=400&q=80",
     "membership": "Gold"
   },
@@ -95,7 +95,7 @@
     "description": "Agricultural enterprise specializing in the production of organic fruits and vegetables for local and international markets.",
     "address": "Area 18, Lilongwe",
     "phone": "+265 1 791 234",
-    "website": "https://www.greenfieldsfarm.mw",
+    "website": "www.greenfieldsfarm.mw",
     "logo": "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?auto=format&fit=crop&w=400&q=80",
     "membership": "Bronze"
   },
@@ -105,7 +105,7 @@
     "description": "Modern healthcare facility offering a wide range of medical services, including general practice, pediatrics, and specialist consultations.",
     "address": "Area 9, Lilongwe",
     "phone": "+265 1 792 345",
-    "website": "https://www.healthplusclinic.mw",
+    "website": "www.healthplusclinic.mw",
     "logo": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80",
     "membership": "Silver"
   }

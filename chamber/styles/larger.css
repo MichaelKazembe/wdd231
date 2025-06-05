@@ -379,7 +379,6 @@ nav ul li a:hover:after {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
- 
 }
 
 .current-weather .description {
@@ -400,7 +399,6 @@ nav ul li a:hover:after {
   text-align: center;
   color: var(--color-background);
   margin-bottom: 1.2rem;
-  
 }
 
 .forecast-days {
@@ -436,8 +434,6 @@ nav ul li a:hover:after {
   width: 48px;
   height: 48px;
   margin: 0.2rem 0;
-  
-
 }
 
 .forecast-temp {
@@ -479,36 +475,25 @@ nav ul li a:hover:after {
 }
 
 .spotlight h2 {
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
   text-align: center;
-  color: var(--color-primary);
-  margin-bottom: 1.5rem;
-  font-size: var(--font-size-h2, 1.6rem);
-  font-weight: var(--font-weight-bold);
+  margin-bottom: 1rem;
 }
 
 .spotlight-card {
   background: #fff;
   border-radius: var(--border-radius-medium);
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--shadow-large);
   padding: 1.5rem 1.2rem 1.2rem 1.2rem;
   max-width: 270px;
   min-width: 200px;
   text-align: center;
   flex: 1 1 220px;
-  border: 2px solid #e5e7eb;
   transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
   margin-bottom: 1rem;
 }
 
-.spotlight-card.gold {
-  border-color: #ffd700;
-  box-shadow: 0 4px 24px rgba(255, 215, 0, 0.10);
-}
-
-.spotlight-card.silver {
-  border-color: #b0b0b0;
-  box-shadow: 0 4px 24px rgba(176, 176, 176, 0.10);
-}
 
 .spotlight-card:hover {
   box-shadow: var(--shadow-large);
@@ -517,56 +502,49 @@ nav ul li a:hover:after {
 }
 
 .spotlight-logo {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
   margin-bottom: 0.7rem;
-  border-radius: var(--border-radius-small);
-  box-shadow: 0 2px 8px rgba(44,62,80,0.08);
-  background: #f8fafc;
 }
 
 .spotlight-name {
-  font-size: 1.15rem;
   font-weight: var(--font-weight-bold);
   margin: 0.5rem 0 0.2rem 0;
-  color: var(--color-primary);
+  color: var(--color-text);
   letter-spacing: 0.5px;
 }
 
 .spotlight-level {
-  font-size: 1rem;
-  color: var(--color-secondary);
-  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
   font-weight: var(--font-weight-medium);
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
+.spotlight-card .fa-phone,
+.spotlight-card .fa-location-dot,
+.spotlight-card .fa-globe {
+  color: var(--color-secondary);
+  margin-right: 0.4em;
+  font-size: var(--font-size-small);
+  vertical-align: middle;
+}
+
+.spotlight-address,
 .spotlight-phone,
-.spotlight-address {
-  font-size: 0.97rem;
+.spotlight-website {
+  font-size: var(--font-size-small);
   color: var(--color-text-secondary);
-  margin: 0.2rem 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.4em;
+  word-break: break-word;
 }
 
-.spotlight-phone i,
-.spotlight-address i {
-  color: var(--color-secondary);
-  opacity: 0.85;
-}
 
 .spotlight-website {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: var(--color-secondary);
+  color: var(--color-text);
+  font-size: var(--font-size-small);
   text-decoration: none;
-  font-weight: var(--font-weight-bold);
-  font-size: 1rem;
   transition: color 0.2s;
 }
 
@@ -586,6 +564,8 @@ nav ul li a:hover:after {
     min-width: 0;
   }
 }
+
+
 /* ======================================== DIRECTORY PAGE ============================== */
 
 /* ========== DIRECTORY VIEW TOGGLE ========== */
