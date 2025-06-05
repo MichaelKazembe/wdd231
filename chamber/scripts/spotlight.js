@@ -1,7 +1,6 @@
-// Spotlight feature: always selects 3 gold or silver members to spotlight
+// Display 2 or 3 random gold/silver members as spotlight cards, keeping the h2 in HTML and cards in a row below
 
 async function loadSpotlights() {
-  // Fetch chamber members JSON (adjust path if needed)
   const response = await fetch('data/members.json');
   if (!response.ok) {
     console.error('Failed to fetch members.json');
@@ -10,45 +9,48 @@ async function loadSpotlights() {
   const members = await response.json();
 
   // Filter for gold or silver members
-  const spotlightCandidates = members.filter(
-    m => m.membership && (m.membership.toLowerCase() === 'gold' || m.membership.toLowerCase() === 'silver')
+  const candidates = members.filter(
+    m => m.membership && ['gold', 'silver'].includes(m.membership.toLowerCase())
   );
 
   // Shuffle array
-  for (let i = spotlightCandidates.length - 1; i > 0; i--) {
+  for (let i = candidates.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [spotlightCandidates[i], spotlightCandidates[j]] = [spotlightCandidates[j], spotlightCandidates[i]];
+    [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
   }
 
-  // Always pick 3
-  const spotlights = spotlightCandidates.slice(0, 3);
+  // Pick 2 or 3 randomly
+  const count = Math.floor(Math.random() * 2) + 2; // 2 or 3
+  const spotlights = candidates.slice(0, count);
 
-  // Render spotlights without removing the h2
+  // Render spotlights after the h2 (do not remove h2)
   const spotlightSection = document.querySelector('.spotlight');
   if (!spotlightSection) return;
 
-  // Remove any old cards (but not the h2)
-  spotlightSection.querySelectorAll('.spotlight-card').forEach(card => card.remove());
+  // Remove any old .spotlight-cards container
+  const oldCards = spotlightSection.querySelector('.spotlight-cards');
+  if (oldCards) oldCards.remove();
 
-  // Insert cards after the h2
+  // Find the h2 and insert cards after it, wrapped in .spotlight-cards
   const h2 = spotlightSection.querySelector('h2');
-  const cardsHTML = spotlights.map(member => `
-    <article class="spotlight-card ${member.membership.toLowerCase()}">
-      <img src="${member.logo}" alt="${member.name} logo" class="spotlight-logo" loading="lazy" />
-      <h3 class="spotlight-name">${member.name}</h3>
-      <p class="spotlight-level">${member.membership} Member</p>
-      <p class="spotlight-phone"><i class="fa fa-phone"></i> ${member.phone}</p>
-      <p class="spotlight-address"><i class="fa fa-location-dot"></i> ${member.address}</p>
-      <a href="${member.website}" class="spotlight-website" target="_blank" rel="noopener">
-        <i class="fa fa-globe"></i>${member.website}
-      </a>
-    </article>
-  `).join('');
-
   if (h2) {
+    const cardsHTML = `
+      <div class="spotlight-cards">
+        ${spotlights.map(member => `
+          <article class="spotlight-card ${member.membership.toLowerCase()}">
+            <img src="${member.logo}" alt="${member.name} logo" class="spotlight-logo" loading="lazy" />
+            <h3 class="spotlight-name">${member.name}</h3>
+            <p class="spotlight-level">${member.membership} Member</p>
+            <p class="spotlight-phone"><i class="fa fa-phone"></i> ${member.phone}</p>
+            <p class="spotlight-address"><i class="fa fa-location-dot"></i> ${member.address}</p>
+            <a href="${member.website}" class="spotlight-website" target="_blank" rel="noopener">
+              <i class="fa fa-globe"></i>Website
+            </a>
+          </article>
+        `).join('')}
+      </div>
+    `;
     h2.insertAdjacentHTML('afterend', cardsHTML);
-  } else {
-    spotlightSection.innerHTML = cardsHTML;
   }
 }
 
