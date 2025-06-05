@@ -44,7 +44,7 @@ async function loadSpotlights() {
             <p class="spotlight-phone"><i class="fa fa-phone"></i> ${member.phone}</p>
             <p class="spotlight-address"><i class="fa fa-location-dot"></i> ${member.address}</p>
             <a href="${member.website}" class="spotlight-website" target="_blank" rel="noopener">
-              <i class="fa fa-globe"></i>Website
+              <i class="fa fa-globe"></i>${member.website}
             </a>
           </article>
         `).join('')}
