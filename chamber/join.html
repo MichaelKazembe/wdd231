@@ -60,106 +60,104 @@
       </nav>
     </header>
     <main>
-      <h1>Become a Member Today</h1> 
-      <p>Become a member of the Malawi Chamber of Commerce and gain access to a network of businesses, resources, and opportunities.</p>
-      <section class="join-section">
-        <h2>Join the Malawi Chamber of Commerce</h2>
-        <p>Fill out the form below to register your business or organization with the Malawi Chamber of Commerce. Membership is free for NGOs.</p>
+    <section class="join-section">
+      <h1>Join the Malawi Chamber of Commerce</h1>
+      <p>Fill out the form below to register your business or organization with the Malawi Chamber of Commerce. Membership is free for NGOs.</p>
 
-        <form action="thankyou.html" method="GET" class="join-form">
-          <label for="firstName">First Name</label>
-          <input 
-            type="text" 
-            id="firstName" 
-            name="firstName" 
-            placeholder="Enter your first name" 
-            autocomplete="on" 
-            title="First name should only contain letters and spaces, and be up to 50 characters long."
-            required>
+      <form action="thankyou.html" method="GET" class="join-form">
+        <label for="firstName">First Name</label>
+        <input 
+          type="text" 
+          id="firstName" 
+          name="firstName" 
+          placeholder="Enter your first name" 
+          autocomplete="on" 
+          title="First name should only contain letters and spaces, and be up to 50 characters long."
+          required>
 
-          <label for="lastName">Last Name</label>
-          <input 
-            type="text" 
-            id="lastName" 
-            name="lastName" 
-            placeholder="Enter your last name" 
-            autocomplete="on" 
-            title="Last name should only contain letters and spaces, and be up to 50 characters long."
-            required>
+        <label for="lastName">Last Name</label>
+        <input 
+          type="text" 
+          id="lastName" 
+          name="lastName" 
+          placeholder="Enter your last name" 
+          autocomplete="on" 
+          title="Last name should only contain letters and spaces, and be up to 50 characters long."
+          required>
 
-          <label for="organization-title">Organization Title</label>
-          <input 
-            type="text" 
-            id="organization-title" 
-            name="organization-title" 
-            placeholder="Enter your organization name" 
-            autocomplete="organization-title" 
-            pattern="^[A-Za-z\s\-]{7,}$"
-            title="Organization name should only contain letters and spaces, and be up to 50 characters long."
-            required
-          >
+        <label for="organization-title">Organization Title</label>
+        <input 
+          type="text" 
+          id="organization-title" 
+          name="organization-title" 
+          placeholder="Enter your organization name" 
+          autocomplete="organization-title" 
+          pattern="^[A-Za-z\s\-]{7,}$"
+          title="Organization name should only contain letters and spaces, and be up to 50 characters long."
+          required
+        >
 
-          <label for="email">Email Address</label>
-          <input type="text" 
-            id="email" 
-            name="email" 
-            placeholder="example@mail.com" 
-            autocomplete="email" 
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-            title="Please enter a valid email address."
-            required>
+        <label for="email">Email Address</label>
+        <input type="text" 
+          id="email" 
+          name="email" 
+          placeholder="example@mail.com" 
+          autocomplete="email" 
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="Please enter a valid email address."
+          required>
 
-          <label for="number">Mobile Number</label>
-          <input type="tel" 
-            id="number" 
-            name="number" 
-            placeholder="+265xxxxxxxxx" 
-            autocomplete="tel" 
-            pattern="^\+265\d{9}$"
-            title="Please enter a valid mobile number in the format +265 99 123 4567."
-            required>
+        <label for="number">Mobile Number</label>
+        <input type="tel" 
+          id="number" 
+          name="number" 
+          placeholder="+265xxxxxxxxx" 
+          autocomplete="tel" 
+          pattern="^\+265\d{9}$"
+          title="Please enter a valid mobile number in the format +265 99 123 4567."
+          required>
 
-          <label for="organization">Business/Organization's Name</label>
-          <input type="text" 
-            id="organization" 
-            name="organization" 
-            placeholder="Enter your business or organization's name" 
-            autocomplete="organization" 
-            pattern="^[A-Za-z\s\-]{7,}$"
-            title="Business name should only contain letters and spaces, and be at least 7 characters long."
-            required>
+        <label for="organization">Business/Organization's Name</label>
+        <input type="text" 
+          id="organization" 
+          name="organization" 
+          placeholder="Enter your business or organization's name" 
+          autocomplete="organization" 
+          pattern="^[A-Za-z\s\-]{7,}$"
+          title="Business name should only contain letters and spaces, and be at least 7 characters long."
+          required>
 
-          <label for="membership-level">Membership Level</label>
-          <select id="membership-level" name="membership-level" required>
-            <option value="" disabled selected>Select Membership Level</option>
-            <option value="NP">NP Membership - Free for NGOs</option>
-            <option value="Bronze">Bronze Membership</option>
-            <option value="Silver">Silver Membership</option>
-            <option value="Gold">Gold Membership</option>
-          </select>
+        <label for="membership-level">Membership Level</label>
+        <select id="membership-level" name="membership-level" required>
+          <option value="" disabled selected>Select Membership Level</option>
+          <option value="NP">NP Membership - Free for NGOs</option>
+          <option value="Bronze">Bronze Membership</option>
+          <option value="Silver">Silver Membership</option>
+          <option value="Gold">Gold Membership</option>
+        </select>
 
-          <label for="description">Business/Organization's Description</label>
-          <textarea
-            id="description"
-            name="description"
-            placeholder="Enter a brief description of your business or organization"
-            autocomplete="off"
-            title="Description should be at least 20 characters long and can include letters, spaces, hyphens, periods, and commas."
-            required>
-          </textarea>
+        <label for="description">Business/Organization's Description</label>
+        <textarea
+          id="description"
+          name="description"
+          placeholder="Enter a brief description of your business or organization"
+          autocomplete="off"
+          title="Description should be at least 20 characters long and can include letters, spaces, hyphens, periods, and commas."
+          required>
+        </textarea>
 
-          <!-- Hidden Timestamp -->
-          <input 
-            id="timestamp" 
-            name="timestamp" 
-            value="" 
-            type="hidden"
-          >
+        <!-- Hidden Timestamp -->
+        <input 
+          id="timestamp" 
+          name="timestamp" 
+          value="" 
+          type="hidden"
+        >
 
-          <button type="submit" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-primary">Become a Member</button>
 
-        </form>
-      </section>
+      </form>
+    </section>
       
     </main>
     <footer class="footer">
