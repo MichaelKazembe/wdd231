@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/form.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,93 +59,106 @@
       </nav>
     </header>
     <main>
-        <h1>Become a Member Today</h1>
-          <section class="join-section">
-            <p>Become a member of the Malawi Chamber of Commerce and gain access to a network of businesses, resources, and opportunities.</p>
-            <form action="thankyou.html" method="get" class="join-form">
-              <label for="firstName">First Name</label>
-              <input 
-                type="text" 
-                id="firstName" 
-                name="firstName" 
-                placeholder="Enter your first name" 
-                autocomplete="on" 
-                title="First name should only contain letters and spaces, and be up to 50 characters long."
-                required>
+      <h1>Become a Member Today</h1> 
+      <p>Become a member of the Malawi Chamber of Commerce and gain access to a network of businesses, resources, and opportunities.</p>
+      <section class="join-section">
+        <h2>Join the Malawi Chamber of Commerce</h2>
+        <p>Fill out the form below to register your business or organization with the Malawi Chamber of Commerce. Membership is free for NGOs.</p>
 
-              <label for="lastName">Last Name</label>
-              <input 
-                type="text" 
-                id="lastName" 
-                name="lastName" 
-                placeholder="Enter your last name" 
-                autocomplete="on" 
-                title="Last name should only contain letters and spaces, and be up to 50 characters long."
-                required>
+        <form action="thank-you.html" method="GET" class="join-form">
+          <label for="firstName">First Name</label>
+          <input 
+            type="text" 
+            id="firstName" 
+            name="firstName" 
+            placeholder="Enter your first name" 
+            autocomplete="on" 
+            title="First name should only contain letters and spaces, and be up to 50 characters long."
+            required>
 
-              <label for="organization-title">Organization Title</label>
-              <input 
-                type="text" 
-                id="organization-title" 
-                name="organization-title" 
-                placeholder="Enter your organization name" 
-                autocomplete="organization-title" 
-                pattern="^[A-Za-z\s\-]{7,}$"
-                title="Organization name should only contain letters and spaces, and be up to 50 characters long."
-                required
-              >
+          <label for="lastName">Last Name</label>
+          <input 
+            type="text" 
+            id="lastName" 
+            name="lastName" 
+            placeholder="Enter your last name" 
+            autocomplete="on" 
+            title="Last name should only contain letters and spaces, and be up to 50 characters long."
+            required>
 
-              <label for="email">Email Address</label>
-              <input type="text" 
-                id="email" 
-                name="email" 
-                placeholder="example@mail.com" 
-                autocomplete="email" 
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                title="Please enter a valid email address."
-                required>
+          <label for="organization-title">Organization Title</label>
+          <input 
+            type="text" 
+            id="organization-title" 
+            name="organization-title" 
+            placeholder="Enter your organization name" 
+            autocomplete="organization-title" 
+            pattern="^[A-Za-z\s\-]{7,}$"
+            title="Organization name should only contain letters and spaces, and be up to 50 characters long."
+            required
+          >
 
-              <label for="organization">Business/Organization's Name</label>
-              <input type="text" 
-                id="organization" 
-                name="organization" 
-                placeholder="Enter your business or organization's name" 
-                autocomplete="organization" 
-                pattern="^[A-Za-z\s\-]{7,}$"
-                title="Business name should only contain letters and spaces, and be at least 7 characters long."
-                required>
+          <label for="email">Email Address</label>
+          <input type="text" 
+            id="email" 
+            name="email" 
+            placeholder="example@mail.com" 
+            autocomplete="email" 
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            title="Please enter a valid email address."
+            required>
 
-              <label for="membership-level">Membership Level</label>
-              <select id="membership-level" name="membership-level" required>
-                <option value="" disabled selected>Select Membership Level</option>
-                <option value="np">NP Membership - Free for NGOs</option>
-                <option value="bronze">Bronze Membership</option>
-                <option value="silver">Silver Membership</option>
-                <option value="gold">Gold Membership</option>
-              </select>
+          <label for="number">Mobile Number</label>
+          <input type="tel" 
+            id="number" 
+            name="number" 
+            placeholder="+265xxxxxxxxx" 
+            autocomplete="tel" 
+            pattern="^\+265\d{9}$"
+            title="Please enter a valid mobile number in the format +265 99 123 4567."
+            required>
 
-              <label for="description">Business/Organization's Description</label>
-              <input type="text-area" 
-                id="description" 
-                name="description" 
-                placeholder="Enter a brief description of your business or organization" 
-                autocomplete="description" 
-                pattern="^[A-Za-z\s\-.,]{20,}$"
-                title="Description should be at least 20 characters long and can include letters, spaces, hyphens, periods, and commas."
-                required>
+          <label for="organization">Business/Organization's Name</label>
+          <input type="text" 
+            id="organization" 
+            name="organization" 
+            placeholder="Enter your business or organization's name" 
+            autocomplete="organization" 
+            pattern="^[A-Za-z\s\-]{7,}$"
+            title="Business name should only contain letters and spaces, and be at least 7 characters long."
+            required>
 
-              <!-- Hidden Timestamp -->
-              <input 
-                id="timestamp" 
-                name="timestamp" 
-                value="" 
-                type="hidden"
-                readonly>
+          <label for="membership-level">Membership Level</label>
+          <select id="membership-level" name="membership-level" required>
+            <option value="" disabled selected>Select Membership Level</option>
+            <option value="NP">NP Membership - Free for NGOs</option>
+            <option value="Bronze">Bronze Membership</option>
+            <option value="Silver">Silver Membership</option>
+            <option value="Gold">Gold Membership</option>
+          </select>
 
-              <button type="submit" class="btn btn-primary">Register</button>
+          <label for="description">Business/Organization's Description</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Enter a brief description of your business or organization"
+            autocomplete="off"
+            title="Description should be at least 20 characters long and can include letters, spaces, hyphens, periods, and commas."
+            required>
+          </textarea>
 
-            </form>
-          </section>
+          <!-- Hidden Timestamp -->
+          <input 
+            id="timestamp" 
+            name="timestamp" 
+            value="" 
+            type="hidden"
+          >
+
+          <button type="submit" class="btn btn-primary">Register</button>
+
+        </form>
+      </section>
       
     </main>
     <footer class="footer">

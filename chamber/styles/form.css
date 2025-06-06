@@ -1,0 +1,218 @@
+/* Modern Main Registration Page Styles */
+
+main {
+  max-width: 700px;
+  margin: 2.5rem auto;
+  padding: 0 1rem;
+  background: var(--color-background, #f8fafc);
+  border-radius: var(--border-radius-medium, 1rem);
+  box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+}
+
+main h1 {
+  font-size: 2rem;
+  color: var(--color-text);
+  text-align: center;
+}
+
+main > p {
+  text-align: center;
+  color: var(--color-text);
+}
+
+.join-section {
+  background: #fff;
+  border-radius: var(--border-radius-medium, 1rem);
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  max-width: 520px;
+  margin: 0 auto 2rem auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+}
+
+.join-section h2 {
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+.join-section > p {
+  color: var(--color-text);
+  text-align: center;
+}
+
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.join-form label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  margin-bottom: 0.2rem;
+  font-size: var(--font-size-small);
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form textarea,
+.join-form select {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+  font-size: var(--font-size-small);
+  font-family: inherit;
+  background: var(--color-background);
+  color: var(--color-text);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 0.2rem;
+  box-sizing: border-box;
+}
+
+.join-form input[type="text"]:focus,
+.join-form input[type="email"]:focus,
+.join-form input[type="tel"]:focus,
+.join-form textarea:focus,
+.join-form select:focus {
+  border-color: var(--color-secondary);
+  outline: none;
+  box-shadow: var(--shadow-small);
+}
+
+.join-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.join-form select {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+.join-form button[type="submit"],
+.join-form .btn-primary {
+  background: var(--color-secondary);
+  color: black;
+  border: none;
+  border-radius: var(--border-radius-small);
+  padding: 0.9rem 1.2rem;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  margin-top: 0.7rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-small);
+}
+
+.join-form button[type="submit"]:hover,
+.join-form .btn-primary:hover {
+  background: var(--color-primary, #0c1015);
+  color: white;
+}
+
+@media (max-width: 700px) {
+  main {
+    max-width: 99vw;
+    padding: 0 0.2rem;
+  }
+  .join-section {
+    padding: 1.2rem 0.5rem;
+    max-width: 99vw;
+  }
+  .join-form {
+    gap: 0.8rem;
+  }
+}
+
+/* Accessibility: Ensure visible focus for keyboard users */
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus,
+.join-form button:focus {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+
+/* ============= Thank You Page Styles ============= */
+
+#thank-you {
+  max-width: 540px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: var(--border-radius-medium, 1rem);
+  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+}
+
+#thank-you h1 {
+  color: var(--color-text);
+  font-size: 2rem;
+}
+
+#thank-you p {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.2rem;
+}
+
+#thank-you ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  background: var(--color-background);
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--shadow-small);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+#thank-you li {
+  padding:  0.7rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5em;
+}
+#thank-you li:last-child {
+  border-bottom: none;
+}
+
+#thank-you strong {
+  color: var(--color-primary);
+  min-width: 140px;
+  display: inline-block;
+  font-weight: var(--font-weight-bold);
+}
+
+#thank-you a {
+  color: var(--color-secondary, #3498db);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+#thank-you a:hover {
+  color: var(--color-primary, #0c1015);
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  #thank-you {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+    margin: 2rem auto;
+  }
+  #thank-you ul {
+    font-size: 0.98rem;
+    padding: 0.5rem 0.2rem;
+  }
+}
+
+
+
+
