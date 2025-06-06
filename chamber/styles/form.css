@@ -6,7 +6,7 @@ main {
   padding: 0 1rem;
   background: var(--color-background, #f8fafc);
   border-radius: var(--border-radius-medium, 1rem);
-  box-shadow: 0 4px 24px rgba(44,62,80,0.08);
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
 }
 
 main h1 {
@@ -23,7 +23,7 @@ main > p {
 .join-section {
   background: #fff;
   border-radius: var(--border-radius-medium, 1rem);
-  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.1);
   max-width: 520px;
   margin: 0 auto 2rem auto;
   padding: 2.5rem 2rem 2rem 2rem;
@@ -133,7 +133,6 @@ main > p {
   outline-offset: 2px;
 }
 
-
 /* ============= Thank You Page Styles ============= */
 
 #thank-you {
@@ -141,7 +140,7 @@ main > p {
   margin: 3rem auto;
   background: #fff;
   border-radius: var(--border-radius-medium, 1rem);
-  box-shadow: 0 4px 24px rgba(44,62,80,0.10);
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.1);
   padding: 2.5rem 2rem 2rem 2rem;
   text-align: center;
 }
@@ -169,7 +168,7 @@ main > p {
 }
 
 #thank-you li {
-  padding:  0.7rem 1rem;
+  padding: 0.7rem 1rem;
   border-bottom: 1px solid var(--color-border);
   color: var(--color-text);
   font-size: var(--font-size-small);
@@ -190,15 +189,14 @@ main > p {
   font-weight: var(--font-weight-bold);
 }
 
-#thank-you a {
-  color: var(--color-secondary, #3498db);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
+.time {
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+  margin-left: auto;
 }
-#thank-you a:hover {
-  color: var(--color-primary, #0c1015);
-  text-decoration: underline;
+
+.recorded {
+  font-size: var(--font-size-small);
 }
 
 @media (max-width: 600px) {
@@ -212,7 +210,3 @@ main > p {
     padding: 0.5rem 0.2rem;
   }
 }
-
-
-
-
