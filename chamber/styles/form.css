@@ -147,7 +147,7 @@ main > p {
 }
 
 #thank-you h1 {
-  color: var(--color-text);
+  color: var(--color-secondary);
   font-size: 2rem;
 }
 
