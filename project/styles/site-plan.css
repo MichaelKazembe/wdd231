@@ -1,0 +1,49 @@
+:root {
+  --primary-green: #22663f;
+  --light-green: #f5fff5;
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Lato", sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--light-green);
+  color: #333;
+  padding: 1rem;
+}
+
+header {
+  background-color: var(--primary-green);
+  color: var(--light-green);
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-family: var(--heading-font);
+  color: var(--primary-green);
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--light-green);
+  background-color: var(--primary-green);
+  padding: 1rem;
+}
