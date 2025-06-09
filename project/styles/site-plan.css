@@ -1,6 +1,8 @@
 :root {
   --primary-green: #22663f;
+  --accent-yellow: #f2c94c;
   --light-green: #f5fff5;
+  --text-color: #333;
   --heading-font: "Montserrat", sans-serif;
   --body-font: "Lato", sans-serif;
 }
@@ -8,7 +10,7 @@
 body {
   font-family: var(--body-font);
   background-color: var(--light-green);
-  color: #333;
+  color: var(--text-color);
   padding: 1rem;
 }
 
@@ -22,6 +24,7 @@ header {
 h1 {
   font-family: var(--heading-font);
   margin: 0;
+  color: var(--accent-yellow);
 }
 
 h2,
@@ -43,7 +46,7 @@ section {
 footer {
   text-align: center;
   font-size: 0.9rem;
-  color: var(--light-green);
+  color: var(--accent-yellow);
   background-color: var(--primary-green);
   padding: 1rem;
 }
