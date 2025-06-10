@@ -32,7 +32,7 @@ function displayCompanies(view = "grid") {
     memberCard.className = "member-card";
 
     const img = document.createElement("img");
-    img.src = member.imageURL;
+    img.src = member.logo;
     img.alt = `${member.name} logo`;
     img.loading = "lazy";
 
