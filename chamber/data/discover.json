@@ -3,48 +3,48 @@
     "name": "Lilongwe Wildlife Centre",
     "address": "Kenyatta Road, Lilongwe 1464",
     "description": "A 70‑hectare wildlife sanctuary and rescue centre for injured or orphaned animals, managed by the Lilongwe Wildlife Trust.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Lilongwe_Wildlife_Centre_entrance.jpg"
+    "image": "images/wildlife-centre.webp"
   },
   {
     "name": "Kamuzu Mausoleum",
     "address": "Presidential Way, Capital Hill",
     "description": "Marble and granite mausoleum of Malawi’s first president, Dr. Hastings Kamuzu Banda, with a museum, library and pillars inscribed with his guiding principles.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Kamuzu_Mausoleum.JPG"
+    "image": "images/kamuzu-banda-mausoleum.webp"
   },
   {
     "name": "Parliament Building",
     "address": "Presidential Way, City Centre",
     "description": "Modern legislative complex offering guided tours and insight into Malawi’s governance, set within well-kept gardens.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/06/Parliament_Building_of_Malawi.jpg"
+    "image": "images/parliament-building.webp"
   },
   {
     "name": "Maula Cathedral",
     "address": "Chilambula Highway",
     "description": "Principal Catholic cathedral in Lilongwe, known for its peaceful ambiance, distinctive architecture and vibrant communal services.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Maula_Cathedral_Lilongwe.jpg"
+    "image": "images/maula-cathedral.webp"
   },
   {
     "name": "Lilongwe Nature Sanctuary",
     "address": "Kenyatta Road, Area 12",
     "description": "Serene urban forest reserve with hiking trails, creek-side boardwalks and abundant birdlife—a quiet escape within the city.",
-    "image": "https://www.visitmalawi.mw/wp-content/uploads/2024/01/Lilongwe-Nature-Sanctuary.jpg"
+    "image": "images/nature-sanctuary.webp"
   },
   {
     "name": "Old Town Market",
     "address": "Malangalanga Road, Old Town",
     "description": "Bustling open-air market with fresh produce, spices, clothes and crafts—ideal for experiencing everyday local life.",
-    "image": "https://i.imgur.com/ColourfulLilongweMarket.jpg"
+    "image": "images/old-town-market.webp"
   },
   {
     "name": "Lilongwe Golf Club",
     "address": "Off Glyn Jones Road, Area 3",
     "description": "Scenic 18‑hole championship golf course with café, gym, pool, and peaceful grounds—open to both golfers and walkers.",
-    "image": "https://www.golfpass.com/sites/default/files/styles/course-image/public/32000_lilongwe_golf_club_00_0.jpg"
+    "image": "images/golf-club.webp"
   },
   {
-    "name": "Area 4 Artisan Market",
+    "name": "Artisan Market",
     "address": "Opposite Road Traffic Office, Area 4",
     "description": "Vibrant craft bazaar offering handmade jewelry, textiles, woodwork and souvenirs, with occasional artisan demos.",
-    "image": "https://www.evendo.com/images/market_area4.jpg"
+    "image": "images/artcraft-market.webp"
   }
 ]

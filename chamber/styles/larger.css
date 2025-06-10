@@ -882,7 +882,7 @@ nav ul li a:hover:after {
   padding: 1.5rem 1.2rem 1.2rem 1.2rem;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   transition: box-shadow 0.2s, transform 0.2s;
   position: relative;
 }
@@ -919,7 +919,7 @@ nav ul li a:hover:after {
   font-weight: var(--font-weight-medium);
   color: var(--color-text);
   margin-bottom: 0.5rem;
-  align-items: left;
+  align-items: start;
   vertical-align: middle;
   gap: 0.4em;
 }
