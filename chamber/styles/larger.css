@@ -282,7 +282,6 @@ nav ul li a:hover:after {
 }
 
 .event-card h3 {
-  /* font-size: var(--font-size-medium); */
   margin-top: 0;
   color: var(--color-text);
 }
@@ -290,7 +289,7 @@ nav ul li a:hover:after {
 .event-date,
 .event-location {
   font-size: var(--font-size-small);
-  font-weight: var(--font-weight-semibold, 600);
+  font-weight: var(--font-weight-semibold);
   color: var(--color-text);
   margin: 0.2rem 0;
   display: flex;
@@ -300,8 +299,7 @@ nav ul li a:hover:after {
 
 .event-description {
   margin: 1rem 0 1.2rem 0;
-  color: var(--color-text-secondary, #606060);
-  line-height: var(--line-height-normal, 1.6);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-medium, 1rem);
 }
 
@@ -312,7 +310,7 @@ nav ul li a:hover:after {
   font-weight: var(--font-weight-semibold, 600);
   background: var(--color-secondary);
   color: black;
-  border-radius: 2em;
+  border-radius: var(--border-radius-medium);
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
 }
@@ -450,6 +448,7 @@ nav ul li a:hover:after {
 }
 
 /* Responsive adjustments */
+
 @media (max-width: 600px) {
   .weather-section {
     padding: 1.2rem 0.5rem;
@@ -467,8 +466,8 @@ nav ul li a:hover:after {
 
 .spotlight {
   display: flex;
-  flex-direction: column;   /* Add this line */
-  align-items: center;      /* Center h2 and cards horizontally */
+  flex-direction: column;  
+  align-items: center; 
   gap: 2rem;
   padding: 2rem 0;
   background: var(--color-background);
@@ -628,6 +627,7 @@ nav ul li a:hover:after {
 }
 
 /* ========== DIRECTORY GRID VIEW ========== */
+
 .directory-list.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -716,6 +716,7 @@ nav ul li a:hover:after {
 }
 
 /* ========== DIRECTORY GRID VIEW ========== */
+
 .directory-list.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -860,6 +861,112 @@ nav ul li a:hover:after {
   opacity: 0.85;
 }
 
+/* ======================================== DISCOVER PAGE ============================== */
+
+/* ========== Discover Cards Section Styles ========== */
+
+.discover-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.discover-card {
+  background: #fff;
+  border-radius: var(--border-radius-medium, 1rem);
+  box-shadow: var(--shadow-medium);
+  max-width: 320px;
+  min-width: 240px;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.discover-card:hover {
+  box-shadow: var(--shadow-large);
+  transform: translateY(-4px) scale(1.03);
+}
+
+.discover-card h2 {
+  color: var(--color-text);
+  margin-bottom: 0.7rem;
+  text-align: left;
+}
+
+.discover-card figure {
+  width: 100%;
+  margin: 0 0 0.8rem 0;
+  display: flex;
+  justify-content: left;
+}
+
+.discover-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--shadow-small);
+  background: var(--color-background);
+}
+
+.discover-card address {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  align-items: left;
+  vertical-align: middle;
+  gap: 0.4em;
+}
+
+.discover-card .fa-location-dot {
+  color: var(--color-secondary);
+  font-size: var(--font-size-small);
+  margin-right: 0.4em;
+  vertical-align: middle;
+  opacity: 0.85;
+}
+
+.discover-card p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-medium);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.discover-btn {
+  background: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  padding: 0.7rem 1.2rem;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-small);
+}
+
+.discover-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .discover-cards {
+    gap: 1.2rem;
+  }
+  .discover-card {
+    max-width: 98vw;
+    min-width: 0;
+  }
+}
+
 /* ========== FOOTER ========== */
 .footer {
   background-color: var(--color-primary);
@@ -881,6 +988,12 @@ nav ul li a:hover:after {
 .footer-logo img {
   max-width: 100%;
   height: auto;
+}
+
+.visit > p {
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-bold);
+  padding: 10px 0;
 }
 
 .footer-details {
@@ -948,7 +1061,7 @@ nav ul li a:hover:after {
   background-color: var(--color-secondary);
   color: var(--color-primary);
   border: none;
-  border-radius: var(--border-radius-small);
+  border-radius: var(--border-radius-medium);
   cursor: pointer;
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-bold);
