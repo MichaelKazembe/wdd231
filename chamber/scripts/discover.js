@@ -21,11 +21,11 @@ function renderDiscoverItems(items) {
     items.forEach(item => {
         const card = document.createElement("div");
         card.className = "discover-card";
-        card.innerHTML = `
-            <h2>${item.name}</h2>
+        card.innerHTML = `   
             <figure>
                 <img src="${item.image}" alt="${item.name}" loading="lazy">
             </figure>
+            <h2>${item.name}</h2>
             <address>
                 <i class="fa fa-location-dot" aria-hidden="true"></i> ${item.address}
             </address>

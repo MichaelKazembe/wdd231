@@ -466,8 +466,8 @@ nav ul li a:hover:after {
 
 .spotlight {
   display: flex;
-  flex-direction: column;  
-  align-items: center; 
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
   padding: 2rem 0;
   background: var(--color-background);
@@ -500,7 +500,6 @@ nav ul li a:hover:after {
   transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
   margin-bottom: 1rem;
 }
-
 
 .spotlight-card:hover {
   box-shadow: var(--shadow-large);
@@ -547,7 +546,6 @@ nav ul li a:hover:after {
   word-break: break-word;
 }
 
-
 .spotlight-website {
   color: var(--color-text);
   font-size: var(--font-size-small);
@@ -571,7 +569,6 @@ nav ul li a:hover:after {
     min-width: 0;
   }
 }
-
 
 /* ======================================== DIRECTORY PAGE ============================== */
 
@@ -865,46 +862,52 @@ nav ul li a:hover:after {
 
 /* ========== Discover Cards Section Styles ========== */
 
+/* ----- Large screens (default, >1100px) ----- */
 .discover-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   margin: 2rem 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .discover-card {
   background: #fff;
-  border-radius: var(--border-radius-medium, 1rem);
+  border-radius: var(--border-radius-medium);
   box-shadow: var(--shadow-medium);
   max-width: 320px;
   min-width: 240px;
   padding: 1.5rem 1.2rem 1.2rem 1.2rem;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   transition: box-shadow 0.2s, transform 0.2s;
-  position: relative;
-}
 
-.discover-card:hover {
-  box-shadow: var(--shadow-large);
-  transform: translateY(-4px) scale(1.03);
+  display: grid;
+  grid-template-areas:
+    "image"
+    "title"
+    "description"
+    "address"
+    "button";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
 }
 
 .discover-card h2 {
+  grid-area: title;
   color: var(--color-text);
   margin-bottom: 0.7rem;
   text-align: left;
 }
-
 .discover-card figure {
+  grid-area: image;
   width: 100%;
   margin: 0 0 0.8rem 0;
   display: flex;
   justify-content: left;
 }
-
 .discover-card img {
   width: 100%;
   height: 160px;
@@ -913,8 +916,8 @@ nav ul li a:hover:after {
   box-shadow: var(--shadow-small);
   background: var(--color-background);
 }
-
 .discover-card address {
+  grid-area: address;
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-medium);
   color: var(--color-text);
@@ -922,8 +925,8 @@ nav ul li a:hover:after {
   align-items: start;
   vertical-align: middle;
   gap: 0.4em;
+  
 }
-
 .discover-card .fa-location-dot {
   color: var(--color-secondary);
   font-size: var(--font-size-small);
@@ -931,15 +934,15 @@ nav ul li a:hover:after {
   vertical-align: middle;
   opacity: 0.85;
 }
-
 .discover-card p {
+  grid-area: description;
   color: var(--color-text-secondary);
   font-size: var(--font-size-medium);
   margin-bottom: 1rem;
   text-align: left;
 }
-
 .discover-btn {
+  grid-area: button;
   background: var(--color-secondary);
   color: var(--color-primary);
   border: none;
@@ -951,19 +954,103 @@ nav ul li a:hover:after {
   transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   box-shadow: var(--shadow-small);
 }
-
 .discover-btn:hover {
   background: var(--color-primary);
   color: #fff;
 }
+.discover-btn:focus {
+  outline: 2px solid var(--color-secondary);
+}
 
-@media (max-width: 900px) {
+.discover-card:hover {
+  box-shadow: var(--shadow-large);
+  transform: translateY(-4px) scale(1.03);
+}
+
+/* ----- Medium screens: image left, content right (tablets, 601px-1100px) ----- */
+@media only screen and (min-width: 601px) and (max-width: 1100px) {
   .discover-cards {
-    gap: 1.2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 98vw;
   }
   .discover-card {
+    display: grid;
+    grid-template-areas:
+      "image title"
+      "image description"
+      "image address"
+      "image button";
+    grid-template-columns: 180px 1fr;
+    max-width: 600px;
+    min-width: 300px;
+    padding: 0;
+    align-items: stretch;
+  }
+  .discover-card figure {
+    grid-area: image;
+    margin: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    height: 100%;
+    background: var(--color-background, #f8fafc);
+  }
+  .discover-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 180px;
+    max-width: 180px;
+    object-fit: cover;
+    border-radius: 0;
+  }
+  .discover-card h2 {
+    grid-area: title;
+    align-self: flex-start;
+    margin: 1.2rem 1.2rem 0.5rem 1.2rem;
+    text-align: left;
+  }
+  .discover-card p {
+    grid-area: description;
+    margin: 0 1.2rem 0.5rem 1.2rem;
+    text-align: left;
+  }
+  .discover-card address {
+    grid-area: address;
+    margin: 0 1.2rem 0.5rem 1.2rem;
+    text-align: left;
+    align-items: center;
+  }
+  .discover-btn {
+    grid-area: button;
+    margin: 0 1.2rem 1.2rem 1.2rem;
+    align-self: flex-start;
+  }
+}
+/* ----- Small screens: stack all vertically (≤600px) ----- */
+@media (max-width: 600px) {
+  .discover-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 99vw;
+  }
+  .discover-card {
+    display: grid;
+    grid-template-areas:
+      "image"
+      "title"
+      "description"
+      "address"
+      "button";
+    grid-template-columns: 1fr;
     max-width: 98vw;
     min-width: 0;
+    padding: 1rem 0.5rem;
+  }
+  .discover-card img {
+    height: 140px;
   }
 }
 
