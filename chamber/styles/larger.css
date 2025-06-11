@@ -202,7 +202,7 @@ nav ul li a:hover:after {
   padding: 0.9em 2.2em;
   font-size: 1.1rem;
   font-weight: 600;
-  background: var(--color-secondary, #2b8a3e);
+  background: var(--color-secondary);
   color: black;
   border-radius: 1em;
   box-shadow: 0 4px 24px rgba(5, 63, 122, 0.13);
@@ -211,7 +211,7 @@ nav ul li a:hover:after {
 }
 .hero-cta:hover,
 .hero-cta:focus {
-  background: var(--color-primary, #1a4d2e);
+  background: var(--color-primary);
   transform: translateY(-2px) scale(1.03);
   color: white;
   outline: none;
@@ -249,7 +249,6 @@ nav ul li a:hover:after {
 }
 
 .current-events h2 {
-  /* font-size: var(--font-size-large); */
   text-align: center;
   color: var(--color-text);
   margin-bottom: 1rem;
