@@ -1,30 +1,32 @@
 /* ========== ROOT VARIABLES ========== */
 :root {
+  /* Colors */
   --color-primary: #0c1015;
   --color-secondary: #3498db;
   --color-background: #ecf0f1;
   --color-text: #2c3e50;
   --color-text-secondary: #606060;
 
+  /* Font Size*/
   --font-size-xsmall: 10px;
   --font-size-small: 12px;
   --font-size-medium: 14px;
   --font-size-large: 18px;
   --font-size-xlarge: 24px;
 
-  --shadow-small: 0px 1px 3px rgba(0, 0, 0, 0.2);
-  --shadow-medium: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  --shadow-large: 0px 10px 20px rgba(0, 0, 0, 0.2);
-
+  /* Font Families */
   --font-family: "Montserrat", sans-serif;
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
-
   --line-height-normal: 1.5;
-
   --border-radius-small: 4px;
   --border-radius-medium: 8px;
+
+  /* Shadows */
+  --shadow-small: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-medium: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-large: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ========== GLOBAL ========== */
@@ -33,7 +35,6 @@
   margin: 0;
   padding: 0;
 }
-
 html,
 body {
   font-family: var(--font-family);
@@ -43,25 +44,21 @@ body {
   height: 100%;
   width: 100%;
 }
-
 main {
   margin: 2rem;
   padding: 0 2rem;
 }
-
 @media (max-width: 600px) {
   main {
     margin: 0.5rem;
     padding: 0 0.5rem;
   }
 }
-
 p {
   font-size: var(--font-size-medium);
   color: var(--color-text);
   line-height: var(--line-height-normal);
 }
-
 main h1,
 main p {
   margin-bottom: 1rem;
@@ -82,19 +79,16 @@ nav {
   height: 120px;
   z-index: 100;
 }
-
 nav ul {
   display: flex;
   gap: 30px;
 }
-
 nav ul li {
   list-style: none;
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-small);
   position: relative;
 }
-
 nav ul li a {
   text-decoration: none;
   color: var(--color-text);
@@ -102,7 +96,6 @@ nav ul li a {
   display: inline-block;
   transition: color 0.3s;
 }
-
 nav ul li a.active:after,
 nav ul li a:hover:after {
   content: "";
@@ -115,20 +108,13 @@ nav ul li a:hover:after {
   left: 0;
   z-index: 1;
   border-radius: 2px;
-  transform: scaleX(0);
+  transform: scaleX(1);
   transform-origin: left;
   transition: transform 1s cubic-bezier(0.4, 1.5, 0.5, 1);
 }
-
-nav ul li a.active:after,
-nav ul li a:hover:after {
-  transform: scaleX(1);
-}
-
 .logo {
   padding: 20px 0;
 }
-
 #menu-icon,
 #close-icon {
   display: none;
@@ -136,22 +122,19 @@ nav ul li a:hover:after {
   font-size: 30px;
   color: var(--color-secondary);
   position: absolute;
-  top: 32px;
+  top: 40px;
   right: 30px;
   z-index: 1001;
   border-radius: 50%;
   padding: 4px;
   transition: background 0.2s;
 }
-
 #menu-icon:focus,
 #close-icon:focus {
   outline: 2px solid var(--color-secondary);
 }
 
-/* ======================================== MAIN PAGE ============================== */
-
-/* ====== Hero Section ===== */
+/* ========== HERO SECTION ========== */
 .hero {
   position: relative;
   min-height: 60vh;
@@ -165,14 +148,12 @@ nav ul li a:hover:after {
   overflow: hidden;
   margin-bottom: 2rem;
 }
-
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(20, 32, 50, 0.55);
   z-index: 1;
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -181,13 +162,11 @@ nav ul li a:hover:after {
   margin: 0 auto;
   padding: 2rem 1rem;
 }
-
 .hero-content h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
   line-height: var(--line-height-normal);
 }
-
 .hero-content p {
   font-size: var(--font-size-medium, 1.2rem);
   margin-bottom: 2rem;
@@ -196,7 +175,6 @@ nav ul li a:hover:after {
   padding: 0 2rem;
   color: #f3f4f6;
 }
-
 .hero-cta {
   display: inline-block;
   padding: 0.9em 2.2em;
@@ -216,8 +194,6 @@ nav ul li a:hover:after {
   color: white;
   outline: none;
 }
-
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .hero-content h1 {
     font-size: 1.5rem;
@@ -235,25 +211,21 @@ nav ul li a:hover:after {
   }
 }
 
-/* ====== CURRENT EVENTS SECTION ====== */
-
+/* ========== CURRENT EVENTS SECTION ========== */
 .current-events {
   background: #f8f8f8;
   padding: 2.5rem 0 2rem 0;
 }
-
 .events-container {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
 .current-events h2 {
   text-align: center;
   color: var(--color-text);
   margin-bottom: 1rem;
 }
-
 .current-events p {
   text-align: left;
   color: var(--color-text-secondary);
@@ -266,7 +238,6 @@ nav ul li a:hover:after {
   vertical-align: middle;
   opacity: 0.85;
 }
-
 .event-card {
   background: #fff;
   border-radius: 1rem;
@@ -275,16 +246,13 @@ nav ul li a:hover:after {
   margin-bottom: 1.5rem;
   transition: box-shadow 0.2s;
 }
-
 .event-card:hover {
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.13);
 }
-
 .event-card h3 {
   margin-top: 0;
   color: var(--color-text);
 }
-
 .event-date,
 .event-location {
   font-size: var(--font-size-small);
@@ -295,13 +263,11 @@ nav ul li a:hover:after {
   align-items: center;
   gap: 0.5em;
 }
-
 .event-description {
   margin: 1rem 0 1.2rem 0;
   color: var(--color-text-secondary);
   font-size: var(--font-size-medium, 1rem);
 }
-
 .secondary-button {
   display: inline-block;
   padding: 0.6em 1.5em;
@@ -313,7 +279,6 @@ nav ul li a:hover:after {
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
 }
-
 .secondary-button:hover,
 .secondary-button:focus {
   background: var(--color-primary);
@@ -321,8 +286,6 @@ nav ul li a:hover:after {
   color: white;
   outline: none;
 }
-
-/* Responsive */
 @media (max-width: 600px) {
   .events-container {
     padding: 0 0.5rem;
@@ -330,13 +293,9 @@ nav ul li a:hover:after {
   .event-card {
     padding: 1rem 0.7rem;
   }
-  .current-events h2 {
-    color: var(--color-text);
-  }
 }
 
-/* ====== WEATHER SECTION ====== */
-
+/* ========== WEATHER SECTION ========== */
 .weather-section {
   background: var(--color-secondary);
   border-radius: var(--border-radius-medium);
@@ -345,19 +304,15 @@ nav ul li a:hover:after {
   padding: 2rem 1.5rem;
   box-shadow: var(--shadow-medium, 0 4px 6px rgba(0, 0, 0, 0.1));
 }
-
 .current-weather {
   text-align: center;
   margin-bottom: 2rem;
 }
-
 .current-weather h2 {
   color: var(--color-text);
-  margin-bottom: 0.5rem;
-  text-align: center;
   margin-bottom: 1rem;
+  text-align: center;
 }
-
 .weather-container {
   display: flex;
   align-items: center;
@@ -365,48 +320,40 @@ nav ul li a:hover:after {
   gap: 1.2rem;
   margin-bottom: 0.5rem;
 }
-
 .weather-container img {
   width: 84px;
   height: 84px;
   box-shadow: var(--shadow-large);
 }
-
 .temp {
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
 }
-
 .current-weather .description {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-medium);
   color: var(--color-text);
   margin-top: 0.5rem;
 }
-
 .forecast {
   background: var(--color-text);
   border-radius: 1rem;
   padding: 1.2rem 1rem 1rem 1rem;
   box-shadow: var(--shadow-small, 0 1px 3px rgba(0, 0, 0, 0.1));
 }
-
 .forecast h4 {
   text-align: center;
   color: var(--color-background);
   margin-bottom: 1.2rem;
 }
-
 .forecast-days {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
 }
-
 .forecast-day {
   flex: 1 1 0;
-  /* background: #f8fafc; */
   border-radius: var(--border-radius-small);
   background: var(--color-secondary);
   padding: 1rem 0.5rem;
@@ -414,40 +361,32 @@ nav ul li a:hover:after {
   box-shadow: var(--shadow-medium, 0 1px 3px rgba(0, 0, 0, 0.1));
   transition: box-shadow 0.2s;
 }
-
 .forecast-day:hover {
   box-shadow: 0 4px 16px rgba(44, 62, 80, 0.1);
   transform: translateY(-2px);
 }
-
 .forecast-label {
   font-size: 1rem;
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary);
   margin-bottom: 0.3rem;
 }
-
 .forecast-day img {
   width: 48px;
   height: 48px;
   margin: 0.2rem 0;
 }
-
 .forecast-temp {
   font-size: var(--font-size-medium);
   font-weight: 700;
   color: var(--color-primary);
   margin: 0.2rem 0;
 }
-
 .forecast-desc {
   font-size: var(--font-size-small);
   color: var(--color-primary);
   text-transform: capitalize;
 }
-
-/* Responsive adjustments */
-
 @media (max-width: 600px) {
   .weather-section {
     padding: 1.2rem 0.5rem;
@@ -461,8 +400,7 @@ nav ul li a:hover:after {
   }
 }
 
-/* ====== SPOTLIGHT SECTION ====== */
-
+/* ========== SPOTLIGHT SECTION ========== */
 .spotlight {
   display: flex;
   flex-direction: column;
@@ -471,7 +409,6 @@ nav ul li a:hover:after {
   padding: 2rem 0;
   background: var(--color-background);
 }
-
 .spotlight-cards {
   display: flex;
   gap: 2rem;
@@ -479,14 +416,10 @@ nav ul li a:hover:after {
   flex-wrap: wrap;
   width: 80%;
 }
-
 .spotlight h2 {
   color: var(--color-text);
-  margin-bottom: 0.5rem;
-  /* text-align: center; */
   margin-bottom: 1rem;
 }
-
 .spotlight-card {
   background: #fff;
   border-radius: var(--border-radius-medium);
@@ -499,33 +432,28 @@ nav ul li a:hover:after {
   transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
   margin-bottom: 1rem;
 }
-
 .spotlight-card:hover {
   box-shadow: var(--shadow-large);
   transform: translateY(-4px) scale(1.03);
   border-color: var(--color-secondary);
 }
-
 .spotlight-logo {
   width: 100%;
   height: 100px;
   object-fit: cover;
   margin-bottom: 0.7rem;
 }
-
 .spotlight-name {
   font-weight: var(--font-weight-bold);
   margin: 0.5rem 0 0.2rem 0;
   color: var(--color-text);
   letter-spacing: 0.5px;
 }
-
 .spotlight-level {
   color: var(--color-primary);
   margin-bottom: 1rem;
   font-weight: var(--font-weight-medium);
 }
-
 .spotlight-card .fa-phone,
 .spotlight-card .fa-location-dot,
 .spotlight-card .fa-globe {
@@ -534,7 +462,6 @@ nav ul li a:hover:after {
   font-size: var(--font-size-small);
   vertical-align: middle;
 }
-
 .spotlight-address,
 .spotlight-phone,
 .spotlight-website {
@@ -544,19 +471,16 @@ nav ul li a:hover:after {
   align-items: center;
   word-break: break-word;
 }
-
 .spotlight-website {
   color: var(--color-text);
   font-size: var(--font-size-small);
   text-decoration: none;
   transition: color 0.2s;
 }
-
 .spotlight-website:hover {
   text-decoration: underline;
   color: var(--color-primary);
 }
-
 @media (max-width: 900px) {
   .spotlight {
     flex-direction: column;
@@ -569,9 +493,7 @@ nav ul li a:hover:after {
   }
 }
 
-/* ======================================== DIRECTORY PAGE ============================== */
-
-/* ========== DIRECTORY VIEW TOGGLE ========== */
+/* ========== DIRECTORY PAGE ========== */
 .directory-view-toggle {
   display: flex;
   gap: 10px;
@@ -582,7 +504,6 @@ nav ul li a:hover:after {
   padding: 1rem;
   border-radius: var(--border-radius-medium);
 }
-
 .view-btn {
   background: var(--color-background);
   border: 1px solid var(--color-secondary);
@@ -596,24 +517,20 @@ nav ul li a:hover:after {
   align-items: center;
   gap: 8px;
 }
-
 .view-btn i {
   font-size: 1.2em;
   margin-right: 4px;
 }
-
 .view-btn:hover,
 .view-btn.active {
   background: var(--color-secondary);
   color: #fff;
   border-color: var(--color-secondary);
 }
-
 .view-btn:hover i,
 .view-btn.active i {
   color: #fff;
 }
-
 .view-btn span {
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-medium);
@@ -622,15 +539,14 @@ nav ul li a:hover:after {
   transition: color 0.2s;
 }
 
-/* ========== DIRECTORY GRID VIEW ========== */
-
-.directory-list.grid {
+/* ========== DIRECTORY GRID & LIST VIEW ========== */
+.directory-list.grid,
+.directory-list.list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
 }
-
 .member-card {
   background: #fff;
   border-radius: var(--border-radius-medium);
@@ -643,12 +559,10 @@ nav ul li a:hover:after {
   overflow: hidden;
   min-width: 0;
 }
-
 .member-card:hover {
   box-shadow: var(--shadow-large);
   transform: translateY(-4px) scale(1.02);
 }
-
 .member-card img {
   width: 100%;
   height: 170px;
@@ -661,32 +575,27 @@ nav ul li a:hover:after {
   will-change: transform;
   display: block;
 }
-
 .member-card:hover img {
   transform: scale(1.04);
   box-shadow: 0 8px 24px rgba(44, 62, 80, 0.13);
   border-radius: var(--border-radius-medium);
 }
-
 .member-info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+  padding: 1.2rem;
   background: #fff;
 }
-
 .member-card h2 {
   margin: 0 0 0.2rem 0;
   font-size: var(--font-size-large);
 }
-
 .member-card .description {
   margin-bottom: 0.5rem;
   line-height: var(--line-height-normal);
   text-align: left;
 }
-
 .member-card .address,
 .member-card .phone,
 .member-card .website {
@@ -695,12 +604,10 @@ nav ul li a:hover:after {
   display: flex;
   align-items: center;
   gap: 0.3em;
-  margin: 0.1rem 0;
   font-weight: var(--font-weight-medium);
   letter-spacing: 0.01em;
   word-break: break-all;
 }
-
 .member-card .address .fa-location-dot,
 .member-card .phone .fa-phone,
 .member-card .website .fa-globe {
@@ -710,89 +617,6 @@ nav ul li a:hover:after {
   vertical-align: middle;
   opacity: 0.85;
 }
-
-/* ========== DIRECTORY GRID VIEW ========== */
-
-.directory-list.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 2rem 0;
-}
-
-.member-card {
-  background: #fff;
-  border-radius: var(--border-radius-medium);
-  box-shadow: var(--shadow-medium);
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.2s, transform 0.2s;
-  border: 1px solid #e5e7eb;
-  overflow: hidden;
-}
-
-.member-card:hover {
-  box-shadow: var(--shadow-large);
-  transform: translateY(-4px) scale(1.02);
-}
-
-.member-card img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  transition: transform 0.4s cubic-bezier(0.4, 1.5, 0.5, 1), box-shadow 0.3s,
-    border-radius 0.3s;
-  display: block;
-}
-
-.member-card:hover img {
-  transform: scale(1.04);
-  box-shadow: 0 8px 24px rgba(44, 62, 80, 0.13);
-  border-radius: var(--border-radius-medium);
-}
-
-.member-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1.2rem;
-  background: #fff;
-}
-
-.member-card h2 {
-  margin: 0 0 0.2rem 0;
-  font-size: var(--font-size-large);
-}
-
-.member-card .description {
-  margin-bottom: 0.5rem;
-  line-height: var(--line-height-normal);
-  text-align: left;
-}
-
-.member-card .address,
-.member-card .phone,
-.member-card .website {
-  font-size: var(--font-size-small);
-  color: var(--color-text-secondary);
-  display: flex;
-  align-items: center;
-  gap: 0.3em;
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 0.01em;
-  word-break: break-word;
-}
-
-.member-card .address .fa-location-dot,
-.member-card .phone .fa-phone,
-.member-card .website .fa-globe {
-  color: var(--color-secondary);
-  margin-right: 0.4em;
-  font-size: var(--font-size-small);
-  opacity: 0.85;
-}
-
-/* ========== DIRECTORY LIST VIEW ========== */
 .directory-list.list .member-card {
   display: flex;
   flex-direction: row;
@@ -806,12 +630,9 @@ nav ul li a:hover:after {
   gap: 1.5rem;
   flex-wrap: wrap;
 }
-
-/* Remove image in list view */
 .directory-list.list .member-card img {
   display: none;
 }
-
 .directory-list.list .main-info,
 .directory-list.list .info-row {
   flex: 1;
@@ -821,20 +642,17 @@ nav ul li a:hover:after {
   gap: 0.5rem;
   min-width: 150px;
 }
-
 .directory-list.list .main-info h2 {
   margin: 0;
   color: var(--color-text);
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size-large);
 }
-
 .directory-list.list .main-info .description {
   margin: 0;
   color: var(--color-text);
   font-size: var(--font-size-medium);
 }
-
 .directory-list.list .info-row .address,
 .directory-list.list .info-row .phone,
 .directory-list.list .info-row .website {
@@ -847,7 +665,6 @@ nav ul li a:hover:after {
   font-weight: var(--font-weight-medium);
   word-break: break-word;
 }
-
 .directory-list.list .info-row .fa-location-dot,
 .directory-list.list .info-row .fa-phone,
 .directory-list.list .info-row .fa-globe {
@@ -857,11 +674,7 @@ nav ul li a:hover:after {
   opacity: 0.85;
 }
 
-/* ======================================== DISCOVER PAGE ============================== */
-
-/* ========== Discover Cards Section Styles ========== */
-
-/* ----- Large screens (default, >1025px) ----- */
+/* ========== DISCOVER PAGE ========== */
 .discover-cards {
   display: flex;
   flex-wrap: wrap;
@@ -872,7 +685,6 @@ nav ul li a:hover:after {
   margin-left: auto;
   margin-right: auto;
 }
-
 .discover-card {
   background: #fff;
   border-radius: var(--border-radius-medium);
@@ -882,7 +694,6 @@ nav ul li a:hover:after {
   padding: 1.5rem 1.2rem 1.2rem 1.2rem;
   align-items: center;
   transition: box-shadow 0.2s, transform 0.2s;
-
   display: grid;
   grid-template-areas:
     "image"
@@ -893,14 +704,12 @@ nav ul li a:hover:after {
   grid-template-columns: 1fr;
   grid-template-rows: auto;
 }
-
 .discover-card h2 {
   grid-area: title;
   color: var(--color-text);
   margin-bottom: 0.7rem;
   text-align: left;
 }
-
 .discover-card figure {
   grid-area: image;
   width: 100%;
@@ -909,7 +718,6 @@ nav ul li a:hover:after {
   justify-content: left;
   overflow: hidden;
 }
-
 .discover-card img {
   width: 100%;
   height: 160px;
@@ -919,13 +727,11 @@ nav ul li a:hover:after {
   background: var(--color-background);
   transition: transform 0.35s cubic-bezier(0.4, 1.5, 0.5, 1), box-shadow 0.3s;
 }
-
 .discover-card:hover img,
 .discover-card figure:hover img {
   transform: scale(1.08);
   box-shadow: var(--shadow-large);
 }
-
 .discover-card address {
   grid-area: address;
   font-size: var(--font-size-medium);
@@ -935,6 +741,7 @@ nav ul li a:hover:after {
   align-items: start;
   vertical-align: middle;
   gap: 0.4em;
+  display: flex;
 }
 .discover-card .fa-location-dot {
   color: var(--color-secondary);
@@ -970,13 +777,11 @@ nav ul li a:hover:after {
 .discover-btn:focus {
   outline: 2px solid var(--color-secondary);
 }
-
 .discover-card:hover {
   box-shadow: var(--shadow-large);
   transform: translateY(-4px) scale(1.03);
 }
-
-/* ----- Medium screens: image left, content right (tablets, 601px-1100px) ----- */
+/* ----- Medium screens: image left, content right (tablets, 641px-1024px) ----- */
 @media only screen and (min-width: 641px) and (max-width: 1024px) {
   .discover-cards {
     flex-direction: column;
@@ -1006,7 +811,6 @@ nav ul li a:hover:after {
     height: 100%;
     background: var(--color-background, #f8fafc);
   }
-
   .discover-card img {
     width: 100%;
     height: 100%;
@@ -1015,7 +819,6 @@ nav ul li a:hover:after {
     object-fit: cover;
     border-radius: 0;
   }
-
   .discover-card h2 {
     grid-area: title;
     align-self: flex-start;
@@ -1039,8 +842,7 @@ nav ul li a:hover:after {
     align-self: flex-start;
   }
 }
-
-/* ----- Small screens: stack all vertically (≤600px) ----- */
+/* ----- Small screens: stack all vertically (≤640px) ----- */
 @media (min-width: 320px) and (max-width: 640px) {
   .discover-cards {
     flex-direction: column;
@@ -1061,19 +863,15 @@ nav ul li a:hover:after {
     min-width: 0;
     padding: 1rem 0.5rem;
   }
-
   .discover-card img {
     height: 140px;
-    transition: none; /* Remove transition on small screens */
+    transition: none;
   }
-
-  /* Remove image hover effect for small screens */
   .discover-card:hover img,
   .discover-card figure:hover img {
     transform: none;
     box-shadow: var(--shadow-small);
   }
-
 }
 
 /* ========== FOOTER ========== */
@@ -1083,7 +881,6 @@ nav ul li a:hover:after {
   padding: 40px 20px;
   text-align: center;
 }
-
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -1093,18 +890,15 @@ nav ul li a:hover:after {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .footer-logo img {
   max-width: 100%;
   height: auto;
 }
-
 .visit > p {
   color: var(--color-secondary);
   font-weight: var(--font-weight-bold);
   padding: 10px 0;
 }
-
 .footer-details {
   flex: 1;
   min-width: 200px;
@@ -1112,17 +906,14 @@ nav ul li a:hover:after {
   font-size: var(--font-size-small);
   padding: 20px 0;
 }
-
 .footer-text,
 .footer-modified {
   font-weight: 600;
   color: white;
 }
-
 .footer-modified {
   font-style: italic;
 }
-
 .footer-social p,
 .footer-subscribe p {
   margin-bottom: 10px;
@@ -1130,7 +921,6 @@ nav ul li a:hover:after {
   font-weight: var(--font-weight-normal);
   color: white;
 }
-
 .social-links {
   list-style: none;
   padding: 0;
@@ -1138,25 +928,21 @@ nav ul li a:hover:after {
   gap: 0.5rem;
   justify-content: center;
 }
-
 .social-links li a {
   color: #fff;
   font-size: 1rem;
   padding: 8px 12px;
   transition: color 0.3s ease;
 }
-
 .social-links li a:hover {
   color: var(--color-secondary);
 }
-
 .footer-subscribe .subscribe-form {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
 }
-
 .subscribe-form input[type="email"] {
   padding: 10px;
   font-size: var(--font-size-small);
@@ -1164,7 +950,6 @@ nav ul li a:hover:after {
   border-radius: var(--border-radius-small);
   box-sizing: border-box;
 }
-
 .subscribe-form button {
   padding: 10px 20px;
   background-color: var(--color-secondary);
@@ -1176,11 +961,9 @@ nav ul li a:hover:after {
   font-weight: var(--font-weight-bold);
   transition: background-color 0.3s ease;
 }
-
 .subscribe-form button:hover {
   background-color: white;
 }
-
 .footer-copyright {
   margin-top: 20px;
   font-size: var(--font-size-small);
