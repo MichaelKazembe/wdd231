@@ -901,13 +901,16 @@ nav ul li a:hover:after {
   margin-bottom: 0.7rem;
   text-align: left;
 }
+
 .discover-card figure {
   grid-area: image;
   width: 100%;
   margin: 0 0 0.8rem 0;
   display: flex;
   justify-content: left;
+  overflow: hidden;
 }
+
 .discover-card img {
   width: 100%;
   height: 160px;
@@ -915,7 +918,15 @@ nav ul li a:hover:after {
   border-radius: var(--border-radius-small);
   box-shadow: var(--shadow-small);
   background: var(--color-background);
+  transition: transform 0.35s cubic-bezier(0.4, 1.5, 0.5, 1), box-shadow 0.3s;
 }
+
+.discover-card:hover img,
+.discover-card figure:hover img {
+  transform: scale(1.08);
+  box-shadow: var(--shadow-large);
+}
+
 .discover-card address {
   grid-area: address;
   font-size: var(--font-size-medium);
@@ -925,7 +936,6 @@ nav ul li a:hover:after {
   align-items: start;
   vertical-align: middle;
   gap: 0.4em;
-  
 }
 .discover-card .fa-location-dot {
   color: var(--color-secondary);
@@ -997,6 +1007,7 @@ nav ul li a:hover:after {
     height: 100%;
     background: var(--color-background, #f8fafc);
   }
+
   .discover-card img {
     width: 100%;
     height: 100%;
@@ -1005,6 +1016,7 @@ nav ul li a:hover:after {
     object-fit: cover;
     border-radius: 0;
   }
+
   .discover-card h2 {
     grid-area: title;
     align-self: flex-start;
@@ -1029,7 +1041,7 @@ nav ul li a:hover:after {
   }
 }
 
- /* ----- Small screens: stack all vertically (≤600px) ----- */
+/* ----- Small screens: stack all vertically (≤600px) ----- */
 @media (min-width: 320px) and (max-width: 640px) {
   .discover-cards {
     flex-direction: column;
@@ -1050,9 +1062,19 @@ nav ul li a:hover:after {
     min-width: 0;
     padding: 1rem 0.5rem;
   }
+
   .discover-card img {
     height: 140px;
+    transition: none; /* Remove transition on small screens */
   }
+
+  /* Remove image hover effect for small screens */
+  .discover-card:hover img,
+  .discover-card figure:hover img {
+    transform: none;
+    box-shadow: var(--shadow-small);
+  }
+
 }
 
 /* ========== FOOTER ========== */
