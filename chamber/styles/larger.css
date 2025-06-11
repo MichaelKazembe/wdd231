@@ -862,7 +862,7 @@ nav ul li a:hover:after {
 
 /* ========== Discover Cards Section Styles ========== */
 
-/* ----- Large screens (default, >1100px) ----- */
+/* ----- Large screens (default, >1025px) ----- */
 .discover-cards {
   display: flex;
   flex-wrap: wrap;
@@ -968,7 +968,7 @@ nav ul li a:hover:after {
 }
 
 /* ----- Medium screens: image left, content right (tablets, 601px-1100px) ----- */
-@media only screen and (min-width: 601px) and (max-width: 1100px) {
+@media only screen and (min-width: 641px) and (max-width: 1024px) {
   .discover-cards {
     flex-direction: column;
     align-items: center;
@@ -1028,8 +1028,9 @@ nav ul li a:hover:after {
     align-self: flex-start;
   }
 }
-/* ----- Small screens: stack all vertically (≤600px) ----- */
-@media (max-width: 600px) {
+
+ /* ----- Small screens: stack all vertically (≤600px) ----- */
+@media (min-width: 320px) and (max-width: 640px) {
   .discover-cards {
     flex-direction: column;
     align-items: center;
