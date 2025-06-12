@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/modals.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +32,9 @@
     <!-- Javascript Files -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/modals.js" defer></script>
     <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/visit.js" defer></script>
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/4ea4219760.js" crossorigin="anonymous" defer></script>
@@ -153,7 +156,88 @@
         <button type="submit" class="btn btn-primary">Become a Member</button>
 
       </form>
+
     </section>
+
+    <section class="membership-cards">
+      <h2>Membership Levels</h2>
+      <div class="membership-card np">
+        <h3>NP Membership</h3>
+        <p>Free for NGOs. Access to basic resources and networking opportunities.</p>
+        <a href="#" class="membership-info-link" data-modal="modal-np">See Benefits</a>
+      </div>
+      <div class="membership-card bronze">
+        <h3>Bronze Membership</h3>
+        <p>Affordable membership with access to exclusive resources and events.</p>
+        <a href="#" class="membership-info-link" data-modal="modal-bronze">See Benefits</a>
+      </div>
+      <div class="membership-card silver">
+        <h3>Silver Membership</h3>
+        <p>Enhanced benefits including marketing support and business development resources.</p>
+        <a href="#" class="membership-info-link" data-modal="modal-silver">See Benefits</a>
+      </div>
+      <div class="membership-card gold">
+        <h3>Gold Membership</h3>
+        <p>Premium membership with top-tier benefits, including personalized support and exclusive networking events.</p>
+        <button type="button" href="#" class="membership-info-link" data-modal="modal-gold">See Benefits</button>
+      </div>
+
+    </section>
+    <!-- Membership Modals -->
+    <div class="modal" id="modal-np">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-np')">&times;</span>
+        <h2>NP Membership Benefits</h2>
+        <p><strong>Price:</strong> Free for NGOs</p>
+        <ul>
+          <li>Free membership for NGOs</li>
+          <li>Access to basic resources</li>
+          <li>Networking opportunities</li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal" id="modal-bronze">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
+        <h2>Bronze Membership Benefits</h2>
+        <p><strong>Price:</strong> MWK 150,000/year</p>
+        <ul>
+          <li>All NP benefits</li>
+          <li>Access to exclusive resources</li>
+          <li>Discounted event entry</li>
+          <li>Business training sessions</li>
+          <li>Networking events</li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal" id="modal-silver">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-silver')">&times;</span>
+        <h2>Silver Membership Benefits</h2>
+        <p><strong>Price:</strong> MWK 250,000/year</p>
+        <ul>
+          <li>All Bronze benefits</li>
+          <li>Advertising on chamber website</li>
+          <li>Spotlight position on homepage</li>
+          <li>Priority event registration</li>
+          <li>Business development resources</li>
+        </ul>
+      </div>
+    </div>
+    <div class="modal" id="modal-gold">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal-gold')">&times;</span>
+        <h2>Gold Membership Benefits</h2>
+        <p><strong>Price:</strong> MWK 500,000/year</p>
+        <ul>
+          <li>All Silver benefits</li>
+          <li>Premium event access (VIP)</li>
+          <li>Featured promotion in chamber emails</li>
+          <li>Exclusive networking events</li>
+          <li>Personalized business support</li>
+        </ul>
+      </div>
+    </div>
       
     </main>
     <footer class="footer">
