@@ -727,11 +727,14 @@ nav ul li a:hover:after {
   background: var(--color-background);
   transition: transform 0.35s cubic-bezier(0.4, 1.5, 0.5, 1), box-shadow 0.3s;
 }
+
+
 .discover-card:hover img,
-.discover-card figure:hover img {
-  transform: scale(1.08);
+.discover-card img:hover {
+  transform: scale(1.2) rotate(-1.95deg);
   box-shadow: var(--shadow-large);
 }
+
 .discover-card address {
   grid-area: address;
   font-size: var(--font-size-medium);
@@ -741,7 +744,6 @@ nav ul li a:hover:after {
   align-items: start;
   vertical-align: middle;
   gap: 0.4em;
-  display: flex;
 }
 .discover-card .fa-location-dot {
   color: var(--color-secondary);
