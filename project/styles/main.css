@@ -4,6 +4,7 @@
   --accent-yellow: #f2c94c;
   --bg-light-green: #f5fff5;
   --text-color: #333;
+  --text-color-secondary: #555;
   --white: #fff;
   --gray-light: #f7f7f7;
   --gray-medium: #e0e0e0;
@@ -20,10 +21,12 @@
   --font-weight-bold: 700;
 
   /* Font Sizes */
-  --font-size-small: 0.95rem;
-  --font-size-medium: 1.1rem;
-  --font-size-large: 1.5rem;
-  --font-size-xlarge: 2.2rem;
+  --font-size-small: 0.95rem;      /* ~15px */
+  --font-size-medium: 1.1rem;      /* ~17.5px */
+  --font-size-large: 1.5rem;       /* ~24px */
+  --font-size-xlarge: 2.2rem;      /* ~35px */
+  --font-size-xxlarge: 3rem;       /* ~48px */
+  --font-heading: 2.5rem;          /* ~40px */
 
   /* Shadows */
   --shadow-small: 0 1px 3px rgba(34, 102, 63, 0.08);
@@ -62,25 +65,24 @@ html {
 } */
 
 h1 {
-  font-size: var(--font-size-xlarge);
+  font-size: var(--font-size-xxlarge);
   line-height: 1.15;
   font-weight: var(--font-weight-bold);
 }
 
 h2 {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-xlarge);
   line-height: 1.2;
   font-weight: var(--font-weight-medium);
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: var(--font-size-large);
   line-height: 1.3;
   font-weight: var(--font-weight-medium);
 }
 
-p {
-  font-family: var(--body-font);
+p, li, a, input, button {
   font-size: var(--font-size-medium);
   line-height: 1.7;
 }
@@ -276,7 +278,7 @@ nav ul li a:hover:after {
   }
 }
 
-/* ========== hero section ========== */
+/* ========== HERO SECTION ========== */
 
 /* ---- Desktop View ---- */
 
@@ -337,6 +339,31 @@ nav ul li a:hover:after {
   }
 }
 /* End of Hero Section */
+
+/* ========== BENEFITS SECTION ========== */
+.fas {
+  font-size: 1rem;
+  color: var(--accent-yellow);
+  background: var(--primary-green);
+  border-radius: 50%;
+  padding: 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(34, 102, 63, 0.10);
+}
+
+.benefits-container {
+  background-color: var(--bg-light-green);
+  color: var(--text-color);
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
 
 /* ========== START SECTION ========== */
 
