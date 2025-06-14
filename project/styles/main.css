@@ -88,6 +88,7 @@ p {
 /* ---- Button Defaults ---*/
 
 /* Shared Button Styles */
+.btn,
 .btn-primary,
 .btn-secondary {
   min-width: 160px;
@@ -106,30 +107,32 @@ p {
 }
 
 /* Primary Button */
-.btn-primary {
-  background-color: var(--primary-green);
-  color: var(--white);
-}
 
-.btn-primary:hover,
-.btn-primary:focus {
+.btn-primary {
   background-color: var(--accent-yellow);
   color: var(--primary-green);
 }
 
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-green);
+  color: var(--bg-light-green);
+}
+
 /* Secondary Button */
+.btn,
 .btn-secondary {
-  background-color: var(--accent-yellow);
+  background-color: var(--bg-light-green);
   color: var(--primary-green);
   border: 2px solid var(--primary-green);
 }
 
 .btn-secondary:hover,
 .btn-secondary:focus {
-  background-color: var(--primary-green);
-  color: var(--white);
+  background-color: var(--bg-light-green);
+  color: var(--primary-green);
+  border: 2px solid var(--accent-yellow);
 }
-
 
 /* ========== NAVIGATION ========== */
 nav {
@@ -202,7 +205,6 @@ nav ul li a:hover:after {
 #close-icon:focus {
   outline: 2px solid var(--accent-yellow);
 }
-
 
 /* --- Mobile --- */
 @media (max-width: 768px) {
@@ -286,7 +288,7 @@ nav ul li a:hover:after {
   box-shadow: var(--shadow-large);
 
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "title image"
     "description image"
     "hero-buttons image";
@@ -333,9 +335,84 @@ nav ul li a:hover:after {
   .hero-buttons {
     justify-content: center;
   }
-
 }
 /* End of Hero Section */
+
+/* ========== START SECTION ========== */
+
+/* ---- Desktop View ---- */
+
+.start-container {
+  background-color: var(--primary-green);
+  color: var(--bg-light-green);
+  padding: 8rem 6rem;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "title"
+    "description"
+    "start-buttons";
+  grid-template-columns: 1fr;
+}
+
+.start-title {
+  grid-area: title;
+  margin-bottom: 20px;
+}
+
+.start-description {
+  grid-area: description;
+  margin-bottom: 30px;
+  padding-right: 40px;
+}
+.start-buttons {
+  grid-area: start-buttons;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.start-secondary-btn {
+  background-color: var(--primary-green);
+  color: var(--bg-light-green);
+  border: 2px solid var(--bg-light-green);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.start-secondary-btn:hover {
+  background-color: var(--bg-light-green);
+  color: var(--primary-green);
+}
+
+/* For Small Screens */
+@media (max-width: 1200px) {
+  .start-container {
+    padding: 6rem 1.5rem;
+    grid-template-areas:
+      "image"
+      "title"
+      "description"
+      "start-buttons";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 1.5rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .start-description {
+    padding: 0 20px;
+    text-align: center;
+    font-size: var(--font-size-small);
+  }
+  .start-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* End of Start Section */
 
 /* ========== FOOTER ========== */
 .footer {
