@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Snake Plant",
+    "light": "Low to Bright",
+    "watering": "Every 2-3 weeks",
+    "image": "https://via.placeholder.com/150?text=Snake+Plant"
+  },
+  {
+    "id": 2,
+    "name": "Peace Lily",
+    "light": "Low Light",
+    "watering": "Once a week",
+    "image": "https://via.placeholder.com/150?text=Peace+Lily"
+  },
+  {
+    "id": 3,
+    "name": "Spider Plant",
+    "light": "Bright, Indirect",
+    "watering": "Once a week",
+    "image": "https://via.placeholder.com/150?text=Spider+Plant"
+  },
+  {
+    "id": 4,
+    "name": "Aloe Vera",
+    "light": "Bright Sunlight",
+    "watering": "Every 2-3 weeks",
+    "image": "https://via.placeholder.com/150?text=Aloe+Vera"
+  },
+  {
+    "id": 5,
+    "name": "ZZ Plant",
+    "light": "Low Light",
+    "watering": "Every 2 weeks",
+    "image": "https://via.placeholder.com/150?text=ZZ+Plant"
+  },
+  {
+    "id": 6,
+    "name": "Fiddle Leaf Fig",
+    "light": "Bright, Indirect",
+    "watering": "Weekly",
+    "image": "https://via.placeholder.com/150?text=Fiddle+Leaf+Fig"
+  },
+  {
+    "id": 7,
+    "name": "Pothos",
+    "light": "Low to Medium",
+    "watering": "Every 1-2 weeks",
+    "image": "https://via.placeholder.com/150?text=Pothos"
+  },
+  {
+    "id": 8,
+    "name": "Rubber Plant",
+    "light": "Bright, Indirect",
+    "watering": "Weekly",
+    "image": "https://via.placeholder.com/150?text=Rubber+Plant"
+  }
+]

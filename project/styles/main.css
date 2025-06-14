@@ -56,10 +56,10 @@ html {
   box-sizing: border-box;
 }
 
-main {
+/* main {
   margin: 2rem;
   padding: 0 2rem;
-}
+} */
 
 h1 {
   font-size: var(--font-size-xlarge);
@@ -83,6 +83,51 @@ p {
   font-family: var(--body-font);
   font-size: var(--font-size-medium);
   line-height: 1.7;
+}
+
+/* ---- Button Defaults ---*/
+
+/* Shared Button Styles */
+.btn-primary,
+.btn-secondary {
+  min-width: 160px;
+  padding: 12px 24px;
+  font-size: var(--font-size-medium);
+  border-radius: var(--radius-medium);
+  font-weight: var(--font-weight-bold);
+  display: inline-block;
+  text-align: center;
+  box-shadow: var(--shadow-small);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--primary-green);
+  color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--accent-yellow);
+  color: var(--primary-green);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: var(--accent-yellow);
+  color: var(--primary-green);
+  border: 2px solid var(--primary-green);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--primary-green);
+  color: var(--white);
 }
 
 
@@ -186,7 +231,6 @@ nav ul li a:hover:after {
     left: 0;
     right: 0;
     background: var(--primary-green);
-    width: 100vw;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.4, 1.5, 0.5, 1);
@@ -209,7 +253,6 @@ nav ul li a:hover:after {
     left: 0;
     right: 0;
     height: 3px;
-    background: var(--accent-yellow);
     border-radius: 2px;
     bottom: -6px;
     transform: scaleX(0);
@@ -231,6 +274,68 @@ nav ul li a:hover:after {
   }
 }
 
+/* ========== hero section ========== */
+
+/* ---- Desktop View ---- */
+
+.hero-container {
+  background-color: var(--bg-light-green);
+  color: var(--text-color);
+  padding: 8rem 6rem;
+  margin: 0 auto;
+  box-shadow: var(--shadow-large);
+
+  display: grid;
+  grid-template-areas: 
+    "title image"
+    "description image"
+    "hero-buttons image";
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-title {
+  grid-area: title;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  grid-area: description;
+  margin-bottom: 30px;
+  padding-right: 40px;
+}
+.hero-buttons {
+  grid-area: hero-buttons;
+  display: flex;
+  gap: 20px;
+}
+
+.hero-image {
+  grid-area: image;
+  max-width: 100%;
+  height: auto;
+}
+
+/* For Small Screens */
+@media (max-width: 1200px) {
+  .hero-container {
+    padding: 3rem 1.5rem;
+    grid-template-areas:
+      "image"
+      "title"
+      "description"
+      "hero-buttons";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 1.5rem;
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+
+}
+/* End of Hero Section */
 
 /* ========== FOOTER ========== */
 .footer {
