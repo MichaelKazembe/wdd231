@@ -2,7 +2,7 @@ const plantContainer = document.querySelector("#plant-cards");
 const showMoreBtn = document.querySelector("#show-more");
 
 let allPlants = [];
-let displayedPlants = 4;
+let displayedPlants = 3;
 
 // Function to fetch plant data from JSON file
 async function loadPlants() {
@@ -26,10 +26,15 @@ function displayPlants(plants) {
     card.className = "card";
 
     card.innerHTML = `
-        <img src="${plant.image} alt="${plant.name}" className="plant-img">
+      <img src="${plant.image}" alt="${plant.name}" class="card-image">
+      <div class="card-content">
         <h3>${plant.name}</h3>
-        <p><strong>Light:</strong>${plant.light}</p>
-        <p><strong>Watering:</strong>${plant.watering}</p>  
+        <p>${plant.description}</p>
+        <div class="card-details">
+          <span><i class="fas fa-sun" aria-hidden="true"></i> ${plant.light}</span>
+          <span><i class="fas fa-tint" aria-hidden="true"></i> ${plant.watering}</span>
+        </div>
+      </div>
     `;
 
     plantContainer.appendChild(card);

@@ -4,55 +4,63 @@
     "name": "Snake Plant",
     "light": "Low to Bright",
     "watering": "Every 2-3 weeks",
-    "image": "https://via.placeholder.com/150?text=Snake+Plant"
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A hardy plant that tolerates low light and infrequent watering. Great for beginners and improves indoor air quality."
   },
   {
     "id": 2,
     "name": "Peace Lily",
     "light": "Low Light",
     "watering": "Once a week",
-    "image": "https://via.placeholder.com/150?text=Peace+Lily"
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "Known for its beautiful white blooms, the Peace Lily thrives in low light and helps purify the air."
   },
   {
     "id": 3,
     "name": "Spider Plant",
     "light": "Bright, Indirect",
     "watering": "Once a week",
-    "image": "https://via.placeholder.com/150?text=Spider+Plant"
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "An easy-to-grow plant with arching leaves and baby plantlets. Tolerates a range of conditions and is pet-friendly."
   },
   {
     "id": 4,
     "name": "Aloe Vera",
     "light": "Bright Sunlight",
     "watering": "Every 2-3 weeks",
-    "image": "https://via.placeholder.com/150?text=Aloe+Vera"
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A succulent known for its medicinal gel. Prefers bright sunlight and minimal watering."
   },
   {
     "id": 5,
     "name": "ZZ Plant",
     "light": "Low Light",
     "watering": "Every 2 weeks",
-    "image": "https://via.placeholder.com/150?text=ZZ+Plant"
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "Extremely drought-tolerant and thrives in low light. Its glossy leaves add a modern touch to any space."
   },
   {
     "id": 6,
     "name": "Fiddle Leaf Fig",
     "light": "Bright, Indirect",
     "watering": "Weekly",
-    "image": "https://via.placeholder.com/150?text=Fiddle+Leaf+Fig"
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A popular statement plant with large, violin-shaped leaves. Prefers bright, indirect light and regular watering."
   },
   {
     "id": 7,
     "name": "Pothos",
     "light": "Low to Medium",
     "watering": "Every 1-2 weeks",
-    "image": "https://via.placeholder.com/150?text=Pothos"
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A fast-growing vine that thrives in various light conditions. Very forgiving and easy to propagate."
   },
   {
     "id": 8,
     "name": "Rubber Plant",
     "light": "Bright, Indirect",
     "watering": "Weekly",
-    "image": "https://via.placeholder.com/150?text=Rubber+Plant"
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "Features thick, glossy leaves and grows well in bright, indirect light. Can grow into a striking indoor tree."
   }
 ]
