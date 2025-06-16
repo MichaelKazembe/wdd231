@@ -139,8 +139,8 @@
   font-size: var(--font-size-medium, 1.1rem);
   padding: 0.9rem 0;
   border-radius: var(--radius-medium, 0.7rem);
-  background: var(--primary-green, #22663f);
-  color: #fff;
+  background: var(--accent-yellow);
+  color: var(--primary-green);
   font-weight: 700;
   border: none;
   cursor: pointer;
@@ -149,8 +149,8 @@
 
 .care-form .btn-primary:hover,
 .care-form .btn-primary:focus {
-  background: var(--accent-yellow, #ffe066);
-  color: var(--primary-green, #22663f);
+  background: var(--primary-green);
+  color: var(--bg-light-green);
 }
 
 .last-input {
