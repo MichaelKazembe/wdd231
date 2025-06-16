@@ -169,6 +169,15 @@ nav ul li a {
   display: inline-block;
   transition: color 0.3s;
 }
+
+nav ul li a:hover {
+  color: var(--accent-yellow);
+}
+nav ul li a.active {
+  color: var(--accent-yellow);
+  position: relative;
+  text-decoration: none;
+}
 nav ul li a.active:after,
 nav ul li a:hover:after {
   content: "";
@@ -255,7 +264,11 @@ nav ul li a:hover:after {
     text-decoration: none;
     color: var(--accent-yellow);
   }
- 
+
+  nav ul li a:hover {
+    color: var(--accent-yellow);
+  }
+
   nav ul li a:hover::after,
   nav ul li a.active::after {
     transform: scaleX(0);

@@ -1,3 +1,4 @@
+
 const plantContainer = document.querySelector("#plant-cards");
 const showMoreBtn = document.querySelector("#show-more");
 const cardModal = document.getElementById("card-modal");
