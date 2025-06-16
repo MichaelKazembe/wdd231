@@ -5,7 +5,11 @@
     "light": "Low to Bright",
     "watering": "Every 2-3 weeks",
     "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
-    "description": "A hardy plant that tolerates low light and infrequent watering. Great for beginners and improves indoor air quality."
+    "description": "A hardy plant that tolerates low light and infrequent watering. Great for beginners and improves indoor air quality.",
+    "origin": "West Africa",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-29°C (60-85°F)",
+    "humidity": "Low to moderate"
   },
   {
     "id": 2,
@@ -13,7 +17,11 @@
     "light": "Low Light",
     "watering": "Once a week",
     "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
-    "description": "Known for its beautiful white blooms, the Peace Lily thrives in low light and helps purify the air."
+    "description": "Known for its beautiful white blooms, the Peace Lily thrives in low light and helps purify the air.",
+    "origin": "Central and South America",
+    "soil": "Moist, well-draining soil",
+    "temperature": "18-27°C (65-80°F)",
+    "humidity": "High"
   },
   {
     "id": 3,
@@ -21,46 +29,214 @@
     "light": "Bright, Indirect",
     "watering": "Once a week",
     "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
-    "description": "An easy-to-grow plant with arching leaves and baby plantlets. Tolerates a range of conditions and is pet-friendly."
+    "description": "An easy-to-grow plant with arching leaves and baby plantlets. Tolerates a range of conditions and is pet-friendly.",
+    "origin": "South Africa",
+    "soil": "Well-draining potting mix",
+    "temperature": "13-27°C (55-80°F)",
+    "humidity": "Moderate"
   },
   {
     "id": 4,
-    "name": "Aloe Vera",
-    "light": "Bright Sunlight",
-    "watering": "Every 2-3 weeks",
+    "name": "Pothos",
+    "light": "Low to Bright, Indirect",
+    "watering": "Every 1-2 weeks",
     "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
-    "description": "A succulent known for its medicinal gel. Prefers bright sunlight and minimal watering."
+    "description": "A versatile vine that thrives in various light conditions. Great for hanging baskets or as a climbing plant.",
+    "origin": "French Polynesia",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-30°C (60-86°F)",
+    "humidity": "Moderate"
   },
   {
     "id": 5,
     "name": "ZZ Plant",
-    "light": "Low Light",
-    "watering": "Every 2 weeks",
+    "light": "Low to Bright, Indirect",
+    "watering": "Every 2-3 weeks",
     "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
-    "description": "Extremely drought-tolerant and thrives in low light. Its glossy leaves add a modern touch to any space."
+    "description": "A tough plant that can survive neglect and low light. Its glossy leaves add a touch of elegance to any space.",
+    "origin": "East Africa",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-24°C (60-75°F)",
+    "humidity": "Low to moderate"
   },
   {
     "id": 6,
-    "name": "Fiddle Leaf Fig",
+    "name": "Rubber Plant",
     "light": "Bright, Indirect",
-    "watering": "Weekly",
+    "watering": "Every 1-2 weeks",
     "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
-    "description": "A popular statement plant with large, violin-shaped leaves. Prefers bright, indirect light and regular watering."
+    "description": "A popular indoor plant with large, glossy leaves. It thrives in bright light and can grow quite tall.",
+    "origin": "Southeast Asia",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-29°C (60-85°F)",
+    "humidity": "Moderate"
   },
   {
     "id": 7,
-    "name": "Pothos",
-    "light": "Low to Medium",
-    "watering": "Every 1-2 weeks",
+    "name": "Aloe Vera",
+    "light": "Bright, Indirect",
+    "watering": "Every 2-3 weeks",
     "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
-    "description": "A fast-growing vine that thrives in various light conditions. Very forgiving and easy to propagate."
+    "description": "A succulent known for its medicinal properties. It requires bright light and infrequent watering.",
+    "origin": "Arabian Peninsula",
+    "soil": "Cactus mix or well-draining potting mix",
+    "temperature": "15-30°C (60-86°F)",
+    "humidity": "Low"
   },
   {
     "id": 8,
-    "name": "Rubber Plant",
+    "name": "Fiddle Leaf Fig",
     "light": "Bright, Indirect",
-    "watering": "Weekly",
+    "watering": "Once a week",
     "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
-    "description": "Features thick, glossy leaves and grows well in bright, indirect light. Can grow into a striking indoor tree."
+    "description": "A trendy plant with large, violin-shaped leaves. It prefers bright light and consistent watering.",
+    "origin": "West Africa",
+    "soil": "Well-draining potting mix",
+    "temperature": "18-24°C (65-75°F)",
+    "humidity": "Moderate to high"
+  },
+  {
+    "id": 9,
+    "name": "Boston Fern",
+    "light": "Indirect Light",
+    "watering": "Twice a week",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A lush, feathery fern that thrives in humid conditions. It prefers indirect light and regular watering.",
+    "origin": "North America",
+    "soil": "Moist, well-draining potting mix",
+    "temperature": "15-24°C (60-75°F)",
+    "humidity": "High"
+  },
+  {
+    "id": 10,
+    "name": "Dracaena",
+    "light": "Low to Bright, Indirect",
+    "watering": "Every 2-3 weeks",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A diverse group of plants with striking foliage. They are easy to care for and adapt to various light conditions.",
+    "origin": "Madagascar and Africa",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-30°C (60-86°F)",
+    "humidity": "Moderate"
+  },
+  {
+    "id": 11,
+    "name": "Chinese Evergreen",
+    "light": "Low to Bright, Indirect",
+    "watering": "Every 1-2 weeks",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A hardy plant with attractive leaves. It thrives in low light and is known for its air-purifying qualities.",
+    "origin": "Southeast Asia",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-30°C (60-86°F)",
+    "humidity": "Moderate"
+  },
+  {
+    "id": 12,
+    "name": "Cast Iron Plant",
+    "light": "Low to Bright, Indirect",
+    "watering": "Every 2-3 weeks",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A resilient plant that can tolerate neglect and low light. Its dark green leaves add a touch of elegance.",
+    "origin": "Japan and China",
+    "soil": "Well-draining potting mix",
+    "temperature": "10-24°C (50-75°F)",
+    "humidity": "Low to moderate"
+  },
+  {
+    "id": 13,
+    "name": "Philodendron",
+    "light": "Low to Bright, Indirect",
+    "watering": "Every 1-2 weeks",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A popular houseplant with heart-shaped leaves. It thrives in various light conditions and is easy to care for.",
+    "origin": "South America",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-30°C (60-86°F)",
+    "humidity": "Moderate"
+  },
+  {
+    "id": 14,
+    "name": "Calathea",
+    "light": "Indirect Light",
+    "watering": "Once a week",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "Known for its striking leaf patterns, the Calathea prefers indirect light and high humidity.",
+    "origin": "South America",
+    "soil": "Moist, well-draining potting mix",
+    "temperature": "18-24°C (65-75°F)",
+    "humidity": "High"
+  },
+  {
+    "id": 15,
+    "name": "Orchid",
+    "light": "Bright, Indirect",
+    "watering": "Every 1-2 weeks",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A beautiful flowering plant that thrives in bright, indirect light. Requires specific care for optimal blooming.",
+    "origin": "Tropical and subtropical regions worldwide",
+    "soil": "Orchid mix or well-draining potting mix",
+    "temperature": "18-30°C (65-86°F)",
+    "humidity": "Moderate to high"
+  },
+  {
+    "id": 16,
+    "name": "Bamboo Palm",
+    "light": "Low to Bright, Indirect",
+    "watering": "Once a week",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A tropical palm that thrives in low light and adds a touch of the tropics to your home.",
+    "origin": "Central America",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-30°C (60-86°F)",
+    "humidity": "Moderate to high"
+  },
+  {
+    "id": 17,
+    "name": "Money Tree",
+    "light": "Bright, Indirect",
+    "watering": "Every 1-2 weeks",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A popular houseplant believed to bring good luck and prosperity. It thrives in bright, indirect light.",
+    "origin": "Central and South America",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-30°C (60-86°F)",
+    "humidity": "Moderate"
+  },
+  {
+    "id": 18,
+    "name": "Dracaena Marginata",
+    "light": "Low to Bright, Indirect",
+    "watering": "Every 2-3 weeks",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A striking plant with long, slender leaves. It is easy to care for and adapts well to various light conditions.",
+    "origin": "Madagascar",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-30°C (60-86°F)",
+    "humidity": "Moderate"
+  },
+  {
+    "id": 19,
+    "name": "Parlor Palm",
+    "light": "Low to Bright, Indirect",
+    "watering": "Once a week",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A small palm that thrives in low light and is perfect for indoor spaces. It adds a tropical feel to your home.",
+    "origin": "Central America",
+    "soil": "Well-draining potting mix",
+    "temperature": "15-24°C (60-75°F)",
+    "humidity": "Moderate"
+  },
+  {
+    "id": 20,
+    "name": "Cast Iron Plant",
+    "light": "Low to Bright, Indirect",
+    "watering": "Every 2-3 weeks",
+    "image": "https://dummyimage.com/200x200/f4f4f4/000.png",
+    "description": "A resilient plant that can tolerate neglect and low light. Its dark green leaves add a touch of elegance.",
+    "origin": "Japan and China",
+    "soil": "Well-draining potting mix",
+    "temperature": "10-24°C (50-75°F)",
+    "humidity": "Low to moderate"
   }
 ]

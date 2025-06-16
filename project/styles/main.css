@@ -344,7 +344,9 @@ nav ul li a:hover:after {
 /* End of Hero Section */
 
 /* ========== BENEFITS SECTION ========== */
-.fas {
+.benefits-item .fa-lungs,
+.benefits-item .fa-heart,
+.benefits-item .fa-house {
   font-size: 1rem;
   color: var(--accent-yellow);
   background: var(--primary-green);
@@ -600,6 +602,12 @@ nav ul li a:hover:after {
   gap: 20px;
 }
 
+.start-primary-btn:hover {
+  color: var(--bg-light-green);
+  border: 2px solid var(--accent-yellow);
+
+}
+
 .start-secondary-btn {
   background-color: var(--primary-green);
   color: var(--bg-light-green);
@@ -608,8 +616,9 @@ nav ul li a:hover:after {
 }
 
 .start-secondary-btn:hover {
-  background-color: var(--bg-light-green);
+  background-color: var(--accent-yellow);
   color: var(--primary-green);
+  border:none;
 }
 
 /* For Small Screens */

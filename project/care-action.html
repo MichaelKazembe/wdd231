@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Your beginner-friendly guide to keeping houseplants happy and healthy. Learn proper care techniques and build confidence in plant parenting.">
     <meta name="author" content="Michael Kazembe">
-    <title>Library | PlantCare Hub</title>
+    <title>Care Tips | PlantCare Hub</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/logos/logo-favicon.png" sizes="16x16">
 
     <!-- Facebook Open Graph Meta Tags -->
-    <meta property="og:title" content="Library | PlantCare Hub">
+    <meta property="og:title" content="Care Tips | PlantCare Hub">
     <meta property="og:description" content="Your beginner-friendly guide to keeping houseplants happy and healthy. Learn proper care techniques and build confidence in plant parenting.">
     <meta property="og:image" content="https://github.com/MichaelKazembe/wdd231/blob/main/project/images/logos/logo-light-transparent.png">
-    <meta property="og:url" content="https://michaelkazembe.github.io/wdd231/project/plant-library.html">
+    <meta property="og:url" content="https://michaelkazembe.github.io/wdd231/project/my-plants.html">
     <meta property="og:type" content="website">
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/plant-library.css">
+    <link rel="stylesheet" href="styles/care-action.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
     <!-- Javascript Files -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/plants.js" defer></script>
+    <script src="scripts/care-action.js" defer></script>
 
     <!-- Icons -->
     <script src="https://kit.fontawesome.com/4ea4219760.js" crossorigin="anonymous" defer></script>
@@ -45,8 +45,9 @@
         </div>
         <ul id="menu-list">
           <li><a href="index.html">Home</a></li>
-          <li><a href="plant-library.html" class="active">Plant Library</a></li>
-          <li><a href="my-plants.html">My Plants</a></li>
+          <li><a href="plant-library.html" >Plant Library</a></li>
+          <li><a href="my-plants.html" >My Plants</a></li>
+    
         </ul>
       </nav>
         <div>
@@ -55,31 +56,11 @@
         </div>
     </header>
     <main> 
-      <!-- HERO SECTION -->
-      <section class="lib-hero-section">
-        <div class="lib-hero-container">
-          
-            <div class="hero-text">
-              <h2 class="hero-title">Welcome to the Plant Library</h2>
-              <p class="hero-description">Your go-to resource for caring for houseplants.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-        <!-- PLANTS -->
-      <section id="common-section">
-        <div class="common-container">
-          <div>
-            <h2>Common Plants</h2>
-            <p>Explore our library of houseplants.</p>
-          </div> 
-          <div id="plant-cards" class="card-container"></div>
-          <button id="show-more" class="btn btn-primary">Show More</button>
-        </div>
-        <!-- Card Modal -->
-        <div id="card-modal" class="modal">
-            <!-- insert Modal data Dynamically -->
+      <section class="care-form-section">
+        <div class="care-form-container">
+          <h2>Thank You for Sharing!</h2>
+          <div id="submitted-data"></div>
+          <a href="my-plants.html" class="btn btn-primary" style="margin-top:2rem;display:inline-block;">Back to Care Tips</a>
         </div>
       </section>
     </main>

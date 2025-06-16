@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your beginner-friendly guide to keeping houseplants happy and healthy. Learn proper care techniques and build confidence in plant parenting.">
+    <meta name="author" content="Michael Kazembe">
+    <title>My Plants | PlantCare Hub</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logos/logo-favicon.png" sizes="16x16">
+
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="My Plants | PlantCare Hub">
+    <meta property="og:description" content="Your beginner-friendly guide to keeping houseplants happy and healthy. Learn proper care techniques and build confidence in plant parenting.">
+    <meta property="og:image" content="https://github.com/MichaelKazembe/wdd231/blob/main/project/images/logos/logo-light-transparent.png">
+    <meta property="og:url" content="https://michaelkazembe.github.io/wdd231/project/my-plants.html">
+    <meta property="og:type" content="website">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/plant-library.css">
+    <link rel="stylesheet" href="styles/my-plants.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic" rel="stylesheet">
+    
+    <!-- Javascript Files -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/my-plants.js" defer></script>
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/4ea4219760.js" crossorigin="anonymous" defer></script>
+    
+</head>
+<body>
+    <header>
+      <nav class="navBar">
+        <div class="logo">
+          <img src="images/logos/logo-light-transparent.png" alt="logo" class="logo-img" width="150" height="45" loading="lazy">
+        </div>
+        <ul id="menu-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="plant-library.html" >Plant Library</a></li>
+          <li><a href="my-plants.html" class="active">My Plants</a></li>
+        </ul>
+      </nav>
+        <div>
+          <i id="menu-icon" class="fa-solid fa-bars" tabindex="0" onclick="toggleMenu()"></i>
+          <i id="close-icon" class="fa-solid fa-xmark" tabindex="0" onclick="toggleMenu()"></i>
+        </div>
+    </header>
+    <main> 
+        <section class="care-tips-section">
+        <div class="care-tips-container">
+            <h1>Practical Plant Care Tips</h1>
+            <ul class="care-tips-list">
+            <li><i class="fas fa-sun"></i> Place your plants in the right light for their species.</li>
+            <li><i class="fas fa-tint"></i> Water only when the top inch of soil is dry (most houseplants).</li>
+            <li><i class="fas fa-wind"></i> Ensure good air circulation to prevent mold and pests.</li>
+            <li><i class="fas fa-thermometer-half"></i> Keep plants away from cold drafts and heat sources.</li>
+            <li><i class="fas fa-leaf"></i> Wipe leaves gently to remove dust and allow photosynthesis.</li>
+            <li><i class="fas fa-flask"></i> Fertilize during the growing season for best results.</li>
+            </ul>
+        </div>
+        </section>
+        <section class="my-plans-section">
+          <div class="my-plans-container">
+            <h2>My Plans & Care Tips</h2>
+            <div id="my-plans-list" class="my-plans-list">
+              <!-- Previous submissions will be rendered here by JS -->
+            </div>
+          </div>
+        </section>
+        <section class="care-form-section">
+        <div class="care-form-container">
+            <h2>Share Your Plant Care Goals or Favorite Plant</h2>
+            <form id="care-form" action="care-action.html" method="GET" class="care-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required autocomplete="off">
+
+                <label for="goal">Your Plant Care Goal</label>
+                <input type="text" id="goal" name="goal" placeholder="e.g. Grow a Monstera, water more regularly" required autocomplete="off">
+
+                <label for="favorite">Favorite Plant</label>
+                <input type="text" id="favorite" name="favorite" placeholder="e.g. Snake Plant">
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <div id="last-input" class="last-input"></div>
+        </div>
+        </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+          <img
+            src="images/logos/icon-light-transparent.png"
+            alt="Logo"
+            width="75"
+            height="75"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+          <p>Follow Us</p>
+          <ul class="social-links">
+            <li>
+              <a href="https://www.facebook.com" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.x.com" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com" aria-label="YouTube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Subscribe Form -->
+        <div class="footer-subscribe">
+          <p>Subscribe to Our Newsletter</p>
+          <form action="thank-you.html" method="post" class="subscribe-form">
+            <input type="email" placeholder="Enter your email" required >
+            <button type="submit" class="primary-button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <!-- My Details -->
+       <div class="footer-details">
+            <p class="footer-text">
+            &copy; <span id="currentdate"></span> Michael Kazembe 🇲🇼 Malawi, Africa
+            </p>
+            <p id="last-modified" class="footer-modified">
+        Last Modified: <span id="last-modified-date"></span>
+            </p>
+       </div>
+    </footer>
+</body>
+</html>
