@@ -25,7 +25,7 @@ function displayPlants(plants) {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <img src="${plant.image}" alt="${plant.name}" class="card-image">
+      <img src="${plant.image}" alt="${plant.name}" class="card-image" >
       <div class="card-content">
         <h3>${plant.name}</h3>
         <p>${plant.description}</p>
