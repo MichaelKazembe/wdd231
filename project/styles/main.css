@@ -625,8 +625,7 @@ figcaption > p {
 
 /* ========== FOOTER ========== */
 .footer {
-  background-color: var(--gray-dark);
-  color: #fff;
+  background-color: var(--gray-gray);
   padding: 40px 20px;
   text-align: center;
 }
@@ -643,11 +642,7 @@ figcaption > p {
   max-width: 100%;
   height: auto;
 }
-.visit > p {
-  color: var(--color-secondary);
-  font-weight: var(--font-weight-bold);
-  padding: 10px 0;
-}
+
 .footer-details {
   flex: 1;
   min-width: 200px;
@@ -655,66 +650,31 @@ figcaption > p {
   font-size: var(--font-size-small);
   padding: 20px 0;
 }
+.footer-video a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 .footer-text,
 .footer-modified {
   font-weight: 600;
-  color: white;
+  color: var(--text-color);
 }
+
 .footer-modified {
   font-style: italic;
 }
-.footer-social p,
-.footer-subscribe p {
-  margin-bottom: 10px;
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-normal);
-  color: white;
-}
-.social-links {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-}
-.social-links li a {
-  color: #fff;
-  font-size: 1rem;
-  padding: 8px 12px;
-  transition: color 0.3s ease;
-}
-.social-links li a:hover {
-  color: var(--color-secondary);
-}
-.footer-subscribe .subscribe-form {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-.subscribe-form input[type="email"] {
-  padding: 10px;
-  font-size: var(--font-size-small);
-  border: 1px solid var(--color-secondary);
-  border-radius: var(--border-radius-small);
-  box-sizing: border-box;
-}
-.subscribe-form button {
-  padding: 10px 20px;
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  border: none;
-  border-radius: var(--border-radius-medium);
-  cursor: pointer;
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-bold);
-  transition: background-color 0.3s ease;
-}
-.subscribe-form button:hover {
-  background-color: white;
-}
+
+
 .footer-copyright {
   margin-top: 20px;
   font-size: var(--font-size-small);
   color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
 }
