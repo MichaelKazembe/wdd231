@@ -60,10 +60,7 @@ html {
   box-sizing: border-box;
 }
 
-/* main {
-  margin: 2rem;
-  padding: 0 2rem;
-} */
+
 
 h1 {
   font-size: var(--font-size-xxlarge);
@@ -201,6 +198,11 @@ nav ul li a:hover:after {
 
 .logo {
   padding: 20px 0;
+}
+
+.logo-img {
+  max-width: 150px;
+  height: auto;
 }
 
 #menu-icon,
