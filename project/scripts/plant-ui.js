@@ -1,5 +1,32 @@
-// Function to show modal
-export function showModal(plant, cardModal) {
+// plant-ui.js
+const plantContainer = document.querySelector("#plant-cards");
+const cardModal = document.getElementById("card-modal");
+
+export function renderPlants(plants, onLearnMoreClick) {
+  plantContainer.innerHTML = "";
+
+  plants.forEach(plant => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+      <img src="${plant.image}" alt="${plant.name}" class="card-image" width="300" height="200">
+      <div class="card-content">
+        <h3>${plant.name}</h3>
+        <p>${plant.description}</p>
+        <div class="card-details">
+          <span><i class="fas fa-sun"></i> ${plant.light}</span>
+          <span><i class="fas fa-tint"></i> ${plant.watering}</span>
+        </div>
+        <button class="btn card-btn">Learn More</button>
+      </div>
+    `;
+
+    card.querySelector(".card-btn").addEventListener("click", () => onLearnMoreClick(plant));
+    plantContainer.appendChild(card);
+  });
+}
+
+export function showModal(plant) {
   if (!cardModal) return;
 
   const oldContent = cardModal.querySelector(".modal-content");
@@ -10,7 +37,7 @@ export function showModal(plant, cardModal) {
   content.innerHTML = `
     <span class="modal-close" id="modal-close" tabindex="0" role="button" aria-label="Close">&times;</span>
     <div class="modal-img-col">
-      <img src="${plant.image || 'https://via.placeholder.com/300'}" alt="${plant.name}">
+      <img src="${plant.image || "https://via.placeholder.com/300"}" alt="${plant.name}">
     </div>
     <div class="modal-info-col">
       <h2>${plant.name}</h2>
@@ -52,6 +79,5 @@ export function showModal(plant, cardModal) {
   const escListener = (e) => {
     if (e.key === "Escape") closeModal();
   };
-
   document.addEventListener("keydown", escListener);
 }
