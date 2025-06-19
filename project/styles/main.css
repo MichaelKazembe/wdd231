@@ -355,6 +355,7 @@ nav ul li a:hover:after {
 /* End of Hero Section */
 
 /* ========== BENEFITS SECTION ========== */
+.benefits-item .fas,
 .benefits-item .fa-lungs,
 .benefits-item .fa-heart,
 .benefits-item .fa-house {
